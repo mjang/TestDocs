@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/openam/!svn/ver/7228/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide
+END
+chap-session-failover.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/openam/!svn/ver/6988/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/chap-session-failover.xml
+END
+chap-uninstall.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/openam/!svn/ver/6763/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/chap-uninstall.xml
+END
+chap-cts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/openam/!svn/ver/7228/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/chap-cts.xml
+END
+chap-install-das.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/openam/!svn/ver/6701/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/chap-install-das.xml
+END
+chap-install-core.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/openam/!svn/ver/6701/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/chap-install-core.xml
+END
+preface.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/preface.xml
+END
+index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/openam/!svn/ver/6988/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/index.xml
+END
+chap-prepare-install.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/openam/!svn/ver/7223/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/chap-prepare-install.xml
+END
+chap-install-tools.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/6935/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/chap-install-tools.xml
+END
+chap-custom-ui.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/openam/!svn/ver/6799/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/install-guide/chap-custom-ui.xml
+END

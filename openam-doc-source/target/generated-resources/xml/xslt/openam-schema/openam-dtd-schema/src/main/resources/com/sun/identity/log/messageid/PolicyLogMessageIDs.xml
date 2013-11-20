@@ -1,0 +1,126 @@
+<variablelist xml:id="log-ref-POLICY">
+<para>OpenAM logs the following POLICY messages.</para>
+<varlistentry>
+<term>POLICY_EVALUATION</term>
+<listitem>
+<para>ID: POLICY-1</para>
+<para>Level: INFO</para>
+<para>Description: Evaluating policy succeeded</para>
+<para>Data: policy name, realm name, service type name, resource name, action names, policy decision</para>
+<para>Triggers: Evaluating policy.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PROTECTED_RESOURCES</term>
+<listitem>
+<para>ID: POLICY-2</para>
+<para>Level: INFO</para>
+<para>Description: Getting protected policy resources succeeded</para>
+<para>Data: principal name, resource name, protecting policies</para>
+<para>Triggers: Getting protected policy resources.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POLICY_CREATE_SUCCESS</term>
+<listitem>
+<para>ID: POLICY-3</para>
+<para>Level: INFO</para>
+<para>Description: Creating policy in a realm succeeded</para>
+<para>Data: policy name, realm name</para>
+<para>Triggers: Creating policy in a realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POLICY_MODIFY_SUCCESS</term>
+<listitem>
+<para>ID: POLICY-4</para>
+<para>Level: INFO</para>
+<para>Description: Modifying policy in a realm succeeded</para>
+<para>Data: policy name, realm name</para>
+<para>Triggers: Modifying policy in a realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POLICY_REMOVE_SUCCESS</term>
+<listitem>
+<para>ID: POLICY-5</para>
+<para>Level: INFO</para>
+<para>Description: Removing policy from a realm succeeded</para>
+<para>Data: policy name, realm name</para>
+<para>Triggers: Removing policy from a realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POLICY_ALREADY_EXISTS_IN_REALM</term>
+<listitem>
+<para>ID: POLICY-6</para>
+<para>Level: INFO</para>
+<para>Description: Policy already exists in the realm</para>
+<para>Data: policy name, realm name</para>
+<para>Triggers: Creating policy in the realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_ADD_POLICY</term>
+<listitem>
+<para>ID: POLICY-7</para>
+<para>Level: INFO</para>
+<para>Description: Creating policy in a realm failed</para>
+<para>Data: policy name, realm name</para>
+<para>Triggers: Creating policy in a realm.</para>
+<para>Actions: Check if the user has privilege to create a policy in the realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_REPLACE_POLICY</term>
+<listitem>
+<para>ID: POLICY-8</para>
+<para>Level: INFO</para>
+<para>Description: Replacing policy in a realm failed</para>
+<para>Data: policy name, realm name</para>
+<para>Triggers: Replacing policy in a realm.</para>
+<para>Actions: Check if the user has privilege to replace a policy in the realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DID_NOT_REPLACE_POLICY</term>
+<listitem>
+<para>ID: POLICY-81</para>
+<para>Level: INFO</para>
+<para>Description: Did not replace policy - A diifferent policy with the new name already exists in the realm</para>
+<para>Data: new policy name, realm name</para>
+<para>Triggers: Replacing policy in a realm</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_REMOVE_POLICY</term>
+<listitem>
+<para>ID: POLICY-9</para>
+<para>Level: INFO</para>
+<para>Description: Removing policy from a realm failed</para>
+<para>Data: policy name, realm name</para>
+<para>Triggers: Removing policy from a realm.</para>
+<para>Actions: Check if the user has privilege to remove a policy from the realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PROXIED_POLICY_EVALUATION</term>
+<listitem>
+<para>ID: POLICY-10</para>
+<para>Level: INFO</para>
+<para>Description: Computing policy decision by an administrator succeeded</para>
+<para>Data: admin name, principal name, resource name, policy decision</para>
+<para>Triggers: Computing policy decision by an administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PROXIED_POLICY_EVALUATION_IGNORING_SUBJECTS</term>
+<listitem>
+<para>ID: POLICY-11</para>
+<para>Level: INFO</para>
+<para>Description: Computing policy decision by an administrator ignoring subjects succeeded</para>
+<para>Data: admin name, resource name, policy decision</para>
+<para>Triggers: Computing policy decision by an administrator ignoring subjects.</para>
+</listitem>
+</varlistentry>
+</variablelist>

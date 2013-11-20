@@ -1,0 +1,98 @@
+<variablelist xml:id="log-ref-OAuth2Provider">
+<para>OpenAM logs the following OAuth2Provider messages.</para>
+<varlistentry>
+<term>CREATED_TOKEN</term>
+<listitem>
+<para>ID: OAuth2Provider-1</para>
+<para>Level: INFO</para>
+<para>Description: Created an oauth 2.0 token</para>
+<para>Data: message, token info</para>
+<para>Triggers: Creating a new oauth 2.0 token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DELETED_TOKEN</term>
+<listitem>
+<para>ID: OAuth2Provider-2</para>
+<para>Level: INFO</para>
+<para>Description: Deleted an oauth 2.0 token</para>
+<para>Data: message, token info</para>
+<para>Triggers: Deleteing an oauth 2.0 token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_CREATE_TOKEN</term>
+<listitem>
+<para>ID: OAuth2Provider-3</para>
+<para>Level: INFO</para>
+<para>Description: Failed to creating an oauth 2.0 token</para>
+<para>Triggers: Failed creating an oauth 2.0 token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_DELETE_TOKEN</term>
+<listitem>
+<para>ID: OAuth2Provider-4</para>
+<para>Level: INFO</para>
+<para>Description: Failed deleting an oauth 2.0 token</para>
+<para>Triggers: Failed deleting an oauth 2.0 token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATED_CLIENT</term>
+<listitem>
+<para>ID: OAuth2Provider-11</para>
+<para>Level: INFO</para>
+<para>Description: Created an oauth 2.0 Client</para>
+<para>Data: message, token info</para>
+<para>Triggers: Creating a new oauth 2.0 client</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DELETED_CLIENT</term>
+<listitem>
+<para>ID: OAuth2Provider-12</para>
+<para>Level: INFO</para>
+<para>Description: Deleted an oauth 2.0 client</para>
+<para>Data: message, token info</para>
+<para>Triggers: Deleteing an oauth 2.0 client</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_CREATE_CLIENT</term>
+<listitem>
+<para>ID: OAuth2Provider-13</para>
+<para>Level: INFO</para>
+<para>Description: Failed to creating an oauth 2.0 client</para>
+<para>Triggers: Failed creating an oauth 2.0 client</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_DELETE_CLIENT</term>
+<listitem>
+<para>ID: OAuth2Provider-14</para>
+<para>Level: INFO</para>
+<para>Description: Failed deleting an oauth 2.0 client</para>
+<para>Triggers: Failed deleting an oauth 2.0 client</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTHENTICATED_CLIENT</term>
+<listitem>
+<para>ID: OAuth2Provider-15</para>
+<para>Level: INFO</para>
+<para>Description: Authenticated an oauth 2.0 client</para>
+<para>Data: message, client id</para>
+<para>Triggers: Authenticating a oauth 2.0 client</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_AUTHENTICATE_CLIENT</term>
+<listitem>
+<para>ID: OAuth2Provider-16</para>
+<para>Level: INFO</para>
+<para>Description: Failed authenticating an oauth 2.0 client</para>
+<para>Triggers: Failed authenticating an oauth 2.0 client</para>
+</listitem>
+</varlistentry>
+</variablelist>

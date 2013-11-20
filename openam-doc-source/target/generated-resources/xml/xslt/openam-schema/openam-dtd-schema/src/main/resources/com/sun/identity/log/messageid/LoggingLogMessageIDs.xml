@@ -1,0 +1,43 @@
+<variablelist xml:id="log-ref-LOG">
+<para>OpenAM logs the following LOG messages.</para>
+<varlistentry>
+<term>LOG_START_NEW_LOGGER</term>
+<listitem>
+<para>ID: LOG-1</para>
+<para>Level: INFO</para>
+<para>Description: Logging Started - New Logger</para>
+<para>Data: current location</para>
+<para>Triggers: Logging started by getting a new Logger.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOG_END</term>
+<listitem>
+<para>ID: LOG-2</para>
+<para>Level: INFO</para>
+<para>Description: Logging Terminated - Server Stopped</para>
+<para>Data: current location</para>
+<para>Triggers: Logging terminated by server shutdown.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOG_START_CONFIG</term>
+<listitem>
+<para>ID: LOG-3</para>
+<para>Level: INFO</para>
+<para>Description: Logging Started - Configuration Change</para>
+<para>Data: old location, new location, old backend, new backend, old security status, new security status, old status, new status, old level, new level</para>
+<para>Triggers: Logging started after logging configuration change.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOG_END_CONFIG</term>
+<listitem>
+<para>ID: LOG-4</para>
+<para>Level: INFO</para>
+<para>Description: Logging Terminated - Configuration Change</para>
+<para>Data: old location, new location, old backend, new backend, old security status, new security status, old status, new status, old level, new level</para>
+<para>Triggers: Logging terminated by logging configuration change.</para>
+</listitem>
+</varlistentry>
+</variablelist>

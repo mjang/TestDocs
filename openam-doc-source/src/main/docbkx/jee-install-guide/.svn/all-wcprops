@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/openam/!svn/ver/7342/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide
+END
+chap-troubleshooting.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/openam/!svn/ver/6307/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/chap-troubleshooting.xml
+END
+chap-jboss-4and5.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/openam/!svn/ver/6880/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/chap-jboss-4and5.xml
+END
+chap-about-jee-agents.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/openam/!svn/ver/7342/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/chap-about-jee-agents.xml
+END
+chap-weblogic.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/openam/!svn/ver/6894/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/chap-weblogic.xml
+END
+preface.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/openam/!svn/ver/5872/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/preface.xml
+END
+index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/openam/!svn/ver/6216/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/index.xml
+END
+chap-jetty.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/openam/!svn/ver/6894/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/chap-jetty.xml
+END
+chap-glassfish.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/6894/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/chap-glassfish.xml
+END
+chap-jboss-7.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/openam/!svn/ver/6724/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/chap-jboss-7.xml
+END
+chap-websphere.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/6894/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/chap-websphere.xml
+END
+chap-apache-tomcat.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/openam/!svn/ver/7069/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/jee-install-guide/chap-apache-tomcat.xml
+END

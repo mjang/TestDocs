@@ -1,0 +1,827 @@
+<variablelist xml:id="log-ref-IDFF">
+<para>OpenAM logs the following IDFF messages.</para>
+<varlistentry>
+<term>WRITE_ACCOUNT_FED_INFO</term>
+<listitem>
+<para>ID: IDFF-14</para>
+<para>Level: INFO</para>
+<para>Description: Write Account Federation Info</para>
+<para>Data: user DN, federation info key, federation info value</para>
+<para>Triggers: Acccount Federation Info with key was added to user</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REMOVE_ACCOUNT_FED_INFO</term>
+<listitem>
+<para>ID: IDFF-15</para>
+<para>Level: INFO</para>
+<para>Description: Remove Account Federation Info</para>
+<para>Data: user DN, provider id, existing federation info key</para>
+<para>Triggers: Account federation info with key and provider ID was removed from user</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_ASSERTION</term>
+<listitem>
+<para>ID: IDFF-16</para>
+<para>Level: FINER</para>
+<para>Description: Create Assertion</para>
+<para>Data: assertion id or string</para>
+<para>Triggers: Assertion Created</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_REQUEST_PROCESSING_FAILED</term>
+<listitem>
+<para>ID: IDFF-18</para>
+<para>Level: INFO</para>
+<para>Description: Logout Request processing failed.</para>
+<para>Data: message</para>
+<para>Triggers: Logout Request processing failed</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>TERMINATION_REQUEST_PROCESSING_FAILED</term>
+<listitem>
+<para>ID: IDFF-19</para>
+<para>Level: INFO</para>
+<para>Description: Termination request processing failed</para>
+<para>Data: message</para>
+<para>Triggers: Termination request processing failed</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_SOAP_URL_END_POINT_CREATION</term>
+<listitem>
+<para>ID: IDFF-20</para>
+<para>Level: INFO</para>
+<para>Description: Failed in creating SOAP URL End point.</para>
+<para>Data: soap end point url</para>
+<para>Triggers: Failed in creating SOAP URL End point</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISMATCH_AUTH_TYPE_AND_PROTOCOL</term>
+<listitem>
+<para>ID: IDFF-21</para>
+<para>Level: INFO</para>
+<para>Description: Mismatched AuthType and the protocol (based on SOAPUrl).</para>
+<para>Data: protocol, authentication type</para>
+<para>Triggers: AuthType and the protocol (based on SOAPUrl) do not match.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>WRONG_AUTH_TYPE</term>
+<listitem>
+<para>ID: IDFF-22</para>
+<para>Level: INFO</para>
+<para>Description: Wrong Authentication type</para>
+<para>Data: authentication type</para>
+<para>Triggers: Wrong Authentication type</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SOAP_RECEIVER_URL</term>
+<listitem>
+<para>ID: IDFF-23</para>
+<para>Level: FINER</para>
+<para>Description: SAML SOAP Receiver URL</para>
+<para>Data: soap url</para>
+<para>Triggers: SAML SOAP Receiver URL</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_SOAP_RESPONSE</term>
+<listitem>
+<para>ID: IDFF-24</para>
+<para>Level: INFO</para>
+<para>Description: SOAP Response is Invalid</para>
+<para>Data: message</para>
+<para>Triggers: SOAP Response is Invalid.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_ASSERTION</term>
+<listitem>
+<para>ID: IDFF-25</para>
+<para>Level: INFO</para>
+<para>Description: Assertion is invalid</para>
+<para>Data: message</para>
+<para>Triggers: This Assertion is invalid</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SINGLE_SIGNON_FAILED</term>
+<listitem>
+<para>ID: IDFF-26</para>
+<para>Level: INFO</para>
+<para>Description: Single SignOn Failed</para>
+<para>Data: message</para>
+<para>Triggers: Single SignOn Failed</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ACCESS_GRANTED_REDIRECT_TO</term>
+<listitem>
+<para>ID: IDFF-27</para>
+<para>Level: INFO</para>
+<para>Description: Redirect to URL after granting access.</para>
+<para>Data: redirect url</para>
+<para>Triggers: Redirecting to URL after granting access.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_AUTHN_RESPONSE</term>
+<listitem>
+<para>ID: IDFF-28</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Response is missing</para>
+<para>Data: message</para>
+<para>Triggers: Authentication Response not found</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ACCOUNT_FEDERATION_FAILED</term>
+<listitem>
+<para>ID: IDFF-29</para>
+<para>Level: INFO</para>
+<para>Description: Account Federation Failed</para>
+<para>Data: message</para>
+<para>Triggers: Account Federation Failed</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_SSO_TOKEN_GENERATION</term>
+<listitem>
+<para>ID: IDFF-30</para>
+<para>Level: INFO</para>
+<para>Description: SSOToken Generation Failed</para>
+<para>Data: message</para>
+<para>Triggers: Failed to generate SSOToken</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_AUTHN_RESPONSE</term>
+<listitem>
+<para>ID: IDFF-31</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Response is invalid</para>
+<para>Data: invalid authentication response</para>
+<para>Triggers: Authentication Response is invalid</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTHN_REQUEST_PROCESSING_FAILED</term>
+<listitem>
+<para>ID: IDFF-32</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Request processing failed</para>
+<para>Data: message</para>
+<para>Triggers: Authentication Request processing failed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SIGNATURE_VERIFICATION_FAILED</term>
+<listitem>
+<para>ID: IDFF-33</para>
+<para>Level: INFO</para>
+<para>Description: Signature Verification Failed.</para>
+<para>Data: message</para>
+<para>Triggers: Signature Verification Failed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_SAML_RESPONSE</term>
+<listitem>
+<para>ID: IDFF-34</para>
+<para>Level: INFO</para>
+<para>Description: Created SAML Response</para>
+<para>Data: sending saml response to remote server's IP address, saml response or response ID and InResponseTo ID</para>
+<para>Triggers: Created SAML Response</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REDIRECT_TO</term>
+<listitem>
+<para>ID: IDFF-35</para>
+<para>Level: FINER</para>
+<para>Description: Redirect URL</para>
+<para>Data: redirect url</para>
+<para>Triggers: Redirect to :</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>COMMON_DOMAIN_META_DATA_NOT_FOUND</term>
+<listitem>
+<para>ID: IDFF-36</para>
+<para>Level: INFO</para>
+<para>Description: Common Domain Service Information not found</para>
+<para>Data: message</para>
+<para>Triggers: Common Domain Service Information not found.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PROVIDER_NOT_TRUSTED</term>
+<listitem>
+<para>ID: IDFF-37</para>
+<para>Level: INFO</para>
+<para>Description: Provider is not trusted</para>
+<para>Data: provider id</para>
+<para>Triggers: Provider is not trusted.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_AUTHN_REQUEST</term>
+<listitem>
+<para>ID: IDFF-38</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Request is invalid</para>
+<para>Data: message</para>
+<para>Triggers: Authentication Request is invalid</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>USER_ACCOUNT_FEDERATION_INFO_NOT_FOUND</term>
+<listitem>
+<para>ID: IDFF-39</para>
+<para>Level: INFO</para>
+<para>Description: Account Federation Information not found for user</para>
+<para>Data: user name</para>
+<para>Triggers: Account Federation Information not found for user :</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>USER_NOT_FOUND</term>
+<listitem>
+<para>ID: IDFF-40</para>
+<para>Level: INFO</para>
+<para>Description: User not found.</para>
+<para>Data: user name</para>
+<para>Triggers: User not found.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_PROFILE_NOT_SUPPORTED</term>
+<listitem>
+<para>ID: IDFF-41</para>
+<para>Level: INFO</para>
+<para>Description: Logout profile not supported.</para>
+<para>Data: logout profile</para>
+<para>Triggers: Logout profile not supported.</para>
+<para>Actions: Verify metadata is correct.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_SUCCESS</term>
+<listitem>
+<para>ID: IDFF-42</para>
+<para>Level: INFO</para>
+<para>Description: Logout is successful.</para>
+<para>Data: user name</para>
+<para>Triggers: Logout is successful.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_REDIRECT_FAILED</term>
+<listitem>
+<para>ID: IDFF-43</para>
+<para>Level: INFO</para>
+<para>Description: Logout failed to redirect due to incorrect URL.</para>
+<para>Data: message</para>
+<para>Triggers: Logout failed to redirect due to incorrect URL.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_FAILED_REQUEST_IMPROPER</term>
+<listitem>
+<para>ID: IDFF-44</para>
+<para>Level: INFO</para>
+<para>Description: Logout request not formed properly.</para>
+<para>Data: user name</para>
+<para>Triggers: Logout request not formed properly.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_FAILED_INVALID_HANDLER</term>
+<listitem>
+<para>ID: IDFF-45</para>
+<para>Level: INFO</para>
+<para>Description: Failed to get Pre/Logout handler.</para>
+<para>Data: logout url</para>
+<para>Triggers: Failed to get Pre/Logout handler.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_FAILED</term>
+<listitem>
+<para>ID: IDFF-46</para>
+<para>Level: INFO</para>
+<para>Description: Single logout failed.</para>
+<para>Data: user name</para>
+<para>Triggers: Single logout failed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REGISTRATION_FAILED_SP_NAME_IDENTIFIER</term>
+<listitem>
+<para>ID: IDFF-47</para>
+<para>Level: INFO</para>
+<para>Description: Failed to create SPProvidedNameIdentifier.</para>
+<para>Data: message</para>
+<para>Triggers: Failed to create SPProvidedNameIdentifier.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_SIGNATURE</term>
+<listitem>
+<para>ID: IDFF-48</para>
+<para>Level: INFO</para>
+<para>Description: Invalid Signature.</para>
+<para>Data: message</para>
+<para>Triggers: Invalid Signature.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>TERMINATION_FAILED</term>
+<listitem>
+<para>ID: IDFF-49</para>
+<para>Level: INFO</para>
+<para>Description: Federation Termination failed.</para>
+<para>Data: user name</para>
+<para>Triggers: Federation Termination failed. Cannot update account.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>TERMINATION_SUCCESS</term>
+<listitem>
+<para>ID: IDFF-50</para>
+<para>Level: INFO</para>
+<para>Description: Federation Termination succeeded.</para>
+<para>Data: userDN</para>
+<para>Triggers: Federation Termination succeeded. User account updated.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_RESPONSE</term>
+<listitem>
+<para>ID: IDFF-51</para>
+<para>Level: INFO</para>
+<para>Description: Response is Invalid</para>
+<para>Data: saml response</para>
+<para>Triggers: SAML Response is Invalid.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_PROVIDER</term>
+<listitem>
+<para>ID: IDFF-52</para>
+<para>Level: INFO</para>
+<para>Description: Invalid Provider Registration.</para>
+<para>Data: provider id, Realm or Organization Name</para>
+<para>Triggers: Invalid Provider.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_GET_IDFF_META_INSTANCE</term>
+<listitem>
+<para>ID: IDFF-61</para>
+<para>Level: INFO</para>
+<para>Description: Error getting Configuration instance.</para>
+<para>Data: message</para>
+<para>Triggers: Trying to initialize IDFF Metadata configuration.</para>
+<para>Actions: Check if the Data Repository has the IDFFMetaData Service. If it is not present then it wil need to be loading using the FM Administration command. Check the Administration Guide on how to load services.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: IDFF-62</para>
+<para>Level: INFO</para>
+<para>Description: EntityDescriptor is null.</para>
+<para>Data: message</para>
+<para>Triggers: Trying to create EntityDescriptor.</para>
+<para>Actions: Pass a valid non-null EntityDescriptorElement object to the IDFFMetaManager:createEntityDescriptor method.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_ENTITY_ID</term>
+<listitem>
+<para>ID: IDFF-63</para>
+<para>Level: INFO</para>
+<para>Description: Entity Identifier in the EntityDescriptor is null.</para>
+<para>Data: message</para>
+<para>Triggers: Trying to create, modify, retrieve or delete EntityDescriptor or extended Entity Config.</para>
+<para>Actions: The EntityDescriptor Element passed should have the Entity Identifier , this is the "providerID" attribute in the IDFF MetaData schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_ENTITY_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-64</para>
+<para>Level: INFO</para>
+<para>Description: Creating of Entity Descriptor succeeded.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: EntityDescriptor is stored in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_ENTITY_FAILED</term>
+<listitem>
+<para>ID: IDFF-65</para>
+<para>Level: INFO</para>
+<para>Description: Storing of IDFF Meta Data in the repository failed.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Trying to create EntityDescriptor.</para>
+<para>Actions: Check the IDFF Meta Data Debug "libIDFFMeta" for specific errors. Check if the data repository exists and is accessible. Check if the IDFF Meta Data Service exists in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNSUPPORTED_OPERATION</term>
+<listitem>
+<para>ID: IDFF-66</para>
+<para>Level: INFO</para>
+<para>Description: Unsupported operation.</para>
+<para>Data: message</para>
+<para>Triggers: Trying to create, modify or delete EntityDescriptor or extended EntityConfig.</para>
+<para>Actions: Check the System Configuration Implementation to find out how IDFF Meta Data can be stored in the repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: IDFF-67</para>
+<para>Level: INFO</para>
+<para>Description: The EntityDescriptor object is not valid.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Trying to retrieve or modify EntityDescriptor.</para>
+<para>Actions: Check the EntityDescriptor Element is valid and follows the IDFF Standard Meta Data Schema Description.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_ENTITY_FAILED</term>
+<listitem>
+<para>ID: IDFF-68</para>
+<para>Level: INFO</para>
+<para>Description: Retrieval of Entity Configuration failed.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: EntityDescriptor is retrieved.</para>
+<para>Actions: Check if the entity identifier is correct.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_ENTITY_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-69</para>
+<para>Level: INFO</para>
+<para>Description: Retrieval of Entity Descriptor succeeded.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Entity Configuration is returned to the requester.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_ENTITY_FAILED</term>
+<listitem>
+<para>ID: IDFF-70</para>
+<para>Level: INFO</para>
+<para>Description: Storing of Entity Configuration failed.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Trying to modify IDFF Standard Meta data.</para>
+<para>Actions: Check if the entity identifier is correct.; Check if the data repository exists and is accessible.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_ENTITY_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-71</para>
+<para>Level: INFO</para>
+<para>Description: Modifying Entity Descriptor succeeded.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Entity Descriptor is modified in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DELETE_ENTITY_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-72</para>
+<para>Level: INFO</para>
+<para>Description: Deleting of IDFF Standard Meta Data succeeded.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: IDFF Standard Meta data for the entity is deleted in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DELETE_ENTITY_FAILED</term>
+<listitem>
+<para>ID: IDFF-73</para>
+<para>Level: INFO</para>
+<para>Description: Deleting of Standard Metadata for entity identifier failed.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Trying to delete IDFF Standard Meta data for the entity.</para>
+<para>Actions: Check if the entity identifier is correct.; Check if the data repository exists and is accessible</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: IDFF-74</para>
+<para>Level: INFO</para>
+<para>Description: Extended Entity Configuration is null.</para>
+<para>Data: message</para>
+<para>Triggers: Trying to create IDFF extended Meta data.</para>
+<para>Actions: Check the validity of the extended entity configuration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_CONFIG_NOT_FOUND</term>
+<listitem>
+<para>ID: IDFF-75</para>
+<para>Level: INFO</para>
+<para>Description: Entity Configuration could not be found.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Trying to create IDFF extended Meta data.</para>
+<para>Actions: Check the validity of the entity configuration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_CONFIG_EXISTS</term>
+<listitem>
+<para>ID: IDFF-76</para>
+<para>Level: INFO</para>
+<para>Description: Creation of Extended Entity Configuration failed since it already exists.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Trying to create IDFF extended Meta data.</para>
+<para>Actions: Cannot create entity configuration if it already exists. If new attributes are to be set in the extended entity configuration then use the setConfiguration method or delete the existing entity configuration and then try create again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_ENTITY_CONFIG_FAILED</term>
+<listitem>
+<para>ID: IDFF-77</para>
+<para>Level: INFO</para>
+<para>Description: Failed to get entity configuration.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Trying to retrieve IDFF extended Meta data.</para>
+<para>Actions: Check the IDFF Meta Data Debug "libIDFFMeta" for specific errors.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_ENTITY_CONFIG_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-78</para>
+<para>Level: INFO</para>
+<para>Description: Retrieval of Entity Configuration succeeded.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Entity Configuration is retrieved from the data repository</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_ENTITY_CONFIG_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-79</para>
+<para>Level: INFO</para>
+<para>Description: Extended Entity Configuration was modified.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Extended Entity Configuration is modified in the data repository</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_ENTITY_CONFIG_FAILED</term>
+<listitem>
+<para>ID: IDFF-80</para>
+<para>Level: INFO</para>
+<para>Description: Failed to modify Extended Entity Configuration.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Extended Entity Configuration is modified in the data repository</para>
+<para>Actions: Check the IDFF Meta Data Debug "libIDFFMeta" for specific errors.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_ENTITY_CONFIG_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-81</para>
+<para>Level: INFO</para>
+<para>Description: Extended Entity Configuration was created.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Extended Entity Configuration is stored in the data repository</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_ENTITY_CONFIG_FAILED</term>
+<listitem>
+<para>ID: IDFF-82</para>
+<para>Level: INFO</para>
+<para>Description: Storing of IDFF Extended Configuration in the repository failed.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Trying to create Extended Entity Configuration.</para>
+<para>Actions: Check the IDFF Meta Data Debug "libIDFFMeta" for specific errors.; Check if the data repository exists and is accessible.; Check if the IDFF Meta Data Service exists in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: IDFF-83</para>
+<para>Level: INFO</para>
+<para>Description: The Extended Entity Configuration is invalid.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Trying to create, modify or retrieve Extended Entity Configuration.</para>
+<para>Actions: Check the Extended Entity Configuration is valid and retry creating the entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_ALL_ENTITIES_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-84</para>
+<para>Level: INFO</para>
+<para>Description: Retrieve all Entity Descriptors succeeded.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieve all Entity Descriptors</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_ALL_ENTITIES_FAILED</term>
+<listitem>
+<para>ID: IDFF-85</para>
+<para>Level: INFO</para>
+<para>Description: Failed to get all Entity Descriptors.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieve all Entity Descriptors</para>
+<para>Actions: Check the IDFF Meta Data Debug "libIDFFMeta" for specific errors.; Check if the data repository exists and is accessible.; Check if the IDFF Meta Data Service exists in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_ENTITY_NAMES_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-86</para>
+<para>Level: INFO</para>
+<para>Description: Retrieve names of all Entities.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieve names of all Entities.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_ENTITY_NAMES_FAILED</term>
+<listitem>
+<para>ID: IDFF-87</para>
+<para>Level: INFO</para>
+<para>Description: Failed to get names for all Entities.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieving names of all Entities.</para>
+<para>Actions: Check the IDFF Meta Data Debug "libIDFFMeta" for specific errors.; Check if the data repository exists and is accessible.; Check if the IDFF Meta Data Service exists in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_HOSTED_ENTITIES_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-88</para>
+<para>Level: INFO</para>
+<para>Description: Retrieve all hosted Entities succeeded.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieving all hosted Entities.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_HOSTED_ENTITIES_FAILED</term>
+<listitem>
+<para>ID: IDFF-89</para>
+<para>Level: INFO</para>
+<para>Description: Failed to get all hosted Entities.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieving all hosted Entities.</para>
+<para>Actions: Check the IDFF Meta Data Debug "libIDFFMeta" for specific errors.; Check if the data repository exists and is accessible.; Check if the IDFF Meta Data Service exists in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_REMOTE_ENTITIES_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-90</para>
+<para>Level: INFO</para>
+<para>Description: Retrieval of all remote Entities succeeded.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieve all remote Entities.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_REMOTE_ENTITIES_FAILED</term>
+<listitem>
+<para>ID: IDFF-91</para>
+<para>Level: INFO</para>
+<para>Description: Failed to get all remote Entities.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieving all remote Entities.</para>
+<para>Actions: Check the IDFF Meta Data Debug "libIDFFMeta" for specific errors.; Check if the data repository exists and is accessible.; Check if the IDFF Meta Data Service exists in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_HOSTED_SERVICE_PROVIDERS_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-92</para>
+<para>Level: INFO</para>
+<para>Description: Retrieval of all hosted services providers succeeded.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieving all hosted services providers.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_REMOTE_SERVICE_PROVIDERS_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-93</para>
+<para>Level: INFO</para>
+<para>Description: Retrieval of all remote services providers succeeded.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieve all remote services providers.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_HOSTED_IDENTITY_PROVIDERS_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-94</para>
+<para>Level: INFO</para>
+<para>Description: Retrieval of all hosted identity providers succeeded.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieve all hosted identity providers.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GET_REMOTE_IDENTITY_PROVIDERS_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-95</para>
+<para>Level: INFO</para>
+<para>Description: Retrieval of all remote identity providers succeeded.</para>
+<para>Data: message</para>
+<para>Triggers: Retrieve all remote identity providers.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IS_AFFILIATE_MEMBER_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-96</para>
+<para>Level: INFO</para>
+<para>Description: Checking Affiliation member succeeded.</para>
+<para>Data: Entity ID, Affiliation ID, Realm or Organization Name</para>
+<para>Triggers: Checks if the provider is a member of the Affiliation.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_CONFIG_TO_DELETE</term>
+<listitem>
+<para>ID: IDFF-97</para>
+<para>Level: INFO</para>
+<para>Description: No entity configuration to delete.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Delete Entity Configuration.</para>
+<para>Actions: Check the entityID to make sure the Entity Configuration does exist.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DELETE_ENTITY_CONFIG_FAILED</term>
+<listitem>
+<para>ID: IDFF-98</para>
+<para>Level: INFO</para>
+<para>Description: Failed to delete entity configuration.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Delete Entity Configuration.</para>
+<para>Actions: Check the IDFF Meta Data Debug "libIDFFMeta" for specific errors.; Check if the data repository exists and is accessible.; Check if the IDFF Meta Data Service exists in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DELETE_ENTITY_CONFIG_SUCCEEDED</term>
+<listitem>
+<para>ID: IDFF-99</para>
+<para>Level: INFO</para>
+<para>Description: Entity configuration deleted successfully.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Delete Entity Configuration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_DOES_NOT_EXISTS</term>
+<listitem>
+<para>ID: IDFF-100</para>
+<para>Level: INFO</para>
+<para>Description: Entity does not exist.</para>
+<para>Data: Entity ID, Realm or Organization Name</para>
+<para>Triggers: Delete Entity Descriptor.</para>
+<para>Actions: Check to make sure you have the right entity ID.; Check if the data repository exists and is accessible.; Check if the IDFF Meta Data Service exists in the data repository.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_AUTHN_RESPONSE</term>
+<listitem>
+<para>ID: IDFF-101</para>
+<para>Level: INFO</para>
+<para>Description: Created Authn Response</para>
+<para>Data: saml response or response ID and InResponseTo ID</para>
+<para>Triggers: Created SAML Response</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SENT_AUTHN_RESPONSE</term>
+<listitem>
+<para>ID: IDFF-102</para>
+<para>Level: INFO</para>
+<para>Description: Sent Authn Response</para>
+<para>Data: Service provider's assertion consumer service URL, response ID and InResponseTo ID</para>
+<para>Triggers: Sent Authn Response</para>
+</listitem>
+</varlistentry>
+</variablelist>

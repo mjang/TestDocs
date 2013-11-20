@@ -1,0 +1,274 @@
+<variablelist xml:id="log-ref-COT">
+<para>OpenAM logs the following COT messages.</para>
+<varlistentry>
+<term>INVALID_COT_NAME</term>
+<listitem>
+<para>ID: COT-1</para>
+<para>Level: INFO</para>
+<para>Description: Invalid circle of trust name.</para>
+<para>Data: Realm or organization name, Circle of Trust Name</para>
+<para>Triggers: Accessing the circle of trust.</para>
+<para>Actions: Check the name and retry accessing the circle of trust.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_MODIFY_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-2</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error modifying the circle of trust.</para>
+<para>Data: Error message, Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Modifying the circle of trust.</para>
+<para>Actions: Check COT debug , fmCOT, for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ALL_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-3</para>
+<para>Level: INFO</para>
+<para>Description: Error retreiving all circle of trusts.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Getting all circle of trust.</para>
+<para>Actions: Check configuration; check debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_COT_NAME_CREATE_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-4</para>
+<para>Level: INFO</para>
+<para>Description: Invalid name , error creating the circle of trust.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Creating the circle of trust.</para>
+<para>Actions: Check the name to create circle of trust descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>COT_EXISTS_CREATE_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-5</para>
+<para>Level: INFO</para>
+<para>Description: Circle of Trust exists.</para>
+<para>Data: Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Creating the circle of trust.</para>
+<para>Actions: Create Circle of Trust with a unique name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_COT_TYPE</term>
+<listitem>
+<para>ID: COT-6</para>
+<para>Level: INFO</para>
+<para>Description: Circle of Trust Type is invalid</para>
+<para>Data: Realm or organization name, Circle of Trust Type</para>
+<para>Triggers: Creating the circle of trust.</para>
+<para>Actions: The values for Circle of Trust type are IDFF , SAML2. Create Circle of Trust using either of these values.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_CREATE_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-7</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while creating circle of trust.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Create circle of trust.</para>
+<para>Actions: Check the fmCOT debug file for detailed errors.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>COT_DESCRIPTOR_CREATED</term>
+<listitem>
+<para>ID: COT-8</para>
+<para>Level: INFO</para>
+<para>Description: Circle of trust created.</para>
+<para>Data: Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Creating the circle of trust.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_COT_NAME_ADD_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-9</para>
+<para>Level: INFO</para>
+<para>Description: Circle of Trust name is null, error adding to circle of trust.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Adding to the circle of trust.</para>
+<para>Actions: Check the name of the circle of trust.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_ENTITYID_ADD_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-10</para>
+<para>Level: INFO</para>
+<para>Description: Entity Identifier is null , cannot add entity to circle of trust</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Adding to the circle of trust.</para>
+<para>Actions: Check the value of entity id.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_ADD_COT_MEMBER</term>
+<listitem>
+<para>ID: COT-11</para>
+<para>Level: INFO</para>
+<para>Description: Error adding entity to the circle of trust.</para>
+<para>Data: Error message, Name of the circle of trust, Entity Id, Realm or organization name</para>
+<para>Triggers: Adding entity to circle of trust.</para>
+<para>Actions: Check COT debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_COT_NAME_REMOVE_COT_MEMBER</term>
+<listitem>
+<para>ID: COT-12</para>
+<para>Level: INFO</para>
+<para>Description: Null circle of trust name.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Removing member from the circle of trust.</para>
+<para>Actions: Check the name of the circle of trust.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_ENTITYID_REMOVE_COT_MEMBER</term>
+<listitem>
+<para>ID: COT-13</para>
+<para>Level: INFO</para>
+<para>Description: Null entity identifier.</para>
+<para>Data: Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Removing member from the circle of trust.</para>
+<para>Actions: Check the value of the entity identifier.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_REMOVE_COT_MEMBER</term>
+<listitem>
+<para>ID: COT-14</para>
+<para>Level: INFO</para>
+<para>Description: Error while removing entity from the circle of trust.</para>
+<para>Data: Error message, Name of the circle of trust, Entity Id, Realm or organization name</para>
+<para>Triggers: Removing entity identifier from the circle of trust.</para>
+<para>Actions: Check COT debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_COT_NAME_LIST_COT</term>
+<listitem>
+<para>ID: COT-15</para>
+<para>Level: INFO</para>
+<para>Description: Null circle of trust name.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Listing entities in Circle of Trust</para>
+<para>Actions: Check the name of the circle of trust.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_LIST_COT_MEMBER</term>
+<listitem>
+<para>ID: COT-16</para>
+<para>Level: INFO</para>
+<para>Description: Error listing providers in the circle of trust.</para>
+<para>Data: Error message, Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Listing providers in the circle of trust.</para>
+<para>Actions: Check COT debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_DELETE_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-17</para>
+<para>Level: INFO</para>
+<para>Description: Error while deleting the circle of trust.</para>
+<para>Data: Error message, Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Deleting the circle of trust.</para>
+<para>Actions: Check COT debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_NAME_ERROR_DELETE_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-18</para>
+<para>Level: INFO</para>
+<para>Description: Invalid name, cannot delete circle of trust.</para>
+<para>Data: Circle of Trust Name, Realm or organization name</para>
+<para>Triggers: Deleting the circle of trust.</para>
+<para>Actions: Check the circle of trust name and retry deletion.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>HAS_ENTITIES_DELETE_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-19</para>
+<para>Level: INFO</para>
+<para>Description: Cannot delete circle of trust which has entities.</para>
+<para>Data: Circle of Trust Name, Realm or organization name</para>
+<para>Triggers: Deleting the circle of trust.</para>
+<para>Actions: Remove all entities from the circle of trust and retry deletion.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_COT_TYPE_DELETE_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-20</para>
+<para>Level: INFO</para>
+<para>Description: Invalid type cannot delete circle of trust.</para>
+<para>Data: Realm or organization name, Circle of Trust Name, Circle of Trust Type</para>
+<para>Triggers: Deleting the circle of trust.</para>
+<para>Actions: Specify correct Circle of Trust type and retry delete.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>COT_DESCRIPTOR_DELETED</term>
+<listitem>
+<para>ID: COT-21</para>
+<para>Level: INFO</para>
+<para>Description: Circle of trust deleted.</para>
+<para>Data: Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Deleting the circle of trust.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>COT_FROM_CACHE</term>
+<listitem>
+<para>ID: COT-22</para>
+<para>Level: FINE</para>
+<para>Description: Retrieved the circle of trust from cache.</para>
+<para>Data: Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Retreived the circle of trust from cache.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_COT_DESCRIPTOR</term>
+<listitem>
+<para>ID: COT-23</para>
+<para>Level: INFO</para>
+<para>Description: Error while getting the circle of trust from data store.</para>
+<para>Data: Error message, Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Retreiving the circle of trust</para>
+<para>Actions: Check configuration; check debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_RETREIVE_COT</term>
+<listitem>
+<para>ID: COT-24</para>
+<para>Level: INFO</para>
+<para>Description: Error determining an entity is in a circle of trust.</para>
+<para>Data: Error message, Name of the circle of trust, ID of an entity, Realm or organization name</para>
+<para>Triggers: Determining an entity is in a circle of trust.</para>
+<para>Actions: Check debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>COT_DESCRIPTOR_RETRIEVED</term>
+<listitem>
+<para>ID: COT-25</para>
+<para>Level: INFO</para>
+<para>Description: Retrieved the circle of trust descriptor.</para>
+<para>Data: Name of the circle of trust, Realm or organization name</para>
+<para>Triggers: Retrieving the circle of trust under a realm.</para>
+</listitem>
+</varlistentry>
+</variablelist>

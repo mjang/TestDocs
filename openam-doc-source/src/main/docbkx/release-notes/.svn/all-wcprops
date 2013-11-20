@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/openam/!svn/ver/7262/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/release-notes
+END
+chap-compatibility.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/7178/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/release-notes/chap-compatibility.xml
+END
+chap-issues.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/openam/!svn/ver/7241/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/release-notes/chap-issues.xml
+END
+chap-support.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/openam/!svn/ver/5916/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/release-notes/chap-support.xml
+END
+chap-whats-new.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/openam/!svn/ver/7241/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/release-notes/chap-whats-new.xml
+END
+index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/openam/!svn/ver/5947/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/release-notes/index.xml
+END
+chap-before-you-install.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/openam/!svn/ver/7262/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/release-notes/chap-before-you-install.xml
+END
+chap-feedback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/openam/!svn/ver/3781/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/release-notes/chap-feedback.xml
+END

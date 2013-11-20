@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <concat destfile="/Users/ForgeRock/Documents/FileRepo/trunk/openam/openam-documentation/openam-doc-source/target/generated-resources/chap-log-messages.xml">
+    <header file="/Users/ForgeRock/Documents/FileRepo/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/log-messages-preface.header"/>
+    <fileset dir="/Users/ForgeRock/Documents/FileRepo/trunk/openam/openam-documentation/openam-doc-source/target/generated-resources/xml/xslt" includes="**/*.xml"></fileset>
+    <footer file="/Users/ForgeRock/Documents/FileRepo/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/log-messages-preface.footer"/>
+  </concat>
+</target>
+</project>

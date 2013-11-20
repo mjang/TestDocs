@@ -1,0 +1,550 @@
+<variablelist xml:id="log-ref-WSFederation">
+<para>OpenAM logs the following WSFederation messages.</para>
+<varlistentry>
+<term>INVALID_SIGNATURE_ASSERTION</term>
+<listitem>
+<para>ID: WSFederation-1</para>
+<para>Level: INFO</para>
+<para>Description: Assertion is not signed or signature is not valid.</para>
+<para>Data: Assertion or assertion ID, Realm or organization name, Assertion issuer</para>
+<para>Triggers: Service provider requested the Assertion to be signed but the assertion received was not; or the signature on the Assertion received was not valid.</para>
+<para>Actions: Check configuration; check debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_CONDITIONS_NOT_ON_OR_AFTER</term>
+<listitem>
+<para>ID: WSFederation-2</para>
+<para>Level: INFO</para>
+<para>Description: Assertion conditions are missing notOnOrAfter attribute.</para>
+<para>Data: Assertion or assertion ID</para>
+<para>Triggers: The Conditions element of the assertion is missing its notOnOrAfter attribute.</para>
+<para>Actions: Check the assertion. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ASSERTION_EXPIRED</term>
+<listitem>
+<para>ID: WSFederation-3</para>
+<para>Level: INFO</para>
+<para>Description: Assertion has expired.</para>
+<para>Data: Assertion or assertion ID, Assertion notOnOrAfter time, Time skew in seconds, Current time</para>
+<para>Triggers: The current time is after the assertion's notOnOrAfter time plus the time skew.</para>
+<para>Actions: Synchronize server clocks. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_CONDITIONS_NOT_BEFORE</term>
+<listitem>
+<para>ID: WSFederation-4</para>
+<para>Level: INFO</para>
+<para>Description: Assertion conditions are missing notBefore attribute.</para>
+<para>Data: Assertion or assertion ID</para>
+<para>Triggers: The Conditions element of the assertion is missing its notBefore attribute.</para>
+<para>Actions: Check the assertion. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ASSERTION_NOT_YET_VALID</term>
+<listitem>
+<para>ID: WSFederation-5</para>
+<para>Level: INFO</para>
+<para>Description: Assertion not yet valid.</para>
+<para>Data: Assertion or assertion ID, Assertion notBefore time, Time skew in seconds, Current time</para>
+<para>Triggers: The current time is before the assertion's notBefore time minus the time skew.</para>
+<para>Actions: Synchronize server clocks. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_WRESULT</term>
+<listitem>
+<para>ID: WSFederation-6</para>
+<para>Level: INFO</para>
+<para>Description: WS-Federation response is missing wresult.</para>
+<para>Data: WS-Federation response</para>
+<para>Triggers: The WS-Federation response is missing its wresult parameter.</para>
+<para>Actions: Check the response. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_WCTX</term>
+<listitem>
+<para>ID: WSFederation-7</para>
+<para>Level: INFO</para>
+<para>Description: WS-Federation response is missing wctx.</para>
+<para>Data: WS-Federation response</para>
+<para>Triggers: The WS-Federation response is missing its wctx parameter.</para>
+<para>Actions: Check the response. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_WRESULT</term>
+<listitem>
+<para>ID: WSFederation-8</para>
+<para>Level: INFO</para>
+<para>Description: WS-Federation response is invalid.</para>
+<para>Data: WS-Federation response</para>
+<para>Triggers: The WS-Federation response is not a valid RequestSecurityTokenResponse element.</para>
+<para>Actions: Check the response. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-9</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting entity config.</para>
+<para>Data: Error message, MetaAlias, Realm or organization name</para>
+<para>Triggers: Obtain entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANT_FIND_SP_ACCOUNT_MAPPER</term>
+<listitem>
+<para>ID: WSFederation-10</para>
+<para>Level: INFO</para>
+<para>Description: Can't find SP Account Mapper.</para>
+<para>Data: Error message, Account mapper class name</para>
+<para>Triggers: Cannot get class object for SP account mapper class.</para>
+<para>Actions: Check the configuration. Ensure that SP account mapper class name is correct and that the account mapper class is on the classpath.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANT_CREATE_SP_ACCOUNT_MAPPER</term>
+<listitem>
+<para>ID: WSFederation-11</para>
+<para>Level: INFO</para>
+<para>Description: Can't create SP Account Mapper.</para>
+<para>Data: Error message, Account mapper class name</para>
+<para>Triggers: Cannot create SP account mapper object.</para>
+<para>Actions: Check the configuration. Ensure that SP account mapper class name is correct and that the account mapper class is on the classpath.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANT_CREATE_SESSION</term>
+<listitem>
+<para>ID: WSFederation-12</para>
+<para>Level: INFO</para>
+<para>Description: Can't create session for user.</para>
+<para>Data: Error message, Realm or organization name, User name, Auth level</para>
+<para>Triggers: Cannot create session for user.</para>
+<para>Actions: Check the configuration. Ensure that SP account mapper is finding a user in the local store.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_SUCCESSFUL</term>
+<listitem>
+<para>ID: WSFederation-13</para>
+<para>Level: INFO</para>
+<para>Description: Single sign-on completed successfully.</para>
+<para>Data: wctx, Assertion or assertion ID, Realm or organization name, User ID, Authentication Level, Target URL</para>
+<para>Triggers: Successful WS-Federation RP Signin Response.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNTRUSTED_ISSUER</term>
+<listitem>
+<para>ID: WSFederation-14</para>
+<para>Level: INFO</para>
+<para>Description: Assertion issuer is not trusted by this service provider.</para>
+<para>Data: Assertion or assertion ID, Realm or organization name, Service provider ID, Target URL</para>
+<para>Triggers: Cannot create session for user.</para>
+<para>Actions: Check the configuration. Ensure that SP account mapper is finding a user in the local store.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_SUBJECT</term>
+<listitem>
+<para>ID: WSFederation-15</para>
+<para>Level: INFO</para>
+<para>Description: Assertion does not contain a subject element.</para>
+<para>Data: Assertion or assertion ID</para>
+<para>Triggers: Assertion does not contain a subject element.</para>
+<para>Actions: Check the assertion. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_FEDERATION</term>
+<listitem>
+<para>ID: WSFederation-16</para>
+<para>Level: FINE</para>
+<para>Description: Federation obtained.</para>
+<para>Data: Federation ID, Realm or organization name</para>
+<para>Triggers: Obtain federation.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_INVALID_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: WSFederation-17</para>
+<para>Level: INFO</para>
+<para>Description: Obtained invalid entity descriptor.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity descriptor.</para>
+<para>Actions: Delete invalid entity descriptor and import it again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: WSFederation-18</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting entity descriptor.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity descriptor.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: WSFederation-19</para>
+<para>Level: INFO</para>
+<para>Description: Entity descriptor was set.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_SET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: WSFederation-20</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while setting entity descriptor.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity descriptor.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_INVALID_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: WSFederation-21</para>
+<para>Level: INFO</para>
+<para>Description: Invalid entity descriptor to set.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity descriptor.</para>
+<para>Actions: Check entity descriptor if it follows the schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_DESCRIPTOR_CREATED</term>
+<listitem>
+<para>ID: WSFederation-22</para>
+<para>Level: INFO</para>
+<para>Description: Entity descriptor was created.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_CREATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: WSFederation-23</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while creating entity descriptor.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity descriptor.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_INVALID_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: WSFederation-24</para>
+<para>Level: INFO</para>
+<para>Description: Invalid entity descriptor to create.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity descriptor.</para>
+<para>Actions: Check entity descriptor if it follows the schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_DESCRIPTOR_DELETED</term>
+<listitem>
+<para>ID: WSFederation-25</para>
+<para>Level: INFO</para>
+<para>Description: Entity descriptor was deleted.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_DELETE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: WSFederation-26</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while deleting entity descriptor.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity descriptor.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-27</para>
+<para>Level: FINE</para>
+<para>Description: Entity config obtained.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_INVALID_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-28</para>
+<para>Level: INFO</para>
+<para>Description: Obtained invalid entity config.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity config.</para>
+<para>Actions: Delete invalid entity config and import it again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-29</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting entity config.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_ID_SET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-30</para>
+<para>Level: INFO</para>
+<para>Description: No entity ID while setting entity config.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+<para>Actions: Set entity ID in entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-31</para>
+<para>Level: INFO</para>
+<para>Description: Entity config was set.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_SET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-32</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while setting entity config.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_INVALID_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-33</para>
+<para>Level: INFO</para>
+<para>Description: Invalid entity config to set.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+<para>Actions: Check entity config if it follows the schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_ID_CREATE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-34</para>
+<para>Level: INFO</para>
+<para>Description: No entity ID while creating entity config.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Set entity ID in entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_DESCRIPTOR_CREATE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-35</para>
+<para>Level: INFO</para>
+<para>Description: Entity config doesn't exist while creating entity config.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Create entity descriptor before create entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_CONFIG_EXISTS</term>
+<listitem>
+<para>ID: WSFederation-36</para>
+<para>Level: INFO</para>
+<para>Description: Entity config exists while creating entity config.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Delete existing entity config first.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_CONFIG_CREATED</term>
+<listitem>
+<para>ID: WSFederation-37</para>
+<para>Level: INFO</para>
+<para>Description: Entity config was created.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_CREATE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-38</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while creating entity config.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_INVALID_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-39</para>
+<para>Level: INFO</para>
+<para>Description: Invalid entity config to create.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Check entity config if it follows the schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_CONFIG_DELETE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-40</para>
+<para>Level: INFO</para>
+<para>Description: Entity config doesn't exist while deleting entity config.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_CONFIG_DELETED</term>
+<listitem>
+<para>ID: WSFederation-41</para>
+<para>Level: INFO</para>
+<para>Description: Entity config was deleted.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_DELETE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: WSFederation-42</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while deleting entity config.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ALL_HOSTED_ENTITIES</term>
+<listitem>
+<para>ID: WSFederation-43</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting all hosted entities.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Get all hosted entities.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_ALL_HOSTED_ENTITIES</term>
+<listitem>
+<para>ID: WSFederation-44</para>
+<para>Level: FINE</para>
+<para>Description: Obtained all hosted entities.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Get all hosted entities.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ALL_REMOTE_ENTITIES</term>
+<listitem>
+<para>ID: WSFederation-45</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting all remote entities.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Get all remote entities.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_ALL_REMOTE_ENTITIES</term>
+<listitem>
+<para>ID: WSFederation-46</para>
+<para>Level: FINE</para>
+<para>Description: Obtained all remote entities.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Get all remote entities.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ALL_ENTITIES</term>
+<listitem>
+<para>ID: WSFederation-47</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting all entities.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Get all entities.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_ALL_ENTITIES</term>
+<listitem>
+<para>ID: WSFederation-48</para>
+<para>Level: FINE</para>
+<para>Description: Obtained all entities.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Get all entities.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ASSERTION_CREATED</term>
+<listitem>
+<para>ID: WSFederation-49</para>
+<para>Level: INFO</para>
+<para>Description: Assertion created successfully.</para>
+<para>Data: Assertion or assertion ID</para>
+<para>Triggers: Creation of WS-Federation IdP Signin Response.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ACS_URL</term>
+<listitem>
+<para>ID: WSFederation-50</para>
+<para>Level: INFO</para>
+<para>Description: Could not find an Assertion Consumer Service URL.</para>
+<para>Data: Realm or organization name, Service provider ID, Reply URL</para>
+<para>Triggers: No ACS URL in configuration.; ACS URL provided in request not found in configuration.</para>
+<para>Actions: Check configuration for service provider.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SLO_SUCCESSFUL</term>
+<listitem>
+<para>ID: WSFederation-51</para>
+<para>Level: INFO</para>
+<para>Description: Single logout completed successfully.</para>
+<para>Data: Reply URL</para>
+<para>Triggers: Successful single logout.</para>
+</listitem>
+</varlistentry>
+</variablelist>

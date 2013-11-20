@@ -1,0 +1,44 @@
+K 10
+svn:ignore
+V 45
+target
+openam-site.iml
+openam-doc-source.iml
+
+K 13
+svn:mergeinfo
+V 2878
+/branches/IIS7PostData/openam/openam-documentation/openam-doc-source:224-261
+/branches/IIS7PostData/openam/openam-documentation/openam-site:224-261
+/branches/OAuth2_Maven/openam/openam-documentation/openam-doc-source:2756-3584
+/branches/OPENAM-3097-sessions-not-deleted/openam/openam-documentation/openam-doc-source:6910-6946
+/branches/OPENAM-3130-session-quota/openam/openam-documentation/openam-doc-source:6958-6972
+/branches/andyOpenam1708/openam/openam-documentation/openam-doc-source:5576-5592
+/branches/maven_merge/openam/openam-documentation/openam-doc-source:2556-3124
+/branches/maven_merge/openam/openam-documentation/openam-site:2556-2631
+/branches/openam-3049-cts-reaper-connection-usage/openam/openam-documentation/openam-doc-source:6658-6745
+/branches/openam-3053-cts-tab-exception/openam/openam-documentation/openam-doc-source:6672-6721
+/branches/openam-3072-cts-configuration/openam/openam-documentation/openam-doc-source:6691-6714
+/branches/openam-3092-store-mode-error/openam/openam-documentation/openam-doc-source:6729-6733
+/branches/openam-3110-create-or-update-bug/openam/openam-documentation/openam-doc-source:6767-6804
+/branches/openam_10.1.0_SAML2_FIXES/openam-documentation/openam-doc-source:3725-3740
+/branches/openam_10.1.0_jeff/openam-documentation/openam-doc-source:3128-3527
+/branches/openam_10.1.0_jeff/openam-documentation/openam-site:3128-3287
+/branches/openam_10.1.0_xacml3_JAS/openam/openam-documentation/openam-doc-source:4039-4140
+/branches/openam_10.2.0_xacml3_JAS/openam/openam-documentation/openam-doc-source:4141-4379
+/branches/rwapshott-AME-1739/openam/openam-documentation/openam-doc-source:5331-5353
+/branches/rwapshott-AME-215/openam/openam-documentation/openam-doc-source:4091-4155
+/branches/rwapshott-AME-257/openam/openam-documentation/openam-doc-source:4047-4126
+/branches/rwapshott-AME-804/openam/openam-documentation/openam-doc-source:4267-5404
+/branches/rwapshott-ame-2027-cts-oids-should-follow-fr-oid-scheme/openam/openam-documentation/openam-doc-source:5609-5614
+/branches/rwapshott-ame-2160-session-size/openam/openam-documentation/openam-doc-source:6086-6319
+/branches/rwapshott-ame-2311-index-names/openam/openam-documentation/openam-doc-source:6058-6069
+/branches/rwapshott-ame-258-cts-replication/openam/openam-documentation/openam-doc-source:5548-6055
+/branches/rwapshott-openam-2198-session-resource-protection/openam/openam-documentation/openam-doc-source:5628-5824
+/branches/rwapshott-openam-2526/openam/openam-documentation/openam-doc-source:5442-5484
+/branches/rwapshott-openam-2716-cts-invalid-chars/openam/openam-documentation/openam-doc-source:6170-6194
+/branches/rwapshott-openam-2729-saml2-error/openam/openam-documentation/openam-doc-source:6247-6257
+/trunk/openam/openam-documentation/openam-doc-source:3127-3332
+/trunk/openam/openam-documentation/openam-site:2556-2930
+/trunk/opensso/openam-site:2912-3070
+END

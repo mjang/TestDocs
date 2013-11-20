@@ -1,0 +1,189 @@
+<variablelist xml:id="log-ref-ENTITLEMENT">
+<para>OpenAM logs the following ENTITLEMENT messages.</para>
+<varlistentry>
+<term>ATTEMPT_ADD_PRIVILEGE</term>
+<listitem>
+<para>ID: ENTITLEMENT-1</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to add privilege.</para>
+<para>Data: realm, privilege name</para>
+<para>Triggers: Add privilege API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEEDED_ADD_PRIVILEGE</term>
+<listitem>
+<para>ID: ENTITLEMENT-2</para>
+<para>Level: INFO</para>
+<para>Description: Privilege is added.</para>
+<para>Data: realm, privilege name</para>
+<para>Triggers: Add privilege API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_ADD_PRIVILEGE</term>
+<listitem>
+<para>ID: ENTITLEMENT-3</para>
+<para>Level: INFO</para>
+<para>Description: Failed to add privilege.</para>
+<para>Data: realm, privilege name, error message</para>
+<para>Triggers: Add privilege API is called.</para>
+<para>Actions: Privilege might already exists.; Administrator might not have the permission to add privilege.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_ADD_REFERRAL</term>
+<listitem>
+<para>ID: ENTITLEMENT-11</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to add referral privilege.</para>
+<para>Data: realm, privilege name</para>
+<para>Triggers: Add referral privilege API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEEDED_ADD_REFERRAL</term>
+<listitem>
+<para>ID: ENTITLEMENT-12</para>
+<para>Level: INFO</para>
+<para>Description: Referral Privilege is added.</para>
+<para>Data: realm, privilege name</para>
+<para>Triggers: Add referral privilege API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_ADD_REFERRAL</term>
+<listitem>
+<para>ID: ENTITLEMENT-13</para>
+<para>Level: INFO</para>
+<para>Description: Failed to add referral privilege.</para>
+<para>Data: realm, privilege name, error message</para>
+<para>Triggers: Add referral privilege API is called.</para>
+<para>Actions: Privilege might already exists.; Administrator might not have the permission to add referral privilege.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_REMOVE_PRIVILEGE</term>
+<listitem>
+<para>ID: ENTITLEMENT-21</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to remove privilege.</para>
+<para>Data: realm, privilege name</para>
+<para>Triggers: Remove privilege API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEEDED_REMOVE_PRIVILEGE</term>
+<listitem>
+<para>ID: ENTITLEMENT-22</para>
+<para>Level: INFO</para>
+<para>Description: Privilege is removed.</para>
+<para>Data: realm, privilege name</para>
+<para>Triggers: Removed privilege API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_REMOVE_PRIVILEGE</term>
+<listitem>
+<para>ID: ENTITLEMENT-23</para>
+<para>Level: INFO</para>
+<para>Description: Failed to removed privilege.</para>
+<para>Data: realm, privilege name, error message</para>
+<para>Triggers: Removed privilege API is called.</para>
+<para>Actions: Administrator might not have the permission to remove privilege.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_REMOVE_REFERRAL</term>
+<listitem>
+<para>ID: ENTITLEMENT-31</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to remove referral privilege.</para>
+<para>Data: realm, privilege name</para>
+<para>Triggers: Remove referral privilege API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEEDED_REMOVE_REFERRAL</term>
+<listitem>
+<para>ID: ENTITLEMENT-32</para>
+<para>Level: INFO</para>
+<para>Description: Referral privilege is removed.</para>
+<para>Data: realm, privilege name</para>
+<para>Triggers: Removed referral privilege API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_REMOVE_REFERRAL</term>
+<listitem>
+<para>ID: ENTITLEMENT-33</para>
+<para>Level: INFO</para>
+<para>Description: Failed to removed referral privilege.</para>
+<para>Data: realm, privilege name, error message</para>
+<para>Triggers: Removed referral privilege API is called.</para>
+<para>Actions: Administrator might not have the permission to remove privilege.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_SAVE_APPLICATION</term>
+<listitem>
+<para>ID: ENTITLEMENT-101</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to save application.</para>
+<para>Data: realm, application name</para>
+<para>Triggers: Save application API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEEDED_SAVE_APPLICATION</term>
+<listitem>
+<para>ID: ENTITLEMENT-102</para>
+<para>Level: INFO</para>
+<para>Description: Application is saved.</para>
+<para>Data: realm, application name</para>
+<para>Triggers: Save application API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_SAVE_APPLICATION</term>
+<listitem>
+<para>ID: ENTITLEMENT-103</para>
+<para>Level: INFO</para>
+<para>Description: Failed to save application.</para>
+<para>Data: realm, application name, error message</para>
+<para>Triggers: Save application API is called.</para>
+<para>Actions: Administrator might not have the permission to save application.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_REMOVE_APPLICATION</term>
+<listitem>
+<para>ID: ENTITLEMENT-111</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to remove application.</para>
+<para>Data: realm, application name</para>
+<para>Triggers: Remove application API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEEDED_REMOVE_APPLICATION</term>
+<listitem>
+<para>ID: ENTITLEMENT-112</para>
+<para>Level: INFO</para>
+<para>Description: Application is removed.</para>
+<para>Data: realm, application name</para>
+<para>Triggers: Remove application API is called.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_REMOVE_APPLICATION</term>
+<listitem>
+<para>ID: ENTITLEMENT-113</para>
+<para>Level: INFO</para>
+<para>Description: Failed to remove application.</para>
+<para>Data: realm, application name, error message</para>
+<para>Triggers: Remove application API is called.</para>
+<para>Actions: Administrator might not have the permission to remove application.</para>
+</listitem>
+</varlistentry>
+</variablelist>

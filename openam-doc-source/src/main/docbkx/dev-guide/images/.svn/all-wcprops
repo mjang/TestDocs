@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/openam/!svn/ver/6853/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images
+END
+dotnet-fedlet-sso-response.png
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/openam/!svn/ver/5507/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/dotnet-fedlet-sso-response.png
+END
+fedlet-xacml-query-request.png
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/openam/!svn/ver/5504/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/fedlet-xacml-query-request.png
+END
+fedlet-sso-response.png
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/openam/!svn/ver/5496/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/fedlet-sso-response.png
+END
+register-sample-auth.png
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/openam/!svn/ver/6793/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/register-sample-auth.png
+END
+openam-auth-sample-login.png
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/openam/!svn/ver/6793/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/openam-auth-sample-login.png
+END
+fedlet-xacml-query-response.png
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/openam/!svn/ver/5496/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/fedlet-xacml-query-response.png
+END
+fedlet-attr-query-request.png
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/openam/!svn/ver/5496/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/fedlet-attr-query-request.png
+END
+sample-condition.png
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/openam/!svn/ver/6853/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/sample-condition.png
+END
+dotnet-fedlet-attr-query-response.png
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/openam/!svn/ver/5507/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/dotnet-fedlet-attr-query-response.png
+END
+bjensen-with-custom-attribute.png
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/openam/!svn/ver/6853/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/bjensen-with-custom-attribute.png
+END
+sae.png
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/openam/!svn/ver/6853/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/sae.png
+END
+fedlet-attr-query-response.png
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/openam/!svn/ver/5496/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/fedlet-attr-query-response.png
+END
+openam-apis-overview.png
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/openam/!svn/ver/3804/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/openam-apis-overview.png
+END
+sampleauth-test.png
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/sampleauth-test.png
+END
+fedlet-demo.png
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/openam/!svn/ver/6853/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/fedlet-demo.png
+END
+dotnet-fedlet-sso-request.png
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/openam/!svn/ver/5507/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/dotnet-fedlet-sso-request.png
+END
+sampleauth-conf.png
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/sampleauth-conf.png
+END
+config-client-sdk-war.png
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/openam/!svn/ver/4960/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/config-client-sdk-war.png
+END
+fedlet-sso-request.png
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/openam/!svn/ver/5496/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/images/fedlet-sso-request.png
+END

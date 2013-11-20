@@ -1,0 +1,11 @@
+<!-- List generated at 15:48:58 20131023 using http://bugster.forgerock.org/jira/rest/api/2/search?jql=project+%3D+OPENAM+AND+resolution+%3D+fixed+AND+fixVersion+in+%28%22Agents-3.1.0-Xpress%22%2C+%22Agents-3.2.0%22%2C+%22Agents-3.3.0%22%29+and+component+%3D+%22j2ee+agents%22+and+type+in+%28%22New+Feature%22%2C+Improvement%29&startAt=0&maxResults=500&fields=summary-->
+  <itemizedlist>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-2397" xlink:show="new">OPENAM-2397</link>: agent should expose complete REST calls in debug log</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-1806" xlink:show="new">OPENAM-1806</link>: port agent to jboss as7</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-1735" xlink:show="new">OPENAM-1735</link>: J2EE Policy Agent is not supported for JBoss7.1</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-1299" xlink:show="new">OPENAM-1299</link>: Java EE agent goto URL should be modifiable</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-1273" xlink:show="new">OPENAM-1273</link>: support tomcat_v7 j2ee agent  </para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-1265" xlink:show="new">OPENAM-1265</link>: Ability to set Login URL based on incoming FQDN</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-674" xlink:show="new">OPENAM-674</link>: J2EE Agent FormLoginContent.txt not XML valid, causes problems for non-browser / non-html parser clients</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-591" xlink:show="new">OPENAM-591</link>: J2EE Agent for Tomcat 7 needed</para></listitem>
+  </itemizedlist>

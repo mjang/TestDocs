@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/openam/!svn/ver/7192/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference
+END
+log-messages-preface.header
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/openam/!svn/ver/5739/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/log-messages-preface.header
+END
+man-configurator-jar-1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/6671/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/man-configurator-jar-1.xml
+END
+chap-l10n.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/openam/!svn/ver/6620/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/chap-l10n.xml
+END
+log-messages-preface.footer
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/openam/!svn/ver/5581/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/log-messages-preface.footer
+END
+man-ampassword-1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/man-ampassword-1.xml
+END
+chap-config-ref.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/openam/!svn/ver/7192/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/chap-config-ref.xml
+END
+man-agentadmin-varnish.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/5051/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/man-agentadmin-varnish.xml
+END
+man-amverifyarchive-1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/man-amverifyarchive-1.xml
+END
+chap-standards.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/openam/!svn/ver/6424/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/chap-standards.xml
+END
+preface.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/preface.xml
+END
+index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/openam/!svn/ver/6490/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/index.xml
+END
+chap-error-messages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/chap-error-messages.xml
+END
+chap-endpoints.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/openam/!svn/ver/6601/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/chap-endpoints.xml
+END
+man-agentadmin-1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/man-agentadmin-1.xml
+END
+chap-ports-used.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/openam/!svn/ver/6398/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/chap-ports-used.xml
+END
+chap-xui-parameters.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/openam/!svn/ver/6963/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/reference/chap-xui-parameters.xml
+END

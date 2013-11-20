@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/openam/!svn/ver/7164/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared
+END
+sec-release-levels.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/openam/!svn/ver/5420/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/sec-release-levels.xml
+END
+variablelist-oauth2-endpoints.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/openam/!svn/ver/4602/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/variablelist-oauth2-endpoints.xml
+END
+listitem-conditional-login-url-jee.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/openam/!svn/ver/7164/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/listitem-conditional-login-url-jee.xml
+END
+chap-support.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/openam/!svn/ver/5916/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/chap-support.xml
+END
+sec-formatting-conventions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/openam/!svn/ver/4575/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/sec-formatting-conventions.xml
+END
+sec-joining-the-community.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/4007/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/sec-joining-the-community.xml
+END
+sec-interface-stability.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/openam/!svn/ver/5420/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/sec-interface-stability.xml
+END
+sec-accessing-doc-online.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/openam/!svn/ver/4007/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/sec-accessing-doc-online.xml
+END
+listitem-conditional-login-url-web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/openam/!svn/ver/7164/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/listitem-conditional-login-url-web.xml
+END
+chap-feedback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/openam/!svn/ver/5872/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/shared/chap-feedback.xml
+END

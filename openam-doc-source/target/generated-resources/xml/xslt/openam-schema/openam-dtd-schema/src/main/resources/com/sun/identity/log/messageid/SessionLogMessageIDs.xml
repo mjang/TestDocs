@@ -1,0 +1,133 @@
+<variablelist xml:id="log-ref-SESSION">
+<para>OpenAM logs the following SESSION messages.</para>
+<varlistentry>
+<term>SESSION_CREATED</term>
+<listitem>
+<para>ID: SESSION-1</para>
+<para>Level: INFO</para>
+<para>Description: Session is Created</para>
+<para>Data: User ID</para>
+<para>Triggers: User is authenticated.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_IDLE_TIMED_OUT</term>
+<listitem>
+<para>ID: SESSION-2</para>
+<para>Level: INFO</para>
+<para>Description: Session has idle timedout</para>
+<para>Data: User ID</para>
+<para>Triggers: User session idle for long time.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_MAX_TIMEOUT</term>
+<listitem>
+<para>ID: SESSION-3</para>
+<para>Level: INFO</para>
+<para>Description: Session has Expired</para>
+<para>Data: User ID</para>
+<para>Triggers: User session has reached its maximun time limit.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_LOGOUT</term>
+<listitem>
+<para>ID: SESSION-4</para>
+<para>Level: INFO</para>
+<para>Description: User has Logged out</para>
+<para>Data: User ID</para>
+<para>Triggers: User has logged out of the system.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_REACTIVATION</term>
+<listitem>
+<para>ID: SESSION-5</para>
+<para>Level: INFO</para>
+<para>Description: Session is Reactivated</para>
+<para>Data: User ID</para>
+<para>Triggers: User session state is active.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_DESTROYED</term>
+<listitem>
+<para>ID: SESSION-6</para>
+<para>Level: INFO</para>
+<para>Description: Session is Destroyed</para>
+<para>Data: User ID</para>
+<para>Triggers: User session is destroyed and cannot be referenced.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_PROPERTY_CHANGED</term>
+<listitem>
+<para>ID: SESSION-7</para>
+<para>Level: INFO</para>
+<para>Description: Session's property is changed.</para>
+<para>Data: User ID</para>
+<para>Triggers: User changed session's unprotected property.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_UNKNOWN_EVENT</term>
+<listitem>
+<para>ID: SESSION-8</para>
+<para>Level: INFO</para>
+<para>Description: Session received Unknown Event</para>
+<para>Data: User ID</para>
+<para>Triggers: Unknown session event</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_PROTECTED_PROPERTY_ERROR</term>
+<listitem>
+<para>ID: SESSION-9</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to set protected property</para>
+<para>Data: User ID</para>
+<para>Triggers: Attempt to set protected property</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_QUOTA_EXHAUSTED</term>
+<listitem>
+<para>ID: SESSION-10</para>
+<para>Level: INFO</para>
+<para>Description: User's session quota has been exhausted.</para>
+<para>Data: User ID</para>
+<para>Triggers: Session quota exhausted</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_DATABASE_UNAVAILABLE</term>
+<listitem>
+<para>ID: SESSION-11</para>
+<para>Level: INFO</para>
+<para>Description: Session database used for session failover and session constraint is not available.</para>
+<para>Data: User ID</para>
+<para>Triggers: Unable to reach the session database.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_DATABASE_BACK_ONLINE</term>
+<listitem>
+<para>ID: SESSION-12</para>
+<para>Level: INFO</para>
+<para>Description: Session database is back online.</para>
+<para>Data: User ID</para>
+<para>Triggers: Session database is back online..</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_MAX_LIMIT_REACHED</term>
+<listitem>
+<para>ID: SESSION-13</para>
+<para>Level: INFO</para>
+<para>Description: The total number of valid sessions hosted on the AM server has reached the max limit.</para>
+<para>Data: User ID</para>
+<para>Triggers: Session max limit reached.</para>
+</listitem>
+</varlistentry>
+</variablelist>

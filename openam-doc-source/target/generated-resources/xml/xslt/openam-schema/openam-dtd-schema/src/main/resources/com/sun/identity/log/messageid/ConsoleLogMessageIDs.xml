@@ -1,0 +1,4566 @@
+<variablelist xml:id="log-ref-CONSOLE">
+<para>OpenAM logs the following CONSOLE messages.</para>
+<varlistentry>
+<term>ATTEMPT_IDENTITY_CREATION</term>
+<listitem>
+<para>ID: CONSOLE-1</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create Identity</para>
+<para>Data: identity name, identity type, realm name</para>
+<para>Triggers: Click on create button in Realm Creation Page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDENTITY_CREATED</term>
+<listitem>
+<para>ID: CONSOLE-2</para>
+<para>Level: INFO</para>
+<para>Description: Creation of Identity succeeded.</para>
+<para>Data: identity name, identity type, realm name</para>
+<para>Triggers: Click on create button in Realm Creation Page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_IDENTITY_CREATION</term>
+<listitem>
+<para>ID: CONSOLE-3</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of Identity failed</para>
+<para>Data: identity name, identity type, realm name, error message</para>
+<para>Triggers: Unable to create an identity under a realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_IDENTITY_CREATION</term>
+<listitem>
+<para>ID: CONSOLE-4</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of Identity failed</para>
+<para>Data: identity name, identity type, realm name, error message</para>
+<para>Triggers: Unable to create an identity under a realm due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_SEARCH_IDENTITY</term>
+<listitem>
+<para>ID: CONSOLE-11</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to search for Identities</para>
+<para>Data: base realm, identity type, search pattern, search size limit, search time limit</para>
+<para>Triggers: Click on Search button in identity search view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_SEARCH_IDENTITY</term>
+<listitem>
+<para>ID: CONSOLE-12</para>
+<para>Level: INFO</para>
+<para>Description: Searching for Identities succeeded</para>
+<para>Data: base realm, identity type, search pattern, search size limit, search time limit</para>
+<para>Triggers: Click on Search button in identity search view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_SEARCH_IDENTITY</term>
+<listitem>
+<para>ID: CONSOLE-13</para>
+<para>Level: SEVERE</para>
+<para>Description: Searching for identities failed</para>
+<para>Data: identity name, identity type, realm name, error message</para>
+<para>Triggers: Unable to perform search operation on identities under a realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_SEARCH_IDENTITY</term>
+<listitem>
+<para>ID: CONSOLE-14</para>
+<para>Level: SEVERE</para>
+<para>Description: Searching for identities failed</para>
+<para>Data: identity name, identity type, realm name, error message</para>
+<para>Triggers: Unable to perform search operation on identities under a realm due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_READ_IDENTITY_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-21</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to read attribute values of an identity</para>
+<para>Data: identity name, name of attributes</para>
+<para>Triggers: View identity profile view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_READ_IDENTITY_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-22</para>
+<para>Level: INFO</para>
+<para>Description: Reading of attribute values of an identity succeeded</para>
+<para>Data: identity name, name of attributes</para>
+<para>Triggers: View identity profile view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_READ_IDENTITY_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-23</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of attribute values of an identity failed</para>
+<para>Data: identity name, name of attributes, error message</para>
+<para>Triggers: Unable to read attribute values of an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_READ_IDENTITY_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-24</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of attribute values of an identity failed</para>
+<para>Data: identity name, name of attributes, error message</para>
+<para>Triggers: Unable to read attribute values of an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_READ_IDENTITY_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-25</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of attribute values of an identity failed</para>
+<para>Data: identity name, name of attributes, error message</para>
+<para>Triggers: Unable to read attribute values of an identity due to exception service manager API.</para>
+<para>Actions: Look under service manage log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_IDENTITY_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-31</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify attribute values of an identity</para>
+<para>Data: identity name, name of attributes</para>
+<para>Triggers: Click on Save button in identity profile view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_IDENTITY_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-32</para>
+<para>Level: INFO</para>
+<para>Description: Modification of attribute values of an identity succeeded</para>
+<para>Data: identity name, name of attributes</para>
+<para>Triggers: Click on Save button in identity profile view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_IDENTITY_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-33</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of attribute values of an identity failed</para>
+<para>Data: identity name, name of attributes, error message</para>
+<para>Triggers: Unable to modify attribute values of an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_MODIFY_IDENTITY_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-34</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of attribute values of an identity failed</para>
+<para>Data: identity name, name of attributes, error message</para>
+<para>Triggers: Unable to modify attribute values of an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_IDENTITY</term>
+<listitem>
+<para>ID: CONSOLE-41</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete identities</para>
+<para>Data: realm name, name of identities to be deleted</para>
+<para>Triggers: Click on Delete button in identity search view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_IDENTITY</term>
+<listitem>
+<para>ID: CONSOLE-42</para>
+<para>Level: INFO</para>
+<para>Description: Deletion of identities succeeded</para>
+<para>Data: realm name, name of identities to be deleted</para>
+<para>Triggers: Click on Delete button in identity search view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_DELETE_IDENTITY</term>
+<listitem>
+<para>ID: CONSOLE-43</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of identities failed</para>
+<para>Data: realm name, name of identities to be deleted, error message</para>
+<para>Triggers: Unable to delete identities. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_DELETE_IDENTITY</term>
+<listitem>
+<para>ID: CONSOLE-44</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of identities failed</para>
+<para>Data: realm name, name of identities to be deleted, error message</para>
+<para>Triggers: Unable to delete identities due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_READ_IDENTITY_MEMBERSHIP</term>
+<listitem>
+<para>ID: CONSOLE-51</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to read identity's memberships information</para>
+<para>Data: name of identity, membership identity type</para>
+<para>Triggers: View membership page of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_READ_IDENTITY_MEMBERSHIP</term>
+<listitem>
+<para>ID: CONSOLE-52</para>
+<para>Level: INFO</para>
+<para>Description: Reading of identity's memberships information succeeded</para>
+<para>Data: name of identity, membership identity type</para>
+<para>Triggers: View membership page of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_READ_IDENTITY_MEMBERSHIP</term>
+<listitem>
+<para>ID: CONSOLE-53</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of identity's memberships information failed.</para>
+<para>Data: name of identity, membership identity type, error message</para>
+<para>Triggers: Unable to read identity's memberships information. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_READ_IDENTITY_MEMBERSHIP</term>
+<listitem>
+<para>ID: CONSOLE-54</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of identity's memberships information failed.</para>
+<para>Data: name of identity, membership identity type, error message</para>
+<para>Triggers: Unable to read identity's memberships information due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_READ_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-61</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to read identity's members information</para>
+<para>Data: name of identity, members identity type</para>
+<para>Triggers: View members page of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_READ_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-62</para>
+<para>Level: INFO</para>
+<para>Description: Reading of identity's members information succeeded</para>
+<para>Data: name of identity, members identity type</para>
+<para>Triggers: View members page of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_READ_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-63</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of identity's members information failed.</para>
+<para>Data: name of identity, member identity type, error message</para>
+<para>Triggers: Unable to read identity's members information. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_READ_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-64</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of identity's members information failed.</para>
+<para>Data: name of identity, member identity type, error message</para>
+<para>Triggers: Unable to read identity's members information due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_ADD_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-71</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to add member to an identity</para>
+<para>Data: name of identity, name of identity to be added.</para>
+<para>Triggers: Select members to be added to an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_ADD_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-72</para>
+<para>Level: INFO</para>
+<para>Description: Addition of member to an identity succeeded</para>
+<para>Data: name of identity, name of identity added.</para>
+<para>Triggers: Select members to be added to an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_ADD_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-73</para>
+<para>Level: SEVERE</para>
+<para>Description: Addition of member to an identity failed.</para>
+<para>Data: name of identity, name of identity to be added., error message</para>
+<para>Triggers: Unable to add member to an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_ADD_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-74</para>
+<para>Level: SEVERE</para>
+<para>Description: Addition of member to an identity failed.</para>
+<para>Data: name of identity, name of identity to be added., error message</para>
+<para>Triggers: Unable to add member to an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_REMOVE_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-81</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to remove member from an identity</para>
+<para>Data: name of identity, name of identity to be removed.</para>
+<para>Triggers: Select members to be removed from an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_REMOVE_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-82</para>
+<para>Level: INFO</para>
+<para>Description: Removal of member from an identity succeeded</para>
+<para>Data: name of identity, name of identity removed.</para>
+<para>Triggers: Select members to be removed from an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_REMOVE_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-83</para>
+<para>Level: SEVERE</para>
+<para>Description: Removal of member to an identity failed.</para>
+<para>Data: name of identity, name of identity to be removed., error message</para>
+<para>Triggers: Unable to remove member from an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_REMOVE_IDENTITY_MEMBER</term>
+<listitem>
+<para>ID: CONSOLE-84</para>
+<para>Level: SEVERE</para>
+<para>Description: Removal of member from an identity failed.</para>
+<para>Data: name of identity, name of identity to be removed., error message</para>
+<para>Triggers: Unable to remove member to an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_READ_IDENTITY_ASSIGNED_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-91</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to read assigned service names of an identity</para>
+<para>Data: name of identity</para>
+<para>Triggers: Click on Add button in service assignment view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_READ_IDENTITY_ASSIGNED_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-92</para>
+<para>Level: INFO</para>
+<para>Description: Reading assigned service names of an identity succeeded</para>
+<para>Data: name of identity</para>
+<para>Triggers: Click on Add button in service assignment view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_READ_IDENTITY_ASSIGNED_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-93</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading assigned service names of an identity failed.</para>
+<para>Data: name of identity, error message</para>
+<para>Triggers: Unable to read assigned service names of an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_READ_IDENTITY_ASSIGNED_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-94</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading assigned service names of an identity failed.</para>
+<para>Data: name of identity, error message</para>
+<para>Triggers: Unable to read assigned service names of an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_READ_IDENTITY_ASSIGNABLE_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-101</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to read assignable service names of an identity</para>
+<para>Data: name of identity</para>
+<para>Triggers: View the services page of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_READ_IDENTITY_ASSIGNABLE_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-102</para>
+<para>Level: INFO</para>
+<para>Description: Reading assignable service names of an identity succeeded</para>
+<para>Data: name of identity</para>
+<para>Triggers: View the services page of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_READ_IDENTITY_ASSIGNABLE_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-103</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading assignable service names of an identity failed.</para>
+<para>Data: name of identity, error message</para>
+<para>Triggers: Unable to read assignable service names of an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_READ_IDENTITY_ASSIGNABLE_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-104</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading assignable service names of an identity failed.</para>
+<para>Data: name of identity, error message</para>
+<para>Triggers: Unable to read assignable service names of an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_IDENTITY_ASSIGN_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-111</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to assign a service to an identity</para>
+<para>Data: name of identity, name of service</para>
+<para>Triggers: Click Add button of service view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_IDENTITY_ASSIGN_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-112</para>
+<para>Level: INFO</para>
+<para>Description: Assignment of service to an identity succeeded</para>
+<para>Data: name of identity, name of service</para>
+<para>Triggers: Click Add button of service view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_IDENTITY_ASSIGN_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-113</para>
+<para>Level: SEVERE</para>
+<para>Description: Assignment of service to an identity failed.</para>
+<para>Data: name of identity, name of service, error message</para>
+<para>Triggers: Unable to assign service to an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_IDENTITY_ASSIGN_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-114</para>
+<para>Level: SEVERE</para>
+<para>Description: Assignment of service to an identity failed.</para>
+<para>Data: name of identity, name of service, error message</para>
+<para>Triggers: Unable to assign service to an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_IDENTITY_UNASSIGN_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-121</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to unassign a service from an identity</para>
+<para>Data: name of identity, name of service</para>
+<para>Triggers: Click Remove button in service view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_IDENTITY_UNASSIGN_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-122</para>
+<para>Level: INFO</para>
+<para>Description: Unassignment of service to an identity succeeded</para>
+<para>Data: name of identity, name of service</para>
+<para>Triggers: Click Remove button in service view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_IDENTITY_UNASSIGN_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-123</para>
+<para>Level: SEVERE</para>
+<para>Description: Unassignment of service from an identity failed.</para>
+<para>Data: name of identity, name of service, error message</para>
+<para>Triggers: Unable to unassign service from an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_IDENTITY_UNASSIGN_SERVICE</term>
+<listitem>
+<para>ID: CONSOLE-124</para>
+<para>Level: SEVERE</para>
+<para>Description: Unassignment of service from an identity failed.</para>
+<para>Data: name of identity, name of service, error message</para>
+<para>Triggers: Unable to unassign service from an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_IDENTITY_READ_SERVICE_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-131</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to read service attribute values of an identity</para>
+<para>Data: name of identity, name of service</para>
+<para>Triggers: View service profile view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_IDENTITY_READ_SERVICE_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-132</para>
+<para>Level: INFO</para>
+<para>Description: Reading of service attribute values of an identity succeeded</para>
+<para>Data: name of identity, name of service</para>
+<para>Triggers: View service profile view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_IDENTITY_READ_SERVICE_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-133</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of service attribute values of an identity failed.</para>
+<para>Data: name of identity, name of service, error message</para>
+<para>Triggers: Unable to read service attribute values of an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_IDENTITY_READ_SERVICE_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-134</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of service attribute values of an identity failed.</para>
+<para>Data: name of identity, name of service, error message</para>
+<para>Triggers: Unable to read service attribute values of an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_IDENTITY_WRITE_SERVICE_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-141</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to write service attribute values to an identity</para>
+<para>Data: name of identity, name of service</para>
+<para>Triggers: Click on Save button in service profile view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_IDENTITY_WRITE_SERVICE_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-142</para>
+<para>Level: INFO</para>
+<para>Description: Writing of service attribute values to an identity succeeded</para>
+<para>Data: name of identity, name of service</para>
+<para>Triggers: Click on Save button in service profile view of an identity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_IDENTITY_WRITE_SERVICE_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-143</para>
+<para>Level: SEVERE</para>
+<para>Description: Writing of service attribute values to an identity failed.</para>
+<para>Data: name of identity, name of service, error message</para>
+<para>Triggers: Unable to write service attribute values to an identity. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDM_EXCEPTION_IDENTITY_WRITE_SERVICE_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-144</para>
+<para>Level: SEVERE</para>
+<para>Description: Writing of service attribute values to an identity failed.</para>
+<para>Data: name of identity, name of service, error message</para>
+<para>Triggers: Unable to write service attribute values to an identity due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_READ_ALL_GLOBAL_DEFAULT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-201</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to read all global service default attribute values</para>
+<para>Data: name of service</para>
+<para>Triggers: View global configuration view of a service.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_READ_ALL_GLOBAL_DEFAULT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-202</para>
+<para>Level: INFO</para>
+<para>Description: Reading of all global service default attribute values succeeded</para>
+<para>Data: name of service</para>
+<para>Triggers: View global configuration view of a service.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_READ_GLOBAL_DEFAULT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-203</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to read global service default attribute values</para>
+<para>Data: name of service, name of attribute</para>
+<para>Triggers: View global configuration view of a service.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_READ_GLOBAL_DEFAULT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-204</para>
+<para>Level: INFO</para>
+<para>Description: Reading of global service default attribute values succeeded</para>
+<para>Data: name of service, name of attribute</para>
+<para>Triggers: View global configuration view of a service.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_READ_GLOBAL_DEFAULT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-205</para>
+<para>Level: INFO</para>
+<para>Description: Reading of global service default attribute values failed</para>
+<para>Data: name of service, name of attribute</para>
+<para>Triggers: View global configuration view of a service.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_WRITE_GLOBAL_DEFAULT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-211</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to write global service default attribute values</para>
+<para>Data: name of service, name of attribute</para>
+<para>Triggers: Click on Save button in global configuration view of a service.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_WRITE_GLOBAL_DEFAULT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-212</para>
+<para>Level: INFO</para>
+<para>Description: Writing of global service default attribute values succeeded</para>
+<para>Data: name of service, name of attribute</para>
+<para>Triggers: Click on Save button in global configuration view of a service.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_WRITE_GLOBAL_DEFAULT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-213</para>
+<para>Level: SEVERE</para>
+<para>Description: Writing of global service default attribute values failed.</para>
+<para>Data: name of service, name of attribute, error message</para>
+<para>Triggers: Unable to write global service default attribute values. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_WRITE_GLOBAL_DEFAULT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-214</para>
+<para>Level: SEVERE</para>
+<para>Description: Writing of global service default attribute values failed.</para>
+<para>Data: name of service, name of attribute, error message</para>
+<para>Triggers: Unable to write service default attribute values due to service management error.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_READ_GLOBAL_SUB_CONFIGURATION_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-221</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get sub configuration names</para>
+<para>Data: name of service, name of base global sub configuration</para>
+<para>Triggers: View a global service view of which its service has sub schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_READ_GLOBAL_SUB_CONFIGURATION_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-222</para>
+<para>Level: INFO</para>
+<para>Description: Reading of global sub configuration names succeeded</para>
+<para>Data: name of service, name of base global sub configuration</para>
+<para>Triggers: View a global service view of which its service has sub schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_READ_GLOBAL_SUB_CONFIGURATION_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-223</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of global sub configuration names failed.</para>
+<para>Data: name of service, name of base global sub configuration, error message</para>
+<para>Triggers: Unable to get global sub configuration names. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_READ_GLOBAL_SUB_CONFIGURATION_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-224</para>
+<para>Level: SEVERE</para>
+<para>Description: Reading of global sub configuration names failed.</para>
+<para>Data: name of service, name of base global sub configuration, error message</para>
+<para>Triggers: Unable to get global sub configuration names due to service management error.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_GLOBAL_SUB_CONFIGURATION</term>
+<listitem>
+<para>ID: CONSOLE-231</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete sub configuration</para>
+<para>Data: name of service, name of base global sub configuration, name of sub configuration to be deleted</para>
+<para>Triggers: Click on delete selected button in global service profile view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_GLOBAL_SUB_CONFIGURATION</term>
+<listitem>
+<para>ID: CONSOLE-232</para>
+<para>Level: INFO</para>
+<para>Description: Deletion of sub configuration succeeded</para>
+<para>Data: name of service, name of base global sub configuration, name of sub configuration to be deleted</para>
+<para>Triggers: Click on delete selected button in global service profile view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_DELETE_GLOBAL_SUB_CONFIGURATION</term>
+<listitem>
+<para>ID: CONSOLE-233</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of sub configuration failed.</para>
+<para>Data: name of service, name of base global sub configuration, name of sub configuration to be deleted, error message</para>
+<para>Triggers: Unable to delete sub configuration. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_DELETE_GLOBAL_SUB_CONFIGURATION</term>
+<listitem>
+<para>ID: CONSOLE-234</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of sub configuration failed.</para>
+<para>Data: name of service, name of base global sub configuration, name of sub configuration to be deleted, error message</para>
+<para>Triggers: Unable to delete sub configuration due to service management error.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_GLOBAL_SUB_CONFIGURATION</term>
+<listitem>
+<para>ID: CONSOLE-241</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create sub configuration</para>
+<para>Data: name of service, name of base global sub configuration, name of sub configuration to be created, name of sub schema to be created</para>
+<para>Triggers: Click on add button in create sub configuration view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_GLOBAL_SUB_CONFIGURATION</term>
+<listitem>
+<para>ID: CONSOLE-242</para>
+<para>Level: INFO</para>
+<para>Description: Creation of sub configuration succeeded</para>
+<para>Data: name of service, name of base global sub configuration, name of sub configuration to be created, name of sub schema to be created</para>
+<para>Triggers: Click on add button in create sub configuration view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_CREATE_GLOBAL_SUB_CONFIGURATION</term>
+<listitem>
+<para>ID: CONSOLE-243</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of sub configuration failed.</para>
+<para>Data: name of service, name of base global sub configuration, name of sub configuration to be created, name of sub schema to be created, error message</para>
+<para>Triggers: Unable to create sub configuration. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_CREATE_GLOBAL_SUB_CONFIGURATION</term>
+<listitem>
+<para>ID: CONSOLE-244</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of sub configuration failed.</para>
+<para>Data: name of service, name of base global sub configuration, name of sub configuration to be created, name of sub schema to be created, error message</para>
+<para>Triggers: Unable to create sub configuration due to service management error.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_READ_GLOBAL_SUB_CONFIGURATION_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-251</para>
+<para>Level: INFO</para>
+<para>Description: Reading of sub configuration's attribute values succeeded</para>
+<para>Data: name of service, name of sub configuration</para>
+<para>Triggers: View sub configuration profile view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_WRITE_GLOBAL_SUB_CONFIGURATION_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-261</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to write sub configuration's attribute values</para>
+<para>Data: name of service, name of sub configuration</para>
+<para>Triggers: Click on save button in sub configuration profile view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_WRITE_GLOBAL_SUB_CONFIGURATION_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-262</para>
+<para>Level: INFO</para>
+<para>Description: Writing of sub configuration's attribute values succeeded</para>
+<para>Data: name of service, name of sub configuration</para>
+<para>Triggers: Click on save button in sub configuration profile view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_WRITE_GLOBAL_SUB_CONFIGURATION_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-263</para>
+<para>Level: SEVERE</para>
+<para>Description: Writing of sub configuration's attribute value failed.</para>
+<para>Data: name of service, name of sub configuration, error message</para>
+<para>Triggers: Unable to write sub configuration's attribute values. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_WRITE_GLOBAL_SUB_CONFIGURATION_ATTRIBUTE_VALUES_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-264</para>
+<para>Level: SEVERE</para>
+<para>Description: Writing of sub configuration's attribute value failed.</para>
+<para>Data: name of service, name of sub configuration, error message</para>
+<para>Triggers: Unable to write sub configuration's attribute value due to service management error.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_POLICY_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-301</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get policy names under a realm.</para>
+<para>Data: name of realm</para>
+<para>Triggers: View policy main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_POLICY_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-302</para>
+<para>Level: INFO</para>
+<para>Description: Getting policy names under a realm succeeded</para>
+<para>Data: name of realm</para>
+<para>Triggers: View policy main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_POLICY_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-303</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting policy names under a realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get policy names under a realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under policy log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POLICY_EXCEPTION_GET_POLICY_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-304</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting policy names under a realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get policy names under a realm due to policy SDK related errors.</para>
+<para>Actions: Look under policy log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-311</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create policy under a realm.</para>
+<para>Data: name of realm, name of policy</para>
+<para>Triggers: Click on New button in policy creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-312</para>
+<para>Level: INFO</para>
+<para>Description: Creation of policy succeeded</para>
+<para>Data: name of realm, name of policy</para>
+<para>Triggers: Click on New button in policy creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_CREATE_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-313</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of policy failed.</para>
+<para>Data: name of realm, name of policy, error message</para>
+<para>Triggers: Unable to create policy under a realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under policy log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POLICY_EXCEPTION_CREATE_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-314</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of policy failed.</para>
+<para>Data: name of realm, name of policy, error message</para>
+<para>Triggers: Unable to create policy under a realm due to policy SDK related errors.</para>
+<para>Actions: Look under policy log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-321</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify policy.</para>
+<para>Data: name of realm, name of policy</para>
+<para>Triggers: Click on Save button in policy profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-322</para>
+<para>Level: INFO</para>
+<para>Description: Modification of policy succeeded</para>
+<para>Data: name of realm, name of policy</para>
+<para>Triggers: Click on Save button in policy profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-323</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of policy failed.</para>
+<para>Data: name of realm, name of policy, error message</para>
+<para>Triggers: Unable to modify policy under a realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under policy log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POLICY_EXCEPTION_MODIFY_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-324</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of policy failed.</para>
+<para>Data: name of realm, name of policy, error message</para>
+<para>Triggers: Unable to modify policy due to policy SDK related errors.</para>
+<para>Actions: Look under policy log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-331</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete policy.</para>
+<para>Data: name of realm, names of policies</para>
+<para>Triggers: Click on Delete button in policy main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-332</para>
+<para>Level: INFO</para>
+<para>Description: Deletion of policy succeeded</para>
+<para>Data: name of realm, name of policies</para>
+<para>Triggers: Click on Delete button in policy main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_DELETE_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-333</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of policy failed.</para>
+<para>Data: name of realm, name of policies, error message</para>
+<para>Triggers: Unable to delete policy. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under policy log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POLICY_EXCEPTION_DELETE_POLICY</term>
+<listitem>
+<para>ID: CONSOLE-334</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of policy failed.</para>
+<para>Data: name of realm, name of policies, error message</para>
+<para>Triggers: Unable to delete policy due to policy SDK related errors.</para>
+<para>Actions: Look under policy log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_REALM_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-401</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get realm names</para>
+<para>Data: name of parent realm</para>
+<para>Triggers: View realm main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_REALM_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-402</para>
+<para>Level: INFO</para>
+<para>Description: Getting realm names succeeded.</para>
+<para>Data: name of parent realm</para>
+<para>Triggers: View realm main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_REALM_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-403</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting realm names failed.</para>
+<para>Data: name of parent realm, error message</para>
+<para>Triggers: Unable to get realm names due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_REALM</term>
+<listitem>
+<para>ID: CONSOLE-411</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create realm</para>
+<para>Data: name of parent realm, name of new realm</para>
+<para>Triggers: Click on New button in create realm page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_REALM</term>
+<listitem>
+<para>ID: CONSOLE-412</para>
+<para>Level: INFO</para>
+<para>Description: Creation of realm succeeded.</para>
+<para>Data: name of parent realm, name of new realm</para>
+<para>Triggers: Click on New button in create realm page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_CREATE_REALM</term>
+<listitem>
+<para>ID: CONSOLE-413</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of realm failed.</para>
+<para>Data: name of parent realm, name of new realm, error message</para>
+<para>Triggers: Unable to create new realm due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_REALM</term>
+<listitem>
+<para>ID: CONSOLE-421</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete realm</para>
+<para>Data: name of parent realm, name of realm to delete</para>
+<para>Triggers: Click on Delete button in realm main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_REALM</term>
+<listitem>
+<para>ID: CONSOLE-422</para>
+<para>Level: INFO</para>
+<para>Description: Deletion of realm succeeded.</para>
+<para>Data: name of parent realm, name of realm to delete</para>
+<para>Triggers: Click on Delete button in realm main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_DELETE_REALM</term>
+<listitem>
+<para>ID: CONSOLE-423</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of realm failed.</para>
+<para>Data: name of parent realm, name of realm to delete, error message</para>
+<para>Triggers: Unable to delete realm due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ATTR_VALUES_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-431</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get attribute values of realm</para>
+<para>Data: name of realm</para>
+<para>Triggers: View realm profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ATTR_VALUES_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-432</para>
+<para>Level: INFO</para>
+<para>Description: Getting attribute values of realm succeeded.</para>
+<para>Data: name of realm</para>
+<para>Triggers: View realm profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_ATTR_VALUES_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-433</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting attribute values of realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get attribute values of realm due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_SET_ATTR_VALUES_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-441</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify realm's profile</para>
+<para>Data: name of realm</para>
+<para>Triggers: Click on Save button in realm profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_SET_ATTR_VALUES_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-442</para>
+<para>Level: INFO</para>
+<para>Description: Modification of realm's profile succeeded.</para>
+<para>Data: name of realm</para>
+<para>Triggers: Click on Save button in realm profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_SET_ATTR_VALUES_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-443</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of realm's profile failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to modify realm's profile due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_DELEGATION_SUBJECTS</term>
+<listitem>
+<para>ID: CONSOLE-501</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get delegation subjects under a realm</para>
+<para>Data: name of realm, search pattern</para>
+<para>Triggers: View delegation main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_DELEGATION_SUBJECTS</term>
+<listitem>
+<para>ID: CONSOLE-502</para>
+<para>Level: INFO</para>
+<para>Description: Getting delegation subjects under a realm succeeded.</para>
+<para>Data: name of realm, search pattern</para>
+<para>Triggers: View delegation main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_DELEGATION_SUBJECTS</term>
+<listitem>
+<para>ID: CONSOLE-503</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting delegation subjects under a realm failed.</para>
+<para>Data: name of realm, search pattern, error message</para>
+<para>Triggers: Unable to get delegation subjects. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under delegation management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DELEGATION_EXCEPTION_GET_DELEGATION_SUBJECTS</term>
+<listitem>
+<para>ID: CONSOLE-504</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting delegation subjects under a realm failed.</para>
+<para>Data: name of realm, search pattern, error message</para>
+<para>Triggers: Unable to get delegation subjects due to delegation management SDK related errors.</para>
+<para>Actions: Look under delegation management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_PRIVILEGES_OF_DELEGATION_SUBJECT</term>
+<listitem>
+<para>ID: CONSOLE-511</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get privileges of delegation subject</para>
+<para>Data: name of realm, ID of delegation subject</para>
+<para>Triggers: View delegation subject profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_PRIVILEGES_OF_DELEGATION_SUBJECT</term>
+<listitem>
+<para>ID: CONSOLE-512</para>
+<para>Level: INFO</para>
+<para>Description: Getting privileges of delegation subject succeeded.</para>
+<para>Data: name of realm, ID of delegation subject</para>
+<para>Triggers: View delegation subject profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_PRIVILEGES_OF_DELEGATION_SUBJECT</term>
+<listitem>
+<para>ID: CONSOLE-513</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting privileges of delegation subject failed.</para>
+<para>Data: name of realm, ID of delegation subject, error message</para>
+<para>Triggers: Unable to get privileges of delegation subject. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under delegation management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DELEGATION_EXCEPTION_GET_PRIVILEGES_OF_DELEGATION_SUBJECT</term>
+<listitem>
+<para>ID: CONSOLE-514</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting privileges of delegation subject failed.</para>
+<para>Data: name of realm, ID of delegation subject, error message</para>
+<para>Triggers: Unable to get privileges of delegation subject due to delegation management SDK related errors.</para>
+<para>Actions: Look under delegation management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_DELEGATION_PRIVILEGE</term>
+<listitem>
+<para>ID: CONSOLE-521</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify delegation privilege</para>
+<para>Data: name of realm, ID of delegation privilege, ID of subject</para>
+<para>Triggers: Click on Save button in delegation subject profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_DELEGATION_PRIVILEGE</term>
+<listitem>
+<para>ID: CONSOLE-522</para>
+<para>Level: INFO</para>
+<para>Description: Modification of delegation privilege succeeded.</para>
+<para>Data: name of realm, ID of delegation privilege, ID of subject</para>
+<para>Triggers: Click on Save button in delegation subject profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_DELEGATION_PRIVILEGE</term>
+<listitem>
+<para>ID: CONSOLE-523</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of delegation privilege failed.</para>
+<para>Data: name of realm, ID of delegation privilege, ID of subject, error message</para>
+<para>Triggers: Unable to modify delegation privilege. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under delegation management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DELEGATION_EXCEPTION_MODIFY_DELEGATION_PRIVILEGE</term>
+<listitem>
+<para>ID: CONSOLE-524</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of delegation privilege failed.</para>
+<para>Data: name of realm, ID of delegation privilege, ID of subject, error message</para>
+<para>Triggers: Unable to modify delegation privilege due to delegation management SDK related errors.</para>
+<para>Actions: Look under delegation management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ID_REPO_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-601</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get data store names</para>
+<para>Data: name of realm</para>
+<para>Triggers: View data store main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ID_REPO_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-602</para>
+<para>Level: INFO</para>
+<para>Description: Getting data store names succeeded.</para>
+<para>Data: name of realm</para>
+<para>Triggers: View data store main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_ID_REPO_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-603</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting data store names failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get data store names. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_ID_REPO_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-604</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting data store names failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get data store names due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ATTR_VALUES_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-611</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get attribute values of identity repository</para>
+<para>Data: name of realm, name of identity repository</para>
+<para>Triggers: View data store profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ATTR_VALUES_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-612</para>
+<para>Level: INFO</para>
+<para>Description: Getting attribute values of data store succeeded.</para>
+<para>Data: name of realm, name of identity repository</para>
+<para>Triggers: View data store profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_ATTR_VALUES_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-613</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting attribute values of data store failed.</para>
+<para>Data: name of realm, name of identity repository, error message</para>
+<para>Triggers: Unable to get attribute values of identity repository. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_ATTR_VALUES_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-614</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting attribute values of data store failed.</para>
+<para>Data: name of realm, name of identity repository, error message</para>
+<para>Triggers: Unable to get attribute values of data store due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-621</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create identity repository</para>
+<para>Data: name of realm, name of identity repository, type of identity repository</para>
+<para>Triggers: Click on New button in data store creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-622</para>
+<para>Level: INFO</para>
+<para>Description: Creation of data store succeeded.</para>
+<para>Data: name of realm, name of identity repository, type of identity repository</para>
+<para>Triggers: Click on New button in data store creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_CREATE_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-623</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of data store failed.</para>
+<para>Data: name of realm, name of identity repository, type of identity repository, error message</para>
+<para>Triggers: Unable to create identity repository. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_CREATE_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-624</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation data store failed.</para>
+<para>Data: name of realm, name of identity repository, type of identity repository, error message</para>
+<para>Triggers: Unable to create data store due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-631</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete identity repository</para>
+<para>Data: name of realm, name of identity repository</para>
+<para>Triggers: Click on Delete button in data store main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-632</para>
+<para>Level: INFO</para>
+<para>Description: Deletion of data store succeeded.</para>
+<para>Data: name of realm, name of identity repository</para>
+<para>Triggers: Click on Delete button in data store main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_DELETE_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-633</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of data store failed.</para>
+<para>Data: name of realm, name of identity repository, error message</para>
+<para>Triggers: Unable to delete identity repository. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_DELETE_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-634</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion data store failed.</para>
+<para>Data: name of realm, name of identity repository, error message</para>
+<para>Triggers: Unable to delete data store due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-641</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify identity repository</para>
+<para>Data: name of realm, name of identity repository</para>
+<para>Triggers: Click on Save button in data store profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-642</para>
+<para>Level: INFO</para>
+<para>Description: Modification of data store succeeded.</para>
+<para>Data: name of realm, name of identity repository</para>
+<para>Triggers: Click on Save button in data store profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-643</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of data store failed.</para>
+<para>Data: name of realm, name of identity repository, error message</para>
+<para>Triggers: Unable to modify identity repository. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_MODIFY_ID_REPO</term>
+<listitem>
+<para>ID: CONSOLE-644</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification data store failed.</para>
+<para>Data: name of realm, name of identity repository, error message</para>
+<para>Triggers: Unable to modify data store due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ASSIGNED_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-701</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get assigned services of realm</para>
+<para>Data: name of realm</para>
+<para>Triggers: View realm's service main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ASSIGNED_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-702</para>
+<para>Level: INFO</para>
+<para>Description: Getting assigned services of realm succeeded.</para>
+<para>Data: name of realm</para>
+<para>Triggers: View realm's service main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIGURATION_EXCEPTION_GET_ASSIGNED_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-703</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting assigned services of realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get assigned services of realm due authentication configuration exception.</para>
+<para>Actions: Look under authentication log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_ASSIGNED_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-704</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting assigned services of realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get assigned services of realm due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDREPO_EXCEPTION_GET_ASSIGNED_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-705</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting assigned services of realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get assigned services of realm due to data store SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_ASSIGNED_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-706</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting assigned services of realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get assigned services of realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ASSIGNABLE_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-711</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get assignable services of realm</para>
+<para>Data: name of realm</para>
+<para>Triggers: View realm's service main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ASSIGNABLE_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-712</para>
+<para>Level: INFO</para>
+<para>Description: Getting assignable services of realm succeeded.</para>
+<para>Data: name of realm</para>
+<para>Triggers: View realm's service main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIGURATION_EXCEPTION_GET_ASSIGNABLE_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-713</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting assignable services of realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get assignable services of realm due authentication configuration exception.</para>
+<para>Actions: Look under authentication log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_ASSIGNABLE_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-714</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting assignable services of realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get assignable services of realm due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDREPO_EXCEPTION_GET_ASSIGNABLE_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-715</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting assignable services of realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get assignable services of realm due to ID Repository management SDK exception.</para>
+<para>Actions: Look under ID Repository management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_ASSIGNABLE_SERVICE_OF_REALM</term>
+<listitem>
+<para>ID: CONSOLE-716</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting assignable services of realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get assignable services of realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_UNASSIGN_SERVICE_FROM_REALM</term>
+<listitem>
+<para>ID: CONSOLE-721</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to unassign service from realm</para>
+<para>Data: name of realm, name of service</para>
+<para>Triggers: Click on Unassign button in realm's service page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_UNASSIGN_SERVICE_FROM_REALM</term>
+<listitem>
+<para>ID: CONSOLE-722</para>
+<para>Level: INFO</para>
+<para>Description: Unassign service from realm succeeded.</para>
+<para>Data: name of realm, name of service</para>
+<para>Triggers: Click on Unassign button in realm's service page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_UNASSIGN_SERVICE_FROM_REALM</term>
+<listitem>
+<para>ID: CONSOLE-723</para>
+<para>Level: SEVERE</para>
+<para>Description: Unassign service from realm failed.</para>
+<para>Data: name of realm, name of service, error message</para>
+<para>Triggers: Unable to unassign service from realm due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_UNASSIGN_SERVICE_FROM_REALM</term>
+<listitem>
+<para>ID: CONSOLE-725</para>
+<para>Level: SEVERE</para>
+<para>Description: Unassign service from realm failed.</para>
+<para>Data: name of realm, name of service, error message</para>
+<para>Triggers: Unable to unassign service from realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDREPO_EXCEPTION_UNASSIGN_SERVICE_FROM_REALM</term>
+<listitem>
+<para>ID: CONSOLE-724</para>
+<para>Level: SEVERE</para>
+<para>Description: Unassign service from realm failed.</para>
+<para>Data: name of realm, name of service, error message</para>
+<para>Triggers: Unable to unassign service from realm due to data store management SDK exception.</para>
+<para>Actions: Look under data store management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_ASSIGN_SERVICE_TO_REALM</term>
+<listitem>
+<para>ID: CONSOLE-731</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to assign service to realm</para>
+<para>Data: name of realm, name of service</para>
+<para>Triggers: Click on assign button in realm's service page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_ASSIGN_SERVICE_TO_REALM</term>
+<listitem>
+<para>ID: CONSOLE-732</para>
+<para>Level: INFO</para>
+<para>Description: Assignment of service to realm succeeded.</para>
+<para>Data: name of realm, name of service</para>
+<para>Triggers: Click on assign button in realm's service page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_ASSIGN_SERVICE_TO_REALM</term>
+<listitem>
+<para>ID: CONSOLE-733</para>
+<para>Level: SEVERE</para>
+<para>Description: Assignment of service to realm failed.</para>
+<para>Data: name of realm, name of service, error message</para>
+<para>Triggers: Unable to assign service to realm due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_ASSIGN_SERVICE_TO_REALM</term>
+<listitem>
+<para>ID: CONSOLE-734</para>
+<para>Level: SEVERE</para>
+<para>Description: Assignment of service to realm failed.</para>
+<para>Data: name of realm, name of service, error message</para>
+<para>Triggers: Unable to assign service to realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDREPO_EXCEPTION_ASSIGN_SERVICE_TO_REALM</term>
+<listitem>
+<para>ID: CONSOLE-735</para>
+<para>Level: SEVERE</para>
+<para>Description: Assignment of service to realm failed.</para>
+<para>Data: name of realm, name of service, error message</para>
+<para>Triggers: Unable to assign service to realm due to data store SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ATTR_VALUE_OF_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-741</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get attribute values of service in realm</para>
+<para>Data: name of realm, name of service, name of attribute schema</para>
+<para>Triggers: View realm's service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ATTR_VALUE_OF_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-742</para>
+<para>Level: INFO</para>
+<para>Description: Getting of attribute values of service under realm succeeded.</para>
+<para>Data: name of realm, name of service, name of attribute schema</para>
+<para>Triggers: View realm's service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_ATTR_VALUE_OF_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-743</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting of attribute values of service under realm failed.</para>
+<para>Data: name of realm, name of service, name of attribute schema, error message</para>
+<para>Triggers: Unable to get attribute values of service due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDREPO_EXCEPTION_GET_ATTR_VALUE_OF_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-744</para>
+<para>Level: INFO</para>
+<para>Description: Getting of attribute values of service under realm failed.</para>
+<para>Data: name of realm, name of service, name of attribute schema, error message</para>
+<para>Triggers: Unable to get attribute values of service due to data store SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_ATTR_VALUE_OF_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-745</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting of attribute values of service under realm failed.</para>
+<para>Data: name of realm, name of service, name of attribute schema, error message</para>
+<para>Triggers: Unable to get attribute values of service. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-751</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify attribute values of service in realm</para>
+<para>Data: name of realm, name of service</para>
+<para>Triggers: Click on Save button in realm's service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-752</para>
+<para>Level: INFO</para>
+<para>Description: Modification of attribute values of service under realm succeeded.</para>
+<para>Data: name of realm, name of service</para>
+<para>Triggers: Click on Save button in realm's service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_MODIFY_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-753</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of attribute values of service under realm failed.</para>
+<para>Data: name of realm, name of service, error message</para>
+<para>Triggers: Unable to modify attribute values of service due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDREPO_EXCEPTION_MODIFY_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-754</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of attribute values of service under realm failed.</para>
+<para>Data: name of realm, name of service, error message</para>
+<para>Triggers: Unable to modify attribute values of service due to data store error.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_SERVICE_UNDER_REALM</term>
+<listitem>
+<para>ID: CONSOLE-755</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of attribute values of service under realm failed.</para>
+<para>Data: name of realm, name of service, error message</para>
+<para>Triggers: Unable to modify attribute values of service. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_AUTH_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-801</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get authentication type</para>
+<para>Data: server instance name</para>
+<para>Triggers: View authentication profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_AUTH_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-802</para>
+<para>Level: INFO</para>
+<para>Description: Getting of authentication type succeeded.</para>
+<para>Data: server instance name</para>
+<para>Triggers: View authentication profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_AUTH_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-803</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting of authentication type failed.</para>
+<para>Data: error message</para>
+<para>Triggers: Unable to get authentication type due to authentication configuration SDK exception.</para>
+<para>Actions: Look under authentication management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-811</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get authentication instances under a realm</para>
+<para>Data: name of realm</para>
+<para>Triggers: View authentication profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-812</para>
+<para>Level: INFO</para>
+<para>Description: Getting of authentication instances under a realm succeeded.</para>
+<para>Data: name of realm</para>
+<para>Triggers: View authentication profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTH_CONFIG_EXCEPTION_GET_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-813</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting of authentication instances under a realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get authentication instance due to authentication configuration SDK exception.</para>
+<para>Actions: Look under authentication management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_REMOVE_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-821</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to remove authentication instances under a realm</para>
+<para>Data: name of realm, name of authentication instance</para>
+<para>Triggers: View authentication profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_REMOVE_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-822</para>
+<para>Level: INFO</para>
+<para>Description: Removal of authentication instances under a realm succeeded.</para>
+<para>Data: name of realm, name of authentication instance</para>
+<para>Triggers: View authentication profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTH_CONFIG_EXCEPTION_REMOVE_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-823</para>
+<para>Level: SEVERE</para>
+<para>Description: Removal of authentication instances under a realm failed.</para>
+<para>Data: name of realm, name of authentication instance, error message</para>
+<para>Triggers: Unable to remove authentication instance due to authentication configuration SDK exception.</para>
+<para>Actions: Look under authentication management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-831</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create authentication instance under a realm</para>
+<para>Data: name of realm, name of authentication instance, type of authentication instance</para>
+<para>Triggers: Click on New button in authentication creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-832</para>
+<para>Level: INFO</para>
+<para>Description: Creation of authentication instance under a realm succeeded.</para>
+<para>Data: name of realm, name of authentication instance, type of authentication instance</para>
+<para>Triggers: Click on New button in authentication creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTH_CONFIG_EXCEPTION_CREATE_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-833</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of authentication instance under a realm failed.</para>
+<para>Data: name of realm, name of authentication instance, type of authentication instance, error message</para>
+<para>Triggers: Unable to create authentication instance due to authentication configuration exception.</para>
+<para>Actions: Look under authentication configuration log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-841</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify authentication instance</para>
+<para>Data: name of realm, name of authentication service</para>
+<para>Triggers: Click on Save button in authentication profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-842</para>
+<para>Level: INFO</para>
+<para>Description: Modification of authentication instance succeeded.</para>
+<para>Data: name of realm, name of authentication service</para>
+<para>Triggers: Click on Save button in authentication profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_MODIFY_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-843</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of authentication instance failed.</para>
+<para>Data: name of realm, name of authentication service, error message</para>
+<para>Triggers: Unable to modify authentication instance due to service management SDK exception.</para>
+<para>Actions: Look under service anagement log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_AUTH_INSTANCE</term>
+<listitem>
+<para>ID: CONSOLE-844</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of authentication instance failed.</para>
+<para>Data: name of realm, name of authentication service, error message</para>
+<para>Triggers: Unable to modify authentication instance. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_AUTH_INSTANCE_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-851</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get authentication instance profile</para>
+<para>Data: name of realm, name of authentication instance</para>
+<para>Triggers: View authentication instance profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_AUTH_INSTANCE_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-852</para>
+<para>Level: INFO</para>
+<para>Description: Getting of authentication instance profile succeeded.</para>
+<para>Data: name of realm, name of authentication instance</para>
+<para>Triggers: View authentication instance profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTH_CONFIGURATION_EXCEPTION_GET_AUTH_INSTANCE_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-853</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting of authentication instance profile failed.</para>
+<para>Data: name of realm, name of authentication instance, error message</para>
+<para>Triggers: Unable to get authentication instance profile due to authentication configuration SDK exception.</para>
+<para>Actions: Look under authentication management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_AUTH_INSTANCE_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-861</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify authentication instance profile</para>
+<para>Data: name of realm, name of authentication instance</para>
+<para>Triggers: Click on Save button in authentication instance profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_AUTH_INSTANCE_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-862</para>
+<para>Level: INFO</para>
+<para>Description: Modification of authentication instance profile succeeded.</para>
+<para>Data: name of realm, name of authentication instance</para>
+<para>Triggers: Click on Save button in authentication instance profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTH_CONFIGURATION_EXCEPTION_MODIFY_AUTH_INSTANCE_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-863</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of authentication instance profile failed.</para>
+<para>Data: name of realm, name of authentication instance, error message</para>
+<para>Triggers: Unable to modify authentication instance profile due to authentication configuration SDK exception.</para>
+<para>Actions: Look under authentication management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_MODIFY_AUTH_INSTANCE_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-864</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of authentication instance profile failed.</para>
+<para>Data: name of realm, name of authentication instance, error message</para>
+<para>Triggers: Unable to modify authentication instance profile due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_AUTH_INSTANCE_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-865</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of authentication instance profile failed.</para>
+<para>Data: name of realm, name of authentication instance, error message</para>
+<para>Triggers: Unable to modify authentication instance profile. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_AUTH_PROFILE_IN_REALM</term>
+<listitem>
+<para>ID: CONSOLE-871</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get authentication profile under a realm</para>
+<para>Data: name of realm</para>
+<para>Triggers: View authentication profile under a realm page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_AUTH_PROFILE_IN_REALM</term>
+<listitem>
+<para>ID: CONSOLE-872</para>
+<para>Level: INFO</para>
+<para>Description: Getting authentication profile under a realm succeeded.</para>
+<para>Data: name of realm</para>
+<para>Triggers: View authentication profile under a realm page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_CONFIGURATION_EXCEPTION_GET_AUTH_PROFILE_IN_REALM</term>
+<listitem>
+<para>ID: CONSOLE-873</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting authentication profile under a realm failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get authentication profile under a realm due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-881</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get authentication configuration profile</para>
+<para>Data: name of realm, name of authentication configuration</para>
+<para>Triggers: View authentication configuration profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-882</para>
+<para>Level: INFO</para>
+<para>Description: Getting authentication configuration profile succeeded.</para>
+<para>Data: name of realm, name of authentication configuration</para>
+<para>Triggers: View authentication configuration profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-883</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting authentication configuration profile failed.</para>
+<para>Data: name of realm, name of authentication configuration, error message</para>
+<para>Triggers: Unable to get authentication configuration profile. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-884</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting authentication configuration profile failed.</para>
+<para>Data: name of realm, name of authentication configuration, error message</para>
+<para>Triggers: Unable to get authentication configuration profile due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTH_CONFIGURATION_EXCEPTION_GET_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-885</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting authentication configuration profile failed.</para>
+<para>Data: name of realm, name of authentication configuration, error message</para>
+<para>Triggers: Unable to get authentication configuration profile due to authentication configuration SDK exception.</para>
+<para>Actions: Look under authentication configuration log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-891</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify authentication configuration profile</para>
+<para>Data: name of realm, name of authentication configuration</para>
+<para>Triggers: Click on Save button in authentication configuration profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-892</para>
+<para>Level: INFO</para>
+<para>Description: Modification of authentication configuration profile succeeded.</para>
+<para>Data: name of realm, name of authentication configuration</para>
+<para>Triggers: Click on Save button in authentication configuration profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-893</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of authentication configuration profile failed.</para>
+<para>Data: name of realm, name of authentication configuration, error message</para>
+<para>Triggers: Unable to modify authentication configuration profile. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_MODIFY_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-894</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of authentication configuration profile failed.</para>
+<para>Data: name of realm, name of authentication configuration, error message</para>
+<para>Triggers: Unable to modify authentication configuration profile due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTH_CONFIGURATION_EXCEPTION_MODIFY_AUTH_CONFIG_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-895</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of authentication configuration profile failed.</para>
+<para>Data: name of realm, name of authentication configuration, error message</para>
+<para>Triggers: Unable to modify authentication configuration profile due to authentication configuration SDK exception.</para>
+<para>Actions: Look under authentication configuration log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_AUTH_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-901</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create authentication configuration</para>
+<para>Data: name of realm, name of authentication configuration</para>
+<para>Triggers: Click on New button in authentication configuration creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_AUTH_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-902</para>
+<para>Level: INFO</para>
+<para>Description: Creation of authentication configuration succeeded.</para>
+<para>Data: name of realm, name of authentication configuration</para>
+<para>Triggers: Click on New button in authentication configuration creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_CREATE_AUTH_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-903</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of authentication configuration failed.</para>
+<para>Data: name of realm, name of authentication configuration, error message</para>
+<para>Triggers: Unable to create authentication configuration. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_CREATE_AUTH_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-904</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of authentication configuration failed.</para>
+<para>Data: name of realm, name of authentication configuration, error message</para>
+<para>Triggers: Unable to create authentication configuration due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTH_CONFIGURATION_EXCEPTION_CREATE_AUTH_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-905</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of authentication configuration failed.</para>
+<para>Data: name of realm, name of authentication configuration, error message</para>
+<para>Triggers: Unable to create authentication configuration due to authentication configuration SDK exception.</para>
+<para>Actions: Look under authentication configuration log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1001</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get entity descriptor names.</para>
+<para>Data: search pattern</para>
+<para>Triggers: View entity descriptor main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1002</para>
+<para>Level: INFO</para>
+<para>Description: Getting entity descriptor names succeeded</para>
+<para>Data: search pattern</para>
+<para>Triggers: View entity descriptor main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_GET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1003</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting entity descriptor names failed.</para>
+<para>Data: search pattern, error message</para>
+<para>Triggers: Unable to get entity descriptor names due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1011</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create entity descriptor.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, descriptor type</para>
+<para>Triggers: Click on New button in entity descriptor creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1012</para>
+<para>Level: INFO</para>
+<para>Description: Creation entity descriptor succeeded</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, descriptor type</para>
+<para>Triggers: Click on New button in entity descriptor creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_CREATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1013</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation entity descriptor failed.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, descriptor type, error message</para>
+<para>Triggers: Unable to create entity descriptor due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_ENTITY_DESCRIPTORS</term>
+<listitem>
+<para>ID: CONSOLE-1021</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete entity descriptors.</para>
+<para>Data: descriptor names</para>
+<para>Triggers: Click on Delete button in entity descriptor main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_ENTITY_DESCRIPTORS</term>
+<listitem>
+<para>ID: CONSOLE-1022</para>
+<para>Level: INFO</para>
+<para>Description: Deletion entity descriptors succeeded</para>
+<para>Data: descriptor names</para>
+<para>Triggers: Click on Delete button in entity descriptor main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_DELETE_ENTITY_DESCRIPTORS</term>
+<listitem>
+<para>ID: CONSOLE-1023</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion entity descriptors failed.</para>
+<para>Data: descriptor names, error message</para>
+<para>Triggers: Unable to delete entity descriptors due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_AFFILIATE_ENTITY_DESCRIPTOR_ATTR_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1031</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get attribute values of an affiliate entity descriptor.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol</para>
+<para>Triggers: View affiliate entity descriptor profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_AFFILIATE_ENTITY_DESCRIPTOR_ATTR_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1032</para>
+<para>Level: INFO</para>
+<para>Description: Getting of attribute values of an affiliate entity descriptor succeeded.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol</para>
+<para>Triggers: View affiliate entity descriptor profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_GET_AFFILIATE_ENTITY_DESCRIPTOR_ATTR_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1033</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting of attribute values of an affiliate entity descriptor failed.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, error message</para>
+<para>Triggers: Unable to get attribute value of an affiliate entity descriptor due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_AFFILIATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1041</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify an affiliate entity descriptor.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol</para>
+<para>Triggers: Click on Save button of affiliate entity descriptor profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_AFFILIATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1042</para>
+<para>Level: INFO</para>
+<para>Description: Modification of an affiliate entity descriptor succeeded.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol</para>
+<para>Triggers: Click on Save button of affiliate entity descriptor profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_MODIFY_AFFILIATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1043</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of an affiliate entity descriptor failed.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, error message</para>
+<para>Triggers: Unable to modify an affiliate entity descriptor due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTRIBUTE_FORMAT_EXCEPTION_MODIFY_AFFILIATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1044</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of an affiliate entity descriptor failed.</para>
+<para>Data: descriptor name, error message</para>
+<para>Triggers: Unable to modify an affiliate entity descriptor due to incorrect number format of one or more attribute values.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ENTITY_DESCRIPTOR_ATTR_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1051</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get attribute values of an entity descriptor.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, descriptor type</para>
+<para>Triggers: View entity descriptor profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ENTITY_DESCRIPTOR_ATTR_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1052</para>
+<para>Level: INFO</para>
+<para>Description: Getting attribute values of entity descriptor succeeded.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, descriptor type</para>
+<para>Triggers: View entity descriptor profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_GET_ENTITY_DESCRIPTOR_ATTR_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1053</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting attribute values of entity descriptor failed.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, descriptor type, error message</para>
+<para>Triggers: Unable to get attribute values of entity descriptor due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1061</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify entity descriptor.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, descriptor type</para>
+<para>Triggers: Click on Save button in entity descriptor profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1062</para>
+<para>Level: INFO</para>
+<para>Description: Modification of entity descriptor succeeded.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, descriptor type</para>
+<para>Triggers: Click on Save button in entity descriptor profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_MODIFY_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: CONSOLE-1063</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of entity descriptor failed.</para>
+<para>Data: descriptor realm, descriptor name, descriptor protocol, descriptor type, error message</para>
+<para>Triggers: Unable to modify entity descriptor due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_AUTH_DOMAINS</term>
+<listitem>
+<para>ID: CONSOLE-1101</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get authentication domain names.</para>
+<para>Data: search pattern</para>
+<para>Triggers: View authentication domain main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_AUTH_DOMAINS</term>
+<listitem>
+<para>ID: CONSOLE-1102</para>
+<para>Level: INFO</para>
+<para>Description: Getting authentication domain names succeeded.</para>
+<para>Data: search pattern</para>
+<para>Triggers: View authentication domain main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_GET_AUTH_DOMAINS</term>
+<listitem>
+<para>ID: CONSOLE-1103</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting authentication domain names failed.</para>
+<para>Data: name of realm, error message</para>
+<para>Triggers: Unable to get authentication domain names due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1111</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create authentication domain</para>
+<para>Data: name of authentication domain</para>
+<para>Triggers: Click on New button in authentication domain creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1112</para>
+<para>Level: INFO</para>
+<para>Description: Creation authentication domain succeeded.</para>
+<para>Data: name of authentication domain</para>
+<para>Triggers: Click on New button in authentication domain creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_CREATE_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1113</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation authentication domain failed.</para>
+<para>Data: name of authentication domain, error message</para>
+<para>Triggers: Unable to create authentication domain due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_AUTH_DOMAINS</term>
+<listitem>
+<para>ID: CONSOLE-1121</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete authentication domains</para>
+<para>Data: name of realm, name of authentication domains</para>
+<para>Triggers: Click on Delete button in authentication domain main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1122</para>
+<para>Level: INFO</para>
+<para>Description: Deletion authentication domain succeeded.</para>
+<para>Data: name of realm, name of authentication domains</para>
+<para>Triggers: Click on Delete button in authentication domain main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_DELETE_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1123</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion authentication domain failed.</para>
+<para>Data: name of realm, name of authentication domains, error message</para>
+<para>Triggers: Unable to delete authentication domain due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_AUTH_DOMAIN_ATTR_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1131</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get authentication domain's attribute values</para>
+<para>Data: name of realm, name of authentication domain</para>
+<para>Triggers: View authentication domain profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_AUTH_DOMAIN_ATTR_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1132</para>
+<para>Level: INFO</para>
+<para>Description: Getting attribute values of authentication domain succeeded.</para>
+<para>Data: name of realm, name of authentication domain</para>
+<para>Triggers: View authentication domain profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_GET_AUTH_DOMAIN_ATTR_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1133</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting attribute values of authentication domain failed.</para>
+<para>Data: name of realm, name of authentication domains, error message</para>
+<para>Triggers: Unable to get attribute values of authentication domain due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1141</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify authentication domain</para>
+<para>Data: name of realm, name of authentication domain</para>
+<para>Triggers: Click on Save button in authentication domain profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1142</para>
+<para>Level: INFO</para>
+<para>Description: Modification authentication domain succeeded.</para>
+<para>Data: name of realm, name of authentication domain</para>
+<para>Triggers: Click on Save button in authentication domain profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_MODIFY_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1143</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification authentication domain failed.</para>
+<para>Data: name of realm, name of authentication domain, error message</para>
+<para>Triggers: Unable to modify authentication domain due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ALL_PROVIDER_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-1151</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get all provider names</para>
+<para>Data: realm name</para>
+<para>Triggers: View authentication domain profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ALL_PROVIDER_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-1152</para>
+<para>Level: INFO</para>
+<para>Description: Getting all provider names succeeded.</para>
+<para>Data: realm name</para>
+<para>Triggers: View authentication domain profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_GET_ALL_PROVIDER_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-1153</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting all provider names failed.</para>
+<para>Data: error message</para>
+<para>Triggers: Unable to get all provider names due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_PROVIDER_NAMES_UNDER_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1161</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get provider names under a authentication domain</para>
+<para>Data: name of realm, name of authentication domain</para>
+<para>Triggers: View authentication domain profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_PROVIDER_NAMES_UNDER_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1162</para>
+<para>Level: INFO</para>
+<para>Description: Getting provider names under authentication domain succeeded.</para>
+<para>Data: name of realm, name of authentication domain</para>
+<para>Triggers: View authentication domain profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_GET_PROVIDER_NAMES_UNDER_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1163</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting provider names under authentication domain failed.</para>
+<para>Data: name of realm, name of authentication domain, error message</para>
+<para>Triggers: Unable to get provider names under authentication domain due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_ADD_PROVIDERS_TO_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1171</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to add providers to an authentication domain</para>
+<para>Data: name of realm, name of authentication domain, name of providers</para>
+<para>Triggers: Click on Save button in provider assignment page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_ADD_PROVIDERS_TO_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1172</para>
+<para>Level: INFO</para>
+<para>Description: Addition of provider to an authentication domain succeeded.</para>
+<para>Data: name of realm, name of authentication domain, name of providers</para>
+<para>Triggers: Click on Save button in provider assignment page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_ADD_PROVIDERS_TO_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1173</para>
+<para>Level: SEVERE</para>
+<para>Description: Addition of provider to an authentication domain failed.</para>
+<para>Data: name of realm, name of authentication domain, name of providers, error message</para>
+<para>Triggers: Unable to add provider to authentication domain due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_REMOVE_PROVIDERS_FROM_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1181</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to remove providers from authentication domain</para>
+<para>Data: name of realm, name of authentication domain, name of providers</para>
+<para>Triggers: Click on Save button in provider assignment page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_REMOVE_PROVIDERS_FROM_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1182</para>
+<para>Level: INFO</para>
+<para>Description: Deletion of providers from authentication domain succeeded.</para>
+<para>Data: name of realm, name of authentication domain, name of providers</para>
+<para>Triggers: Click on Save button in provider assignment page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_REMOVE_PROVIDERS_FROM_AUTH_DOMAIN</term>
+<listitem>
+<para>ID: CONSOLE-1183</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of provider from authentication domain failed.</para>
+<para>Data: name of realm, name of authentication domain, name of providers, error message</para>
+<para>Triggers: Unable to remove provider from authentication domain due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1301</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create provider</para>
+<para>Data: name of provider, role of provider, type of provider</para>
+<para>Triggers: Click on Save button in provider assignment page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1302</para>
+<para>Level: INFO</para>
+<para>Description: Creation of providers succeeded.</para>
+<para>Data: name of provider, role of provider, type of provider</para>
+<para>Triggers: Click on Save button in provider assignment page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_CREATE_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1303</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of provider failed.</para>
+<para>Data: name of provider, role of provider, type of provider, error message</para>
+<para>Triggers: Unable to create provider due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_CREATE_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1304</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of provider failed.</para>
+<para>Data: name of provider, role of provider, type of provider, error message</para>
+<para>Triggers: Unable to create provider due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVOCATION_TARGET_EXCEPTION_CREATE_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1305</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of provider failed.</para>
+<para>Data: name of provider, role of provider, type of provider, error message</para>
+<para>Triggers: Unable to create provider because Administration Console cannot find the appropriate methods to set values for this provider.</para>
+<para>Actions: This is a web application error. Please contact Sun Support for assistant.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_PROVIDER_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1311</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get attribute values for provider</para>
+<para>Data: name of provider, role of provider, type of provider</para>
+<para>Triggers: View provider profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_PROVIDER_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-1312</para>
+<para>Level: INFO</para>
+<para>Description: Getting attribute values of providers succeeded.</para>
+<para>Data: name of provider, role of provider, type of provider</para>
+<para>Triggers: View provider profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_HANDLER_TO_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1321</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get handler to provider</para>
+<para>Data: name of provider, role of provider</para>
+<para>Triggers: View provider profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_HANDLER_TO_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1322</para>
+<para>Level: INFO</para>
+<para>Description: Getting handler to provider succeeded.</para>
+<para>Data: name of provider, role of provider</para>
+<para>Triggers: View provider profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_GET_HANDLER_TO_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1323</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting handler to provider failed.</para>
+<para>Data: name of provider, role of provider, error message</para>
+<para>Triggers: Unable to get handler to provider due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1331</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify provider</para>
+<para>Data: name of provider, role of provider</para>
+<para>Triggers: Click on Save button in provider profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1332</para>
+<para>Level: INFO</para>
+<para>Description: Modification of provider succeeded.</para>
+<para>Data: name of provider, role of provider</para>
+<para>Triggers: Click on Save button in provider profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_MODIFY_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1333</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of provider failed.</para>
+<para>Data: name of provider, role of provider, error message</para>
+<para>Triggers: Unable to modify provider due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVOCATION_TARGET_EXCEPTION_MODIFY_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1334</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of provider failed.</para>
+<para>Data: name of provider, role of provider, error message</para>
+<para>Triggers: Unable to modify provider because Administration Console cannot find the appropriate methods to set values for this provider.</para>
+<para>Actions: This is a web application error. Please contact Sun Support for assistant.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1341</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete provider</para>
+<para>Data: name of provider, role of provider</para>
+<para>Triggers: Click on delete provider button in provider profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1342</para>
+<para>Level: INFO</para>
+<para>Description: Deletion of provider succeeded.</para>
+<para>Data: name of provider, role of provider</para>
+<para>Triggers: Click on delete provider button in provider profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_DELETE_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1343</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of provider failed.</para>
+<para>Data: name of provider, role of provider, error message</para>
+<para>Triggers: Unable to delete provider due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_PROSPECTIVE_TRUSTED_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1351</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get prospective trusted provider</para>
+<para>Data: name of provider, role of provider</para>
+<para>Triggers: View add trusted provider page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_PROSPECTIVE_TRUSTED_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1352</para>
+<para>Level: INFO</para>
+<para>Description: Getting of prospective trusted provider succeeded.</para>
+<para>Data: name of provider, role of provider</para>
+<para>Triggers: View add trusted provider page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FEDERATION_EXCEPTION_GET_PROSPECTIVE_TRUSTED_PROVIDER</term>
+<listitem>
+<para>ID: CONSOLE-1353</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting of prospective trusted provider failed.</para>
+<para>Data: name of provider, role of provider, error message</para>
+<para>Triggers: Unable to get prospective trusted provider due to federation SDK related errors.</para>
+<para>Actions: Look under federation log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ATTR_VALUE_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2001</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get attribute values of schema type of a service schema</para>
+<para>Data: name of service, name of schema type, name of attribute schemas</para>
+<para>Triggers: View service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ATTR_VALUE_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2002</para>
+<para>Level: INFO</para>
+<para>Description: Getting attribute values of schema type of a service schema succeeded.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas</para>
+<para>Triggers: View service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_ATTR_VALUE_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2003</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting attribute values of schema type of a service schema failed.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas, error message</para>
+<para>Triggers: Unable to get attribute values of schema type of a service schema. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_ATTR_VALUE_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2004</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting attribute values of schema type of a service schema failed.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas, error message</para>
+<para>Triggers: Unable to get attribute values of schema type of a service schema due to service management SDK related errors.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_SCHEMA_GET_ATTR_VALUE_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2005</para>
+<para>Level: INFO</para>
+<para>Description: Getting attribute values of schema type of a service schema failed.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas</para>
+<para>Triggers: View service profile page.</para>
+<para>Actions: Need no action on this event. Console attempts to get a schema from a service but schema does not exist.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ATTR_VALUE_ATR_SCHEMA_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2011</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get attribute values of attribute schema of a schema type of a service schema</para>
+<para>Data: name of service, name of schema type, name of attribute schemas</para>
+<para>Triggers: View service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ATTR_VALUE_ATR_SCHEMA_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2012</para>
+<para>Level: INFO</para>
+<para>Description: Getting attribute values of attribute schema of a schema type of a service schema succeeded.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas</para>
+<para>Triggers: View service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_ATTR_VALUE_ATR_SCHEMA_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2013</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting attribute values of attribute schema of a schema type of a service schema failed.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas, error message</para>
+<para>Triggers: Unable to get attribute values of schema type of a service schema. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_ATTR_VALUE_ATR_SCHEMA_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2014</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting attribute values of attribute schema of a schema type of a service schema failed.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas, error message</para>
+<para>Triggers: Unable to get attribute values of schema type of a service schema due to service management SDK related errors.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_SET_ATTR_VALUE_ATR_SCHEMA_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2021</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify attribute values of attribute schema of a schema type of a service schema</para>
+<para>Data: name of service, name of schema type, name of attribute schemas</para>
+<para>Triggers: Click on Save button in service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_SET_ATTR_VALUE_ATR_SCHEMA_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2022</para>
+<para>Level: INFO</para>
+<para>Description: Modification attribute values of attribute schema of a schema type of a service schema succeeded.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas</para>
+<para>Triggers: Click on Save button in service profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_SET_ATTR_VALUE_ATR_SCHEMA_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2023</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification attribute values of attribute schema of a schema type of a service schema failed.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas, error message</para>
+<para>Triggers: Unable to modify attribute values of schema type of a service schema. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_SET_ATTR_VALUE_ATR_SCHEMA_SCHEMA_TYPE</term>
+<listitem>
+<para>ID: CONSOLE-2024</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification attribute values of attribute schema of a schema type of a service schema failed.</para>
+<para>Data: name of service, name of schema type, name of attribute schemas, error message</para>
+<para>Triggers: Unable to modify attribute values of schema type of a service schema due to service management SDK related errors.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CLIENT_DETECTION_GET_DEVICE_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-2501</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get device names of client detection service</para>
+<para>Data: name of profile, name of style, search pattern</para>
+<para>Triggers: View client profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CLIENT_DETECTION_GET_DEVICE_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-2502</para>
+<para>Level: INFO</para>
+<para>Description: Getting device names of client detection service succeeded.</para>
+<para>Data: name of profile, name of style, search pattern</para>
+<para>Triggers: View client profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CLIENT_DETECTION_DELETE_CLIENT</term>
+<listitem>
+<para>ID: CONSOLE-2511</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete client in client detection service</para>
+<para>Data: type of client</para>
+<para>Triggers: Click on client type delete hyperlink page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CLIENT_DETECTION_DELETE_CLIENT</term>
+<listitem>
+<para>ID: CONSOLE-2512</para>
+<para>Level: INFO</para>
+<para>Description: Deletion of client in client detection service succeeded.</para>
+<para>Data: type of client</para>
+<para>Triggers: Click on client type delete hyperlink page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CLIENT_SDK_EXCEPTION_CLIENT_DETECTION_DELETE_CLIENT</term>
+<listitem>
+<para>ID: CONSOLE-2513</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of client in client detection service failed.</para>
+<para>Data: type of client, error message</para>
+<para>Triggers: Unable to delete client due to client detection SDK related errors.</para>
+<para>Actions: Look under client detection management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CLIENT_DETECTION_CREATE_CLIENT</term>
+<listitem>
+<para>ID: CONSOLE-2521</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create client in client detection service</para>
+<para>Data: type of client</para>
+<para>Triggers: Click on New button in Client Creation Page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CLIENT_DETECTION_CREATE_CLIENT</term>
+<listitem>
+<para>ID: CONSOLE-2522</para>
+<para>Level: INFO</para>
+<para>Description: Creation of client in client detection service succeeded.</para>
+<para>Data: type of client</para>
+<para>Triggers: Click on New button in Client Creation Page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CLIENT_SDK_EXCEPTION_CLIENT_DETECTION_CREATE_CLIENT</term>
+<listitem>
+<para>ID: CONSOLE-2523</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of client in client detection service failed.</para>
+<para>Data: type of client, error message</para>
+<para>Triggers: Unable to create client due to client detection SDK related errors.</para>
+<para>Actions: Look under client detection management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_CLIENT_TYPE_CLIENT_DETECTION_CREATE_CLIENT</term>
+<listitem>
+<para>ID: CONSOLE-2524</para>
+<para>Level: INFO</para>
+<para>Description: Creation of client in client detection service failed.</para>
+<para>Data: type of client, error message</para>
+<para>Triggers: Unable to create client because client type is invalid.</para>
+<para>Actions: Check the client type again before creation.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CLIENT_DETECTION_GET_CLIENT_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-2531</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get client profile in client detection service</para>
+<para>Data: type of client, classification</para>
+<para>Triggers: View client profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CLIENT_DETECTION_GET_CLIENT_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-2532</para>
+<para>Level: INFO</para>
+<para>Description: Getting of client profile in client detection service succeeded.</para>
+<para>Data: type of client, classification</para>
+<para>Triggers: View client profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CLIENT_DETECTION_MODIFY_CLIENT_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-2541</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify client profile in client detection service</para>
+<para>Data: type of client</para>
+<para>Triggers: Click on Save button client profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CLIENT_DETECTION_MODIFY_CLIENT_PROFILE</term>
+<listitem>
+<para>ID: CONSOLE-2542</para>
+<para>Level: INFO</para>
+<para>Description: Modification of client profile in client detection service succeeded.</para>
+<para>Data: type of client</para>
+<para>Triggers: Click on Save button client profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CLIENT_SDK_EXCEPTION_CLIENT_DETECTION_CREATE_CLIENT</term>
+<listitem>
+<para>ID: CONSOLE-2543</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of client profile in client detection service failed.</para>
+<para>Data: type of client, error message</para>
+<para>Triggers: Unable to modify client profile due to client detection SDK related errors.</para>
+<para>Actions: Look under client detection management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_CURRENT_SESSIONS</term>
+<listitem>
+<para>ID: CONSOLE-3001</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get current sessions</para>
+<para>Data: name of server, search pattern</para>
+<para>Triggers: View session main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_CURRENT_SESSIONS</term>
+<listitem>
+<para>ID: CONSOLE-3002</para>
+<para>Level: INFO</para>
+<para>Description: Getting of current sessions succeeded.</para>
+<para>Data: name of server, search pattern</para>
+<para>Triggers: View session main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_EXCEPTION_GET_CURRENT_SESSIONS</term>
+<listitem>
+<para>ID: CONSOLE-3003</para>
+<para>Level: SEVERE</para>
+<para>Description: Getting of current sessions failed.</para>
+<para>Data: name of server, name of realm, error message</para>
+<para>Triggers: Unable to get current sessions due to session SDK exception.</para>
+<para>Actions: Look under session management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_INVALIDATE_SESSIONS</term>
+<listitem>
+<para>ID: CONSOLE-3011</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to invalidate session</para>
+<para>Data: name of server, ID of session</para>
+<para>Triggers: Click on Invalidate button in session main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_INVALIDATE_SESSIONS</term>
+<listitem>
+<para>ID: CONSOLE-3012</para>
+<para>Level: INFO</para>
+<para>Description: Invalidation of session succeeded.</para>
+<para>Data: name of server, ID of session</para>
+<para>Triggers: Click on Invalidate button in session main page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SESSION_EXCEPTION_INVALIDATE_SESSIONS</term>
+<listitem>
+<para>ID: CONSOLE-3013</para>
+<para>Level: SEVERE</para>
+<para>Description: Invalidation of session failed.</para>
+<para>Data: name of server, ID of session, error message</para>
+<para>Triggers: Unable to invalidate session due to session SDK exception.</para>
+<para>Actions: Look under session management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_SITE_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-12001</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get site names</para>
+<para>Data: server instance name</para>
+<para>Triggers: View site and server management page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_SITE_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-12002</para>
+<para>Level: INFO</para>
+<para>Description: Site names are returned.</para>
+<para>Data: server instance name</para>
+<para>Triggers: View site and server management page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_SITE_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-12003</para>
+<para>Level: SEVERE</para>
+<para>Description: Get site names.</para>
+<para>Data: error message</para>
+<para>Triggers: Unable to get site names. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_SITE_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-12004</para>
+<para>Level: SEVERE</para>
+<para>Description: Get site names.</para>
+<para>Data: error message</para>
+<para>Triggers: Unable to get site names due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_SITE_PRIMARY_URL</term>
+<listitem>
+<para>ID: CONSOLE-12011</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get primary URL of site.</para>
+<para>Data: Site Name</para>
+<para>Triggers: View site profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_SITE_PRIMARY_URL</term>
+<listitem>
+<para>ID: CONSOLE-12012</para>
+<para>Level: INFO</para>
+<para>Description: Primary URL of site is returned.</para>
+<para>Data: Site Name</para>
+<para>Triggers: View site profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_SITE_PRIMARY_URL</term>
+<listitem>
+<para>ID: CONSOLE-12013</para>
+<para>Level: SEVERE</para>
+<para>Description: Get primary URL of site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to get primary URL of site. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_SITE_PRIMARY_URL</term>
+<listitem>
+<para>ID: CONSOLE-12014</para>
+<para>Level: SEVERE</para>
+<para>Description: Get primary URL of site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to get primary URL of site due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_SITE_FAILOVER_URLS</term>
+<listitem>
+<para>ID: CONSOLE-12021</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get failover URLs of site.</para>
+<para>Data: Site Name</para>
+<para>Triggers: View site profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_SITE_FAILOVER_URLS</term>
+<listitem>
+<para>ID: CONSOLE-12022</para>
+<para>Level: INFO</para>
+<para>Description: Failover URLs of site is returned.</para>
+<para>Data: Site Name</para>
+<para>Triggers: View site profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_SITE_FAILOVER_URLS</term>
+<listitem>
+<para>ID: CONSOLE-12023</para>
+<para>Level: SEVERE</para>
+<para>Description: Get failover URLs of site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to get failover URLs of site. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_SITE_FAILOVER_URLS</term>
+<listitem>
+<para>ID: CONSOLE-12024</para>
+<para>Level: SEVERE</para>
+<para>Description: Get failover URLs of site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to get failover URLs of site due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_SITE_MEMBERS</term>
+<listitem>
+<para>ID: CONSOLE-12031</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get members of site.</para>
+<para>Data: Site Name</para>
+<para>Triggers: View site profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_SITE_MEMBERS</term>
+<listitem>
+<para>ID: CONSOLE-12032</para>
+<para>Level: INFO</para>
+<para>Description: Members of site is returned.</para>
+<para>Data: Site Name</para>
+<para>Triggers: View site profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_SITE_MEMBERS</term>
+<listitem>
+<para>ID: CONSOLE-12033</para>
+<para>Level: SEVERE</para>
+<para>Description: Get members of site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to get members of site. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_SITE_MEMBERS</term>
+<listitem>
+<para>ID: CONSOLE-12034</para>
+<para>Level: SEVERE</para>
+<para>Description: Get members of site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to get members of site due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12041</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create site.</para>
+<para>Data: Site Name</para>
+<para>Triggers: View create site page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12042</para>
+<para>Level: INFO</para>
+<para>Description: Site is created.</para>
+<para>Data: Site Name</para>
+<para>Triggers: Click on create button on creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_CREATE_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12043</para>
+<para>Level: SEVERE</para>
+<para>Description: Create site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to create site. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_CREATE_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12044</para>
+<para>Level: SEVERE</para>
+<para>Description: Create site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to create site due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12051</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create server.</para>
+<para>Data: Server Name</para>
+<para>Triggers: View create server page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12052</para>
+<para>Level: INFO</para>
+<para>Description: Server is created.</para>
+<para>Data: Server Name</para>
+<para>Triggers: Click on create button on creation page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_CREATE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12053</para>
+<para>Level: SEVERE</para>
+<para>Description: Create server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to create server. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_CREATE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12054</para>
+<para>Level: SEVERE</para>
+<para>Description: Create server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to create server due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIGURATION_EXCEPTION_CREATE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12055</para>
+<para>Level: SEVERE</para>
+<para>Description: Create server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to create server due the incorrect data format error.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IO_EXCEPTION_CREATE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12056</para>
+<para>Level: SEVERE</para>
+<para>Description: Create server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to create server due the incorrect data format error.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12061</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete site.</para>
+<para>Data: Site Name</para>
+<para>Triggers: Click on delete site button.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12062</para>
+<para>Level: INFO</para>
+<para>Description: Site is deleted.</para>
+<para>Data: Site Name</para>
+<para>Triggers: Click on delete button.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_DELETE_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12063</para>
+<para>Level: SEVERE</para>
+<para>Description: Delete site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to delete site. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_DELETE_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12064</para>
+<para>Level: SEVERE</para>
+<para>Description: Delete site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to delete site due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12071</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify site.</para>
+<para>Data: Site Name</para>
+<para>Triggers: Click on OK button in site profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12072</para>
+<para>Level: INFO</para>
+<para>Description: Site is nodified.</para>
+<para>Data: Site Name</para>
+<para>Triggers: Click on OK button in site profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12073</para>
+<para>Level: SEVERE</para>
+<para>Description: Modify site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to modify site. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_MODIFY_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12074</para>
+<para>Level: SEVERE</para>
+<para>Description: Modify site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to modify site due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIGURATION_EXCEPTION_MODIFY_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12075</para>
+<para>Level: SEVERE</para>
+<para>Description: Modify site.</para>
+<para>Data: Site Name, error message</para>
+<para>Triggers: Unable to modify site due the incorrect data format.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_SERVER_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-12081</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get server names.</para>
+<para>Data: server instance name</para>
+<para>Triggers: View site and server management page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_SERVER_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-12082</para>
+<para>Level: INFO</para>
+<para>Description: Server names are returned.</para>
+<para>Data: server instance name</para>
+<para>Triggers: View site and server management page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_SERVER_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-12083</para>
+<para>Level: SEVERE</para>
+<para>Description: Get server name.</para>
+<para>Data: error message</para>
+<para>Triggers: Unable to get server names. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_SERVER_NAMES</term>
+<listitem>
+<para>ID: CONSOLE-12084</para>
+<para>Level: SEVERE</para>
+<para>Description: Get server name.</para>
+<para>Data: error message</para>
+<para>Triggers: Unable to get server names due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_SERVER_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12091</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get server's site.</para>
+<para>Data: Server Name</para>
+<para>Triggers: View server profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_SERVER_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12092</para>
+<para>Level: INFO</para>
+<para>Description: Server's site name is returned.</para>
+<para>Data: Server Name</para>
+<para>Triggers: View server profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_SERVER_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12093</para>
+<para>Level: SEVERE</para>
+<para>Description: Get server's site name.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to get server's site. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_SERVER_SITE</term>
+<listitem>
+<para>ID: CONSOLE-12094</para>
+<para>Level: SEVERE</para>
+<para>Description: Get server's site name.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to get server's site due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12101</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete server.</para>
+<para>Data: Server Name</para>
+<para>Triggers: Click on delete button in server management page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12102</para>
+<para>Level: INFO</para>
+<para>Description: Server is delete.</para>
+<para>Data: Server Name</para>
+<para>Triggers: Click on delete button in server management page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_DELETE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12103</para>
+<para>Level: SEVERE</para>
+<para>Description: Delete server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to delete server. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_DELETE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12104</para>
+<para>Level: SEVERE</para>
+<para>Description: Delete server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to delete server due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CLONE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12201</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to clone server.</para>
+<para>Data: Server Name, Cloned Server Name</para>
+<para>Triggers: Click on clone button in server management page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CLONE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12202</para>
+<para>Level: INFO</para>
+<para>Description: Server is cloned.</para>
+<para>Data: Server Name, Cloned Server Name</para>
+<para>Triggers: Click on clone button in server management page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_CLONE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12203</para>
+<para>Level: SEVERE</para>
+<para>Description: clone server.</para>
+<para>Data: Server Name, Cloned Server Name, error message</para>
+<para>Triggers: Unable to clone server. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_CLONE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12204</para>
+<para>Level: SEVERE</para>
+<para>Description: clone server.</para>
+<para>Data: Server Name, Cloned Server Name, error message</para>
+<para>Triggers: Unable to clone server due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIGURATION_EXCEPTION_CLONE_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12205</para>
+<para>Level: SEVERE</para>
+<para>Description: clone server.</para>
+<para>Data: Server Name, Cloned Server Name, error message</para>
+<para>Triggers: Unable to clone server due the data format error.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_SERVER_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-12211</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get server's configuration.</para>
+<para>Data: Server Name</para>
+<para>Triggers: View server profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_SERVER_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-12212</para>
+<para>Level: INFO</para>
+<para>Description: Server's configuration is returned.</para>
+<para>Data: Server Name</para>
+<para>Triggers: View server profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_SERVER_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-12213</para>
+<para>Level: SEVERE</para>
+<para>Description: Get server's configuration.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to get server's configuration. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_SERVER_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-12214</para>
+<para>Level: SEVERE</para>
+<para>Description: Get server's configuration.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to get server's configuration due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IO_EXCEPTION_GET_SERVER_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-12215</para>
+<para>Level: SEVERE</para>
+<para>Description: get server's configuration.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to get server's configuration due the data parsing error.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_SERVER_DEFAULT_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-12221</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get server default configuration.</para>
+<para>Data: server instance name</para>
+<para>Triggers: View server profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_SERVER_DEFAULT_CONFIG</term>
+<listitem>
+<para>ID: CONSOLE-12222</para>
+<para>Level: INFO</para>
+<para>Description: Server default configuration is returned.</para>
+<para>Data: server instance name</para>
+<para>Triggers: View server profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12231</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify server.</para>
+<para>Data: Server Name</para>
+<para>Triggers: Click on OK button in server profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12232</para>
+<para>Level: INFO</para>
+<para>Description: Server is modified.</para>
+<para>Data: Server Name</para>
+<para>Triggers: Click on OK button in server profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12233</para>
+<para>Level: SEVERE</para>
+<para>Description: modify server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to modify server. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_MODIFY_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12234</para>
+<para>Level: SEVERE</para>
+<para>Description: modify server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to modify server due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IO_EXCEPTION_MODIFY_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12235</para>
+<para>Level: SEVERE</para>
+<para>Description: modify server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to modify server due the data parsing error.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIGURATION_EXCEPTION_MODIFY_SERVER</term>
+<listitem>
+<para>ID: CONSOLE-12236</para>
+<para>Level: SEVERE</para>
+<para>Description: modify server.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to modify server due the incorrect data format error.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_MODIFY_SERVER_INHERITANCE</term>
+<listitem>
+<para>ID: CONSOLE-12241</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify server's inheritance.</para>
+<para>Data: Server Name</para>
+<para>Triggers: Click on OK button in server inheritance setting page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_MODIFY_SERVER_INHERITANCE</term>
+<listitem>
+<para>ID: CONSOLE-12242</para>
+<para>Level: INFO</para>
+<para>Description: Server's inheritance setting is modified.</para>
+<para>Data: Server Name</para>
+<para>Triggers: Click on OK button in server inheritance setting page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_MODIFY_SERVER_INHERITANCE</term>
+<listitem>
+<para>ID: CONSOLE-12243</para>
+<para>Level: SEVERE</para>
+<para>Description: Modify server's inheritance.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to modify server's inheritance. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_MODIFY_SERVER_INHERITANCE</term>
+<listitem>
+<para>ID: CONSOLE-12244</para>
+<para>Level: SEVERE</para>
+<para>Description: Modify server's inheritance.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to modify server's inheritance due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IO_EXCEPTION_MODIFY_SERVER_INHERITANCE</term>
+<listitem>
+<para>ID: CONSOLE-12245</para>
+<para>Level: SEVERE</para>
+<para>Description: modify server's inheritance.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to modify server's inheritance due the data parsing error.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIGURATION_EXCEPTION_MODIFY_SERVER_INHERITANCE</term>
+<listitem>
+<para>ID: CONSOLE-12246</para>
+<para>Level: SEVERE</para>
+<para>Description: modify server's inheritance.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to modify server's inheritance due the incorrect data format error.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_SERVER_CONFIG_XML</term>
+<listitem>
+<para>ID: CONSOLE-12251</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get server's configuration XML.</para>
+<para>Data: Server Name</para>
+<para>Triggers: View server's server configuration XML profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_SERVER_CONFIG_XML</term>
+<listitem>
+<para>ID: CONSOLE-12252</para>
+<para>Level: INFO</para>
+<para>Description: Server's configuration XML is returned.</para>
+<para>Data: Server Name</para>
+<para>Triggers: View server's server configuration XML profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_GET_SERVER_CONFIG_XML</term>
+<listitem>
+<para>ID: CONSOLE-12253</para>
+<para>Level: SEVERE</para>
+<para>Description: Get server's configuration XML.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to get server's configuration XML. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_SERVER_CONFIG_XML</term>
+<listitem>
+<para>ID: CONSOLE-12254</para>
+<para>Level: SEVERE</para>
+<para>Description: sGget server's configuration XML.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to get server's configuration XML due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GENERIC_EXCEPTION_GET_SERVER_CONFIG_XML</term>
+<listitem>
+<para>ID: CONSOLE-12255</para>
+<para>Level: SEVERE</para>
+<para>Description: sGget server's configuration XML.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to get server's configuration XML due the data parsing error.</para>
+<para>Actions: Look under console log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_SET_SERVER_CONFIG_XML</term>
+<listitem>
+<para>ID: CONSOLE-12261</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to set server's configuration XML.</para>
+<para>Data: Server Name</para>
+<para>Triggers: Click on OK button in server's server configuration XML profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_SET_SERVER_CONFIG_XML</term>
+<listitem>
+<para>ID: CONSOLE-12262</para>
+<para>Level: INFO</para>
+<para>Description: Server's configuration XML is modified.</para>
+<para>Data: Server Name</para>
+<para>Triggers: Click on OK button in server's server configuration XML profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_EXCEPTION_SET_SERVER_CONFIG_XML</term>
+<listitem>
+<para>ID: CONSOLE-12263</para>
+<para>Level: SEVERE</para>
+<para>Description: set server's configuration XML.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to set server's configuration XML. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under access management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_SET_SERVER_CONFIG_XML</term>
+<listitem>
+<para>ID: CONSOLE-12264</para>
+<para>Level: SEVERE</para>
+<para>Description: sGset server's configuration XML.</para>
+<para>Data: Server Name, error message</para>
+<para>Triggers: Unable to set server's configuration XML due the SMS API error.</para>
+<para>Actions: Look under service management SDK log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_SEARCH_AGENT</term>
+<listitem>
+<para>ID: CONSOLE-13001</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to search for agents</para>
+<para>Data: base realm, agent type, search pattern, search size limit, search time limit</para>
+<para>Triggers: Click on Search button in agent search view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_SEARCH_AGENT</term>
+<listitem>
+<para>ID: CONSOLE-13002</para>
+<para>Level: INFO</para>
+<para>Description: Searching for agents succeeded</para>
+<para>Data: base realm, agent type, search pattern, search size limit, search time limit</para>
+<para>Triggers: Click on Search button in agent search view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>EXCEPTION_SEARCH_AGENT</term>
+<listitem>
+<para>ID: CONSOLE-13003</para>
+<para>Level: SEVERE</para>
+<para>Description: Searching for agents failed</para>
+<para>Data: base realm, agent type, search pattern, search size limit, search time limit, error message</para>
+<para>Triggers: Unable to perform search operation on agents under a realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_AGENT</term>
+<listitem>
+<para>ID: CONSOLE-13011</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete agents</para>
+<para>Data: base realm, agent names</para>
+<para>Triggers: Click on Delete button in agent home page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_AGENT</term>
+<listitem>
+<para>ID: CONSOLE-13012</para>
+<para>Level: INFO</para>
+<para>Description: Agents are deleted</para>
+<para>Data: base realm, agent names</para>
+<para>Triggers: Click on Delete button in agent home page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>EXCEPTION_DELETE_AGENT</term>
+<listitem>
+<para>ID: CONSOLE-13013</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of agents failed</para>
+<para>Data: base realm, agent names, error message</para>
+<para>Triggers: Unable to perform delete operation on agents under a realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_SEARCH_AGENT_GROUP</term>
+<listitem>
+<para>ID: CONSOLE-13021</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to search for agent groups</para>
+<para>Data: base realm, agent type, search pattern, search size limit, search time limit</para>
+<para>Triggers: Click on Search button in agent search view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_SEARCH_AGENT_GROUP</term>
+<listitem>
+<para>ID: CONSOLE-13022</para>
+<para>Level: INFO</para>
+<para>Description: Searching for agent groups succeeded</para>
+<para>Data: base realm, agent type, search pattern, search size limit, search time limit</para>
+<para>Triggers: Click on Search button in agent search view.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>EXCEPTION_SEARCH_AGENT_GROUP</term>
+<listitem>
+<para>ID: CONSOLE-13023</para>
+<para>Level: SEVERE</para>
+<para>Description: Searching for agent groups failed</para>
+<para>Data: base realm, agent type, search pattern, search size limit, search time limit, error message</para>
+<para>Triggers: Unable to perform search operation on agent groups under a realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_DELETE_AGENT_GROUP</term>
+<listitem>
+<para>ID: CONSOLE-13031</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to delete agent groups</para>
+<para>Data: base realm, agent group names</para>
+<para>Triggers: Click on Delete button in agent home page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_DELETE_AGENT_GROUP</term>
+<listitem>
+<para>ID: CONSOLE-13032</para>
+<para>Level: INFO</para>
+<para>Description: Agent groups are deleted</para>
+<para>Data: base realm, agent group names</para>
+<para>Triggers: Click on Delete button in agent home page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>EXCEPTION_DELETE_AGENT_GROUP</term>
+<listitem>
+<para>ID: CONSOLE-13033</para>
+<para>Level: SEVERE</para>
+<para>Description: Deletion of agent groups failed</para>
+<para>Data: base realm, agent group names, error message</para>
+<para>Triggers: Unable to perform delete operation on agents under a realm. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_AGENT</term>
+<listitem>
+<para>ID: CONSOLE-13041</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create agent</para>
+<para>Data: base realm, agent name, agent type</para>
+<para>Triggers: Click on New button in agent home page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_AGENT</term>
+<listitem>
+<para>ID: CONSOLE-13042</para>
+<para>Level: INFO</para>
+<para>Description: Agent is created</para>
+<para>Data: base realm, agent name, agent type</para>
+<para>Triggers: Click on New button in agent home page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>EXCEPTION_CREATE_AGENT</term>
+<listitem>
+<para>ID: CONSOLE-13043</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of agent failed</para>
+<para>Data: base realm, agent name, agent type, error message</para>
+<para>Triggers: Unable to perform create agent. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_CREATE_AGENT_GROUP</term>
+<listitem>
+<para>ID: CONSOLE-13051</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to create agent group</para>
+<para>Data: base realm, agent group name, agent type</para>
+<para>Triggers: Click on New button in agent home page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_CREATE_AGENT_GROUP</term>
+<listitem>
+<para>ID: CONSOLE-13052</para>
+<para>Level: INFO</para>
+<para>Description: Agent group is created</para>
+<para>Data: base realm, agent group name, agent type</para>
+<para>Triggers: Click on New button in agent home page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>EXCEPTION_CREATE_AGENT_GROUP</term>
+<listitem>
+<para>ID: CONSOLE-13053</para>
+<para>Level: SEVERE</para>
+<para>Description: Creation of agent group failed</para>
+<para>Data: base realm, agent group name, agent type, error message</para>
+<para>Triggers: Unable to perform create agent group. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_AGENT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-13061</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to get agent attribute values</para>
+<para>Data: agent universal Id</para>
+<para>Triggers: Visit agent profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_AGENT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-13062</para>
+<para>Level: INFO</para>
+<para>Description: Agent attribute values is retrieved.</para>
+<para>Data: agent universal Id</para>
+<para>Triggers: Visit agent profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>EXCEPTION_GET_AGENT_ATTRIBUTE_VALUES</term>
+<listitem>
+<para>ID: CONSOLE-13063</para>
+<para>Level: SEVERE</para>
+<para>Description: Unable to get agent attribute values</para>
+<para>Data: agent universal Id, error message</para>
+<para>Triggers: Unable to perform get agent attribute values. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_SET_AGENT_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-13071</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to set agent attribute values</para>
+<para>Data: agent universal Id</para>
+<para>Triggers: Click on save button in agent profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_SET_AGENT_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-13072</para>
+<para>Level: INFO</para>
+<para>Description: Agent attribute values set successfully</para>
+<para>Data: agent universal Id</para>
+<para>Triggers: Click on save button in agent profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>EXCEPTION_SET_AGENT_ATTRIBUTE_VALUE</term>
+<listitem>
+<para>ID: CONSOLE-13073</para>
+<para>Level: SEVERE</para>
+<para>Description: Unable to set agent attribute values</para>
+<para>Data: agent universal Id, error message</para>
+<para>Triggers: Unable to perform set agent attribute values. It may be the single sign on token of the user has expired; or the user does not have permission to perform this operation.</para>
+<para>Actions: Look under data store log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_GET_ATTR_VALUES_OF_SESSION_HA_PROPERTIES</term>
+<listitem>
+<para>ID: CONSOLE-13074</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to read session HA properties</para>
+<para>Data: name of attribute</para>
+<para>Triggers: Click on Save button in session profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_GET_ATTR_VALUES_OF_SESSION_HA_PROPERTIES</term>
+<listitem>
+<para>ID: CONSOLE-13075</para>
+<para>Level: INFO</para>
+<para>Description: Read Access of session HA properties succeeded.</para>
+<para>Data: name of attribute</para>
+<para>Triggers: Click on Save button in session profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_GET_ATTR_VALUES_OF_SESSION_HA_PROPERTIES</term>
+<listitem>
+<para>ID: CONSOLE-13076</para>
+<para>Level: SEVERE</para>
+<para>Description: Read Access of session HA properties failed.</para>
+<para>Data: name of attribute, error message</para>
+<para>Triggers: Unable to modify session HA properties due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTEMPT_SET_ATTR_VALUES_OF_SESSION_HA_PROPERTIES</term>
+<listitem>
+<para>ID: CONSOLE-13077</para>
+<para>Level: INFO</para>
+<para>Description: Attempt to modify session HA properties</para>
+<para>Data: name of attribute</para>
+<para>Triggers: Click on Save button in session profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCEED_SET_ATTR_VALUES_OF_SESSION_HA_PROPERTIES</term>
+<listitem>
+<para>ID: CONSOLE-13078</para>
+<para>Level: INFO</para>
+<para>Description: Modification of session HA properties succeeded.</para>
+<para>Data: name of attribute</para>
+<para>Triggers: Click on Save button in session profile page.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SMS_EXCEPTION_SET_ATTR_VALUES_OF_SESSION_HA_PROPERTIES</term>
+<listitem>
+<para>ID: CONSOLE-13079</para>
+<para>Level: SEVERE</para>
+<para>Description: Modification of session HA properties failed.</para>
+<para>Data: name of attribute, error message</para>
+<para>Triggers: Unable to modify session HA properties due to service management SDK exception.</para>
+<para>Actions: Look under service management log for more information.</para>
+</listitem>
+</varlistentry>
+</variablelist>

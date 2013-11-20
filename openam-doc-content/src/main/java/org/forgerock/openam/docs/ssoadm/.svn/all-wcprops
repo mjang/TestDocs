@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/openam/!svn/ver/4023/trunk/openam/openam-documentation/openam-doc-content/src/main/java/org/forgerock/openam/docs/ssoadm
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-content/src/main/java/org/forgerock/openam/docs/ssoadm/package-info.java
+END
+SsoadmAP.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/openam/!svn/ver/4023/trunk/openam/openam-documentation/openam-doc-content/src/main/java/org/forgerock/openam/docs/ssoadm/SsoadmAP.java
+END
+OptionXML.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-content/src/main/java/org/forgerock/openam/docs/ssoadm/OptionXML.java
+END
+SubCommandXML.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-content/src/main/java/org/forgerock/openam/docs/ssoadm/SubCommandXML.java
+END

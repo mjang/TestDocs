@@ -1,0 +1,233 @@
+<variablelist xml:id="log-ref-LIBERTY">
+<para>OpenAM logs the following LIBERTY messages.</para>
+<varlistentry>
+<term>AS_Abort</term>
+<listitem>
+<para>ID: LIBERTY-1</para>
+<para>Level: INFO</para>
+<para>Description: Unable to process SASL Request</para>
+<para>Data: message id, authentication mechanism, authorization id, advisory authentication id</para>
+<para>Triggers: Unable to process SASL Request.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AS_OK</term>
+<listitem>
+<para>ID: LIBERTY-2</para>
+<para>Level: INFO</para>
+<para>Description: SASL Response Ok</para>
+<para>Data: message id, authentication mechanism, authorization id, advisory authentication id</para>
+<para>Triggers: SASL Response Ok.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AS_Continue</term>
+<listitem>
+<para>ID: LIBERTY-3</para>
+<para>Level: INFO</para>
+<para>Description: Return SASL Authenticaton Response</para>
+<para>Data: message id, authentication mechanism, authorization id, advisory authentication id</para>
+<para>Triggers: Returned SASL Response , continue Authentication.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DS_Lookup_Failure</term>
+<listitem>
+<para>ID: LIBERTY-4</para>
+<para>Level: INFO</para>
+<para>Description: User not found in Data store</para>
+<para>Data: user name</para>
+<para>Triggers: User not found in Data store</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DS_Lookup_Success</term>
+<listitem>
+<para>ID: LIBERTY-5</para>
+<para>Level: INFO</para>
+<para>Description: User found in Data Store</para>
+<para>Data: user name</para>
+<para>Triggers: User found in Data Store</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DS_Update_Failure</term>
+<listitem>
+<para>ID: LIBERTY-6</para>
+<para>Level: INFO</para>
+<para>Description: Cannot locate user from resourceID</para>
+<para>Data: resourceID</para>
+<para>Triggers: Cannot locate user from resourceID</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>DS_Update_Success</term>
+<listitem>
+<para>ID: LIBERTY-7</para>
+<para>Level: INFO</para>
+<para>Description: Successfully updated user profile</para>
+<para>Data: user name</para>
+<para>Triggers: Successfully updated user profile</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PP_Query_Failure</term>
+<listitem>
+<para>ID: LIBERTY-8</para>
+<para>Level: INFO</para>
+<para>Description: UnAuthorized. Failed to Query Personal Profile Service</para>
+<para>Data: resource id</para>
+<para>Triggers: Failed to Query Personal Profile Service</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PP_Interaction_Failure</term>
+<listitem>
+<para>ID: LIBERTY-9</para>
+<para>Level: INFO</para>
+<para>Description: Interaction Failed</para>
+<para>Data: resource id</para>
+<para>Triggers: Interaction with Personal Profile Service Failed</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PP_Query_Success</term>
+<listitem>
+<para>ID: LIBERTY-10</para>
+<para>Level: INFO</para>
+<para>Description: Successfully queried PP Service</para>
+<para>Data: resource id</para>
+<para>Triggers: Personal Profile Service Query Succeeded</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PP_Modify_Failure</term>
+<listitem>
+<para>ID: LIBERTY-11</para>
+<para>Level: INFO</para>
+<para>Description: Modify Failure</para>
+<para>Data: resource id</para>
+<para>Triggers: Failed to modify Personal Profile Service</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PP_Modify_Success</term>
+<listitem>
+<para>ID: LIBERTY-12</para>
+<para>Level: INFO</para>
+<para>Description: Modify Success</para>
+<para>Data: resource id</para>
+<para>Triggers: Personal Profile Service Successfully modified.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PP_Interaction_Success</term>
+<listitem>
+<para>ID: LIBERTY-13</para>
+<para>Level: INFO</para>
+<para>Description: Interaction Successful</para>
+<para>Data: successful interaction message</para>
+<para>Triggers: Successful interaction with Personal Profile Service</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IS_Sending_Message</term>
+<listitem>
+<para>ID: LIBERTY-14</para>
+<para>Level: INFO</para>
+<para>Description: Sending Message</para>
+<para>Data: request message id</para>
+<para>Triggers: Sending SOAP Request Message to WSP.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IS_Returning_Response_Message</term>
+<listitem>
+<para>ID: LIBERTY-15</para>
+<para>Level: INFO</para>
+<para>Description: Returning Response Message</para>
+<para>Data: response message id, request message id</para>
+<para>Triggers: Returning Response Message for SOAP Request.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IS_Resending_Message</term>
+<listitem>
+<para>ID: LIBERTY-16</para>
+<para>Level: INFO</para>
+<para>Description: Resending Message</para>
+<para>Data: message id</para>
+<para>Triggers: Resending SOAP Request Message to WSP</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IS_Redirected_User_Agent</term>
+<listitem>
+<para>ID: LIBERTY-17</para>
+<para>Level: INFO</para>
+<para>Description: Interaction manager redirecting user agent to interaction service</para>
+<para>Data: request message id</para>
+<para>Triggers: Interaction manager redirecting user agent to interaction service</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IS_Returning_Response_Element</term>
+<listitem>
+<para>ID: LIBERTY-18</para>
+<para>Level: INFO</para>
+<para>Description: Interaction manager returning response element</para>
+<para>Data: message id, reference message id, cache entry status</para>
+<para>Triggers: Interaction manager returning response element</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IS_Presented_Query_To_User_Agent</term>
+<listitem>
+<para>ID: LIBERTY-19</para>
+<para>Level: INFO</para>
+<para>Description: Interaction query presented to user agent</para>
+<para>Data: message id</para>
+<para>Triggers: Interaction query presented to user agent</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IS_Collected_Response_From_User_Agent</term>
+<listitem>
+<para>ID: LIBERTY-20</para>
+<para>Level: INFO</para>
+<para>Description: User agent responded to interaction query</para>
+<para>Data: message id</para>
+<para>Triggers: User agent responded to interaction query</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IS_Redirected_User_Agent_Back</term>
+<listitem>
+<para>ID: LIBERTY-21</para>
+<para>Level: INFO</para>
+<para>Description: User agent redirected back to SP</para>
+<para>Data: message id</para>
+<para>Triggers: User agent redirected back to SP</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>WS_Success</term>
+<listitem>
+<para>ID: LIBERTY-22</para>
+<para>Level: INFO</para>
+<para>Description: Webservices Success</para>
+<para>Data: message id, handler key</para>
+<para>Triggers: Webservices success.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>WS_Failure</term>
+<listitem>
+<para>ID: LIBERTY-23</para>
+<para>Level: INFO</para>
+<para>Description: Webservices Failure</para>
+<para>Data: error message</para>
+<para>Triggers: Webservices Failure.</para>
+</listitem>
+</varlistentry>
+</variablelist>

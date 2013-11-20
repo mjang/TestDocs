@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/xslt
+END
+catalog.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/xslt/catalog.xml
+END
+logs.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/xslt/logs.xsl
+END

@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 60
+openam-site-helper.iml
+target
+target
+openam-doc-content.iml
+
+END

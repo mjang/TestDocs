@@ -1,0 +1,111 @@
+<variablelist xml:id="log-ref-CORETOKEN">
+<para>OpenAM logs the following CORETOKEN messages.</para>
+<varlistentry>
+<term>TOKEN_CREATE_SUCCESS</term>
+<listitem>
+<para>ID: CORETOKEN-1</para>
+<para>Level: INFO</para>
+<para>Description: Creating a token succeeded</para>
+<para>Data: token type, token subject, token attribute names</para>
+<para>Triggers: Create token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>TOKEN_READ_SUCCESS</term>
+<listitem>
+<para>ID: CORETOKEN-2</para>
+<para>Level: INFO</para>
+<para>Description: Retrieving a token succeeded</para>
+<para>Data: token type, token subject</para>
+<para>Triggers: Read token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>TOKEN_UPDATE_SUCCESS</term>
+<listitem>
+<para>ID: CORETOKEN-3</para>
+<para>Level: INFO</para>
+<para>Description: Updating a token succeeded</para>
+<para>Data: names of attributes updated</para>
+<para>Triggers: Update token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>TOKEN_SEARCH_SUCCESS</term>
+<listitem>
+<para>ID: CORETOKEN-4</para>
+<para>Level: INFO</para>
+<para>Description: Searching tokens succeeded</para>
+<para>Data: query, number of entries returned</para>
+<para>Triggers: Search token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>TOKEN_DELETE_SUCCESS</term>
+<listitem>
+<para>ID: CORETOKEN-5</para>
+<para>Level: INFO</para>
+<para>Description: Removing a token succeeded</para>
+<para>Triggers: Delete token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>EXPIRED_TOKEN_DELETE_SUCCESS</term>
+<listitem>
+<para>ID: CORETOKEN-6</para>
+<para>Level: INFO</para>
+<para>Description: Removing an expired token succeeded</para>
+<para>Triggers: Token expired</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_CREATE_TOKEN</term>
+<listitem>
+<para>ID: CORETOKEN-7</para>
+<para>Level: INFO</para>
+<para>Description: Creating a token failed</para>
+<para>Data: error message, token type, token subject, token attribute names</para>
+<para>Triggers: Create token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_READ_TOKEN</term>
+<listitem>
+<para>ID: CORETOKEN-8</para>
+<para>Level: INFO</para>
+<para>Description: Retrieving a token failed</para>
+<para>Data: error message</para>
+<para>Triggers: Read token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_UPDATE_TOKEN</term>
+<listitem>
+<para>ID: CORETOKEN-9</para>
+<para>Level: INFO</para>
+<para>Description: Updating a token failed</para>
+<para>Data: error message</para>
+<para>Triggers: Update token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_SEARCH_TOKEN</term>
+<listitem>
+<para>ID: CORETOKEN-10</para>
+<para>Level: INFO</para>
+<para>Description: Searching tokens failed</para>
+<para>Data: query, error message</para>
+<para>Triggers: Search Token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_DELETE_TOKEN</term>
+<listitem>
+<para>ID: CORETOKEN-11</para>
+<para>Level: INFO</para>
+<para>Description: Removing a token failed</para>
+<para>Data: error message</para>
+<para>Triggers: Delete token</para>
+</listitem>
+</varlistentry>
+</variablelist>

@@ -1,0 +1,289 @@
+<variablelist xml:id="log-ref-WebServicesSecurity">
+<para>OpenAM logs the following WebServicesSecurity messages.</para>
+<varlistentry>
+<term>UNSUPPORTED_TOKEN_TYPE</term>
+<listitem>
+<para>ID: WebServicesSecurity-1</para>
+<para>Level: INFO</para>
+<para>Description: Unsupported Token Type sent to STS for Security Token creation.</para>
+<para>Data: Token Type sent by client to STS</para>
+<para>Triggers: Invalid or unsupported token type sent by client to STS.</para>
+<para>Actions: Check the Token Type sent by client to STS.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATED_SAML11_ASSERTION</term>
+<listitem>
+<para>ID: WebServicesSecurity-2</para>
+<para>Level: INFO</para>
+<para>Description: Successfully created SAML 1.1 assertion by STS.</para>
+<para>Data: Assertion ID, Issuer of this SAML assertion, Service Provider for which this Assertion is created or applies to, Confirmation Method, Token Type, Key Type</para>
+<para>Triggers: Valid parameters sent by client to STS to create SAML assetion.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATED_SAML20_ASSERTION</term>
+<listitem>
+<para>ID: WebServicesSecurity-3</para>
+<para>Level: INFO</para>
+<para>Description: Successfully created SAML 2.0 assertion by STS.</para>
+<para>Data: Assertion ID, Issuer of this SAML assertion, Service Provider for which this Assertion is created or applies to, Confirmation Method, Token Type, Key Type</para>
+<para>Triggers: Valid parameters sent by client to STS to create SAML assetion.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_SIGNING_SAML_ASSERTION</term>
+<listitem>
+<para>ID: WebServicesSecurity-4</para>
+<para>Level: INFO</para>
+<para>Description: Error during signing SAML assertion by STS.</para>
+<para>Data: Actual Error message</para>
+<para>Triggers: Problem in STS's Certificate or Private key.</para>
+<para>Actions: Check the certificate of STS.; Check the Private Key of STS.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_CREATING_SAML11_ASSERTION</term>
+<listitem>
+<para>ID: WebServicesSecurity-5</para>
+<para>Level: INFO</para>
+<para>Description: Error during creation of SAML 1.1 Assertion by STS.</para>
+<para>Data: Actual Error message</para>
+<para>Triggers: Invalid parameters sent to create SAML 1.1 Assertion.</para>
+<para>Actions: Check all the parameters sent to create SAML 1.1 Assertion.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_CREATING_SAML20_ASSERTION</term>
+<listitem>
+<para>ID: WebServicesSecurity-6</para>
+<para>Level: INFO</para>
+<para>Description: Error during creation of SAML 2.0 Assertion by STS.</para>
+<para>Data: Actual Error message</para>
+<para>Triggers: Invalid parameters sent to create SAML 2.0 Assertion.</para>
+<para>Actions: Check all the parameters sent to create SAML 2.0 Assertion.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDENTITY_SUBJECT_NAME</term>
+<listitem>
+<para>ID: WebServicesSecurity-7</para>
+<para>Level: INFO</para>
+<para>Description: Security token being created for this Identity.</para>
+<para>Data: Subject or Identity of the token</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ATTR_MAP_FOR_SP</term>
+<listitem>
+<para>ID: WebServicesSecurity-8</para>
+<para>Level: INFO</para>
+<para>Description: Security token being created with this Attribute Map for Service Provider.</para>
+<para>Data: Attribute Map required by Service Provider</para>
+<para>Triggers: Service Provider needs Attributes to be populated in Security token.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCESS_VALIDATE_REQUEST</term>
+<listitem>
+<para>ID: WebServicesSecurity-9</para>
+<para>Level: INFO</para>
+<para>Description: Successfully validated the incoming SOAP request.</para>
+<para>Data: Provider name to identify the STS service or WSP profile, Security Mechanism or authentication token sent by client</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REQUEST_TO_BE_VALIDATED</term>
+<listitem>
+<para>ID: WebServicesSecurity-10</para>
+<para>Level: FINE</para>
+<para>Description: Incoming SOAP request to be validated.</para>
+<para>Data: Complete SOAP request</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>RESPONSE_TO_BE_SECURED</term>
+<listitem>
+<para>ID: WebServicesSecurity-11</para>
+<para>Level: FINE</para>
+<para>Description: Outgoing SOAP response to be secured.</para>
+<para>Data: Complete SOAP response</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCESS_SECURE_RESPONSE</term>
+<listitem>
+<para>ID: WebServicesSecurity-12</para>
+<para>Level: INFO</para>
+<para>Description: Successfully secured the outgoing SOAP response.</para>
+<para>Data: Provider name to identify the STS service or WSP profile</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REQUEST_TO_BE_SECURED</term>
+<listitem>
+<para>ID: WebServicesSecurity-13</para>
+<para>Level: FINE</para>
+<para>Description: Outgoing SOAP request to be secured.</para>
+<para>Data: Complete SOAP request</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCESS_SECURE_REQUEST</term>
+<listitem>
+<para>ID: WebServicesSecurity-14</para>
+<para>Level: INFO</para>
+<para>Description: Successfully secured the outgoing SOAP request.</para>
+<para>Data: Provider name to identify the STS client or WSC profile, Security Mechanism or authentication token sent by client</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>RESPONSE_TO_BE_VALIDATED</term>
+<listitem>
+<para>ID: WebServicesSecurity-15</para>
+<para>Level: FINE</para>
+<para>Description: Incoming SOAP response to be validated.</para>
+<para>Data: Complete SOAP response</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCESS_VALIDATE_RESPONSE</term>
+<listitem>
+<para>ID: WebServicesSecurity-16</para>
+<para>Level: INFO</para>
+<para>Description: Successfully validated the incoming SOAP response.</para>
+<para>Data: Provider name to identify the STS client or WSC profile</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTHENTICATION_FAILED</term>
+<listitem>
+<para>ID: WebServicesSecurity-17</para>
+<para>Level: INFO</para>
+<para>Description: Authentication of the incoming SOAP request failed at server or WSP.</para>
+<para>Data: Security Mechanism or Security token sent by client</para>
+<para>Triggers: Invalid Security Mechanism or Security token sent by client.</para>
+<para>Actions: Check Security Mechanism or Security token sent by client.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_PARSING_SOAP_HEADERS</term>
+<listitem>
+<para>ID: WebServicesSecurity-18</para>
+<para>Level: INFO</para>
+<para>Description: Error in parsing SOAP headers from incoming SOAP request.</para>
+<para>Data: Actual error message</para>
+<para>Triggers: Client has sent incorrect SOAP headers.</para>
+<para>Actions: Check SOAP headers.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_ADDING_SECURITY_HEADER</term>
+<listitem>
+<para>ID: WebServicesSecurity-19</para>
+<para>Level: INFO</para>
+<para>Description: Error in adding Security header in outgoing SOAP request.</para>
+<para>Data: Actual error message</para>
+<para>Triggers: Error in adding namespaces or creating Security Header element.</para>
+<para>Actions: Check namespaces and Secuirty Header.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SIGNATURE_VALIDATION_FAILED</term>
+<listitem>
+<para>ID: WebServicesSecurity-20</para>
+<para>Level: INFO</para>
+<para>Description: Signature validation failed in incoming SOAP request / response.</para>
+<para>Data: Actual error message</para>
+<para>Triggers: Error in signing request / response by client / server.</para>
+<para>Actions: Check keystore and certificate used for signing.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_SIGN</term>
+<listitem>
+<para>ID: WebServicesSecurity-21</para>
+<para>Level: INFO</para>
+<para>Description: Unable to sign SOAP request or response.</para>
+<para>Data: Actual error message</para>
+<para>Triggers: Error in retrieving certificate from the keystore.</para>
+<para>Actions: Check keystore configuration and certificate used for signing.; Check debug file for detailed info.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_ENCRYPT</term>
+<listitem>
+<para>ID: WebServicesSecurity-22</para>
+<para>Level: INFO</para>
+<para>Description: Unable to encrypt SOAP request or response.</para>
+<para>Data: Actual error message</para>
+<para>Triggers: Error in retrieving certificate from the keystore.</para>
+<para>Actions: Check keystore configuration and certificate used for encryption.; Check debug file for detailed info.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_DECRYPT</term>
+<listitem>
+<para>ID: WebServicesSecurity-23</para>
+<para>Level: INFO</para>
+<para>Description: Unable to decrypt SOAP request or response.</para>
+<para>Data: Actual error message</para>
+<para>Triggers: Error in retrieving certificate from the keystore.</para>
+<para>Actions: Check keystore configuration and certificate used for decryption.; Check debug file for detailed info.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCESS_RETRIEVING_TOKEN_FROM_STS</term>
+<listitem>
+<para>ID: WebServicesSecurity-24</para>
+<para>Level: INFO</para>
+<para>Description: Successfully retrieved Security Token from STS service.</para>
+<para>Data: Web Service Provider end point for which Security Token being generated, Security Token Service end point to which STS client talks to, Security Token Service MEX end point address, End user credential (if "null" then the Identity of the generated Security token is Web Service Client, else it is owned by Authenticated End user), Key Type, Token Type</para>
+<para>Triggers: All the required input data parameters are correct.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_RETRIEVING_TOKEN_FROM_STS</term>
+<listitem>
+<para>ID: WebServicesSecurity-25</para>
+<para>Level: INFO</para>
+<para>Description: Error in retrieving Security Token from STS service.</para>
+<para>Data: Actual error message</para>
+<para>Triggers: Some or more required input data parameters are not correct.</para>
+<para>Actions: Check all the required input data parameters.; Check debug file for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_RETRIEVING_TOKEN_FROM_STS</term>
+<listitem>
+<para>ID: WebServicesSecurity-26</para>
+<para>Level: SEVERE</para>
+<para>Description: Error in retrieving Security Token from STS service.</para>
+<para>Data: Actual error message</para>
+<para>Triggers: Some or more required input data parameters are not correct.</para>
+<para>Actions: Check all the required input data parameters.; Check debug file for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_CREATING_SAML11_ASSERTION</term>
+<listitem>
+<para>ID: WebServicesSecurity-27</para>
+<para>Level: SEVERE</para>
+<para>Description: Error during creation of SAML 1.1 Assertion by STS.</para>
+<para>Data: Actual Error message</para>
+<para>Triggers: Invalid parameters sent to create SAML 1.1 Assertion.</para>
+<para>Actions: Check all the parameters sent to create SAML 1.1 Assertion.; Check debug file for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_CREATING_SAML20_ASSERTION</term>
+<listitem>
+<para>ID: WebServicesSecurity-28</para>
+<para>Level: SEVERE</para>
+<para>Description: Error during creation of SAML 2.0 Assertion by STS.</para>
+<para>Data: Actual Error message</para>
+<para>Triggers: Invalid parameters sent to create SAML 2.0 Assertion.</para>
+<para>Actions: Check all the parameters sent to create SAML 2.0 Assertion.; Check debug file for detailed error.</para>
+</listitem>
+</varlistentry>
+</variablelist>

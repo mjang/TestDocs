@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/openam/!svn/ver/6988/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/upgrade-guide
+END
+chap-upgrade-components.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/openam/!svn/ver/6701/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/upgrade-guide/chap-upgrade-components.xml
+END
+chap-legacy-servers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/openam/!svn/ver/6701/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/upgrade-guide/chap-legacy-servers.xml
+END
+preface.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/openam/!svn/ver/6701/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/upgrade-guide/preface.xml
+END
+index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/openam/!svn/ver/6701/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/upgrade-guide/index.xml
+END
+chap-upgrade-servers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/openam/!svn/ver/6988/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/upgrade-guide/chap-upgrade-servers.xml
+END
+chap-about-upgrades.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/openam/!svn/ver/6701/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/upgrade-guide/chap-about-upgrades.xml
+END

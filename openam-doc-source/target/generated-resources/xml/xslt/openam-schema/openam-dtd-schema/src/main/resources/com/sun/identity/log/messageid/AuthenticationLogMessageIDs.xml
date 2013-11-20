@@ -1,0 +1,1035 @@
+<variablelist xml:id="log-ref-AUTHENTICATION">
+<para>OpenAM logs the following AUTHENTICATION messages.</para>
+<varlistentry>
+<term>LOGIN_SUCCESS</term>
+<listitem>
+<para>ID: AUTHENTICATION-100</para>
+<para>Level: INFO</para>
+<para>Description: Authentication is Successful</para>
+<para>Data: message, no session</para>
+<para>Triggers: User authenticated with valid credentials</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_SUCCESS_USER</term>
+<listitem>
+<para>ID: AUTHENTICATION-101</para>
+<para>Level: INFO</para>
+<para>Description: User based authentication is successful</para>
+<para>Data: message, authentication type, user name, no session</para>
+<para>Triggers: User authenticated with valid credentials</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_SUCCESS_ROLE</term>
+<listitem>
+<para>ID: AUTHENTICATION-102</para>
+<para>Level: INFO</para>
+<para>Description: Role based authentication is successful</para>
+<para>Data: message, authentication type, role name, no session</para>
+<para>Triggers: User belonging to role authenticated with valid credentials</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_SUCCESS_SERVICE</term>
+<listitem>
+<para>ID: AUTHENTICATION-103</para>
+<para>Level: INFO</para>
+<para>Description: Service based authentication is successful</para>
+<para>Data: message, authentication type, service name, no session</para>
+<para>Triggers: User authenticated with valid credentials to a configured service under realm</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_SUCCESS_LEVEL</term>
+<listitem>
+<para>ID: AUTHENTICATION-104</para>
+<para>Level: INFO</para>
+<para>Description: Authentication level based authentication is successful</para>
+<para>Data: message, authentication type, authentication level value, no session</para>
+<para>Triggers: User authenticated with valid credentials to one or more authentication modules having authentication level value greater than or equal to specified authentication level</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_SUCCESS_MODULE_INSTANCE</term>
+<listitem>
+<para>ID: AUTHENTICATION-105</para>
+<para>Level: INFO</para>
+<para>Description: Module based authentication is successful</para>
+<para>Data: message, authentication type, module name, no session</para>
+<para>Triggers: User authenticated with valid credentials to authentication module under realm</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED</term>
+<listitem>
+<para>ID: AUTHENTICATION-200</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Incorrect/invalid credentials presented; User locked out/not active</para>
+<para>Actions: Enter correct/valid credentials to required authentication module</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_INVALIDPASSWORD</term>
+<listitem>
+<para>ID: AUTHENTICATION-201</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Invalid credentials entered.</para>
+<para>Actions: Enter the correct password.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_NOCONFIG</term>
+<listitem>
+<para>ID: AUTHENTICATION-202</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Named Configuration (Auth Chain) does not exist.</para>
+<para>Actions: Create and configure a named config for this org.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_NOUSERPROFILE</term>
+<listitem>
+<para>ID: AUTHENTICATION-203</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: No user profile found for this user.</para>
+<para>Actions: User does not exist in the datastore plugin configured and hence configure the datastore plugin for this realm/org correctly.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USERINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-204</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: This user is not active.</para>
+<para>Actions: Activate the user.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LOCKEDOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-205</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Max number of failure attempts exceeded. User is Locked out.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ACCOUNTEXPIRED</term>
+<listitem>
+<para>ID: AUTHENTICATION-206</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: User account has expired.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LOGINTIMEOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-207</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Login timed out.</para>
+<para>Actions: Try to login again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULEDENIED</term>
+<listitem>
+<para>ID: AUTHENTICATION-208</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Authentication module is denied.</para>
+<para>Actions: Configure this module or use some other module.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MAXSESSIONREACHED</term>
+<listitem>
+<para>ID: AUTHENTICATION-209</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Limit for maximum number of allowed session has been reached.</para>
+<para>Actions: Logout of a session or increase the limit.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_INVALIDDOMAIN</term>
+<listitem>
+<para>ID: AUTHENTICATION-210</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Org/Realm does not exists.</para>
+<para>Actions: Use a valid Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ORGINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-211</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Org/Realm is not active.</para>
+<para>Actions: Activate the Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SESSIONCREATEERROR</term>
+<listitem>
+<para>ID: AUTHENTICATION-212</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message</para>
+<para>Triggers: Cannot create a session.</para>
+<para>Actions: Ensure that session service is configured and maxsession is not reached.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER</term>
+<listitem>
+<para>ID: AUTHENTICATION-213</para>
+<para>Level: INFO</para>
+<para>Description: User based authentication failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: No authentication configuration (chain of one or more authentication modules) configured for user; Incorrect/invalid credentials presented; User locked out/not active</para>
+<para>Actions: Configure authentication configuration (chain of one or more authentication modules) for user; Enter correct/valid credentials to required authentication module</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_INVALIDPASSWORD</term>
+<listitem>
+<para>ID: AUTHENTICATION-214</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based Auth. Invalid credentials entered.</para>
+<para>Actions: Enter the correct password.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_NOCONFIG</term>
+<listitem>
+<para>ID: AUTHENTICATION-215</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: Named Configuration (Auth Chain) does not exist for this user</para>
+<para>Actions: Create and configure a named config for this user</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_NOUSERPROFILE</term>
+<listitem>
+<para>ID: AUTHENTICATION-216</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based Auth. No user profile found for this user.</para>
+<para>Actions: User does not exist in the datastore plugin configured and hence configure the datastore plugin for this realm/org correctly.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_USERINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-217</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based Auth. This user is not active.</para>
+<para>Actions: Activate the user.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_LOCKEDOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-218</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based Auth. Max number of failure attempts exceeded. User is Locked out.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_ACCOUNTEXPIRED</term>
+<listitem>
+<para>ID: AUTHENTICATION-219</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based Auth. User account has expired.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_LOGINTIMEOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-220</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based Auth. Login timed out.</para>
+<para>Actions: Try to login again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_MODULEDENIED</term>
+<listitem>
+<para>ID: AUTHENTICATION-221</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based Auth. Authentication module is denied.</para>
+<para>Actions: Configure this module or use some other module.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_MAXSESSIONREACHED</term>
+<listitem>
+<para>ID: AUTHENTICATION-222</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based auth. Limit for maximum number of allowed session has been reached.</para>
+<para>Actions: Logout of a session or increase the limit.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_INVALIDDOMAIN</term>
+<listitem>
+<para>ID: AUTHENTICATION-223</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based auth. Org/Realm does not exists.</para>
+<para>Actions: Use a valid Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_ORGINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-224</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based auth. Org/Realm is not active.</para>
+<para>Actions: Activate the Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_USER_SESSIONCREATEERROR</term>
+<listitem>
+<para>ID: AUTHENTICATION-225</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: User based auth. Cannot create a session.</para>
+<para>Actions: Ensure that session service is configured and maxsession is not reached.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE</term>
+<listitem>
+<para>ID: AUTHENTICATION-226</para>
+<para>Level: INFO</para>
+<para>Description: Role based authentication failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: No authentication configuration (chain of one or more authentication modules) configured for role; Incorrect/invalid credentials presented; User does not belong to this role; User locked out/not active</para>
+<para>Actions: Configure authentication configuration (chain of one or more authentication modules) for role; Enter correct/valid credentials to required authentication module; Assign this role to the authenticating user</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_INVALIDPASSWORD</term>
+<listitem>
+<para>ID: AUTHENTICATION-227</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based Auth. Invalid credentials entered.</para>
+<para>Actions: Enter the correct password.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_NOCONFIG</term>
+<listitem>
+<para>ID: AUTHENTICATION-228</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Named Configuration (Auth Chain) does not exist for this role.</para>
+<para>Actions: Create and configure a named config for this role.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_NOUSERPROFILE</term>
+<listitem>
+<para>ID: AUTHENTICATION-229</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based Auth. No user profile found for this user.</para>
+<para>Actions: User does not exist in the datastore plugin configured and hence configure the datastore plugin for this realm/org correctly.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_USERINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-230</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based Auth. This user is not active.</para>
+<para>Actions: Activate the user.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_LOCKEDOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-231</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based Auth. Max number of failure attempts exceeded. User is Locked out.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_ACCOUNTEXPIRED</term>
+<listitem>
+<para>ID: AUTHENTICATION-232</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based Auth. User account has expired.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_LOGINTIMEOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-233</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based Auth. Login timed out.</para>
+<para>Actions: Try to login again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_MODULEDENIED</term>
+<listitem>
+<para>ID: AUTHENTICATION-234</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based Auth. Authentication module is denied.</para>
+<para>Actions: Configure this module or use some other module.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_MAXSESSIONREACHED</term>
+<listitem>
+<para>ID: AUTHENTICATION-235</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based auth. Limit for maximum number of allowed session has been reached.</para>
+<para>Actions: Logout of a session or increase the limit.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_INVALIDDOMAIN</term>
+<listitem>
+<para>ID: AUTHENTICATION-236</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based auth. Org/Realm does not exists.</para>
+<para>Actions: Use a valid Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_ORGINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-237</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based auth. Org/Realm is not active.</para>
+<para>Actions: Activate the Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_SESSIONCREATEERROR</term>
+<listitem>
+<para>ID: AUTHENTICATION-238</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based auth. Cannot create a session.</para>
+<para>Actions: Ensure that session service is configured and maxsession is not reached.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_ROLE_USERNOTFOUND</term>
+<listitem>
+<para>ID: AUTHENTICATION-239</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, role name</para>
+<para>Triggers: Role based auth. User does not belong to this role.</para>
+<para>Actions: Add the user to this role.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE</term>
+<listitem>
+<para>ID: AUTHENTICATION-240</para>
+<para>Level: INFO</para>
+<para>Description: Service based authentication failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: No authentication configuration (chain of one or more authentication modules) configured for service; Incorrect/invalid credentials presented; User locked out/not active</para>
+<para>Actions: Configure authentication configuration (chain of one or more authentication modules) for service; Enter correct/valid credentials to required authentication module</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_INVALIDPASSWORD</term>
+<listitem>
+<para>ID: AUTHENTICATION-241</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based Auth. Invalid credentials entered.</para>
+<para>Actions: Enter the correct password.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_NOCONFIG</term>
+<listitem>
+<para>ID: AUTHENTICATION-242</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Named Configuration (Auth Chain) does not exist with this service name.</para>
+<para>Actions: Create and configure a named config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_NOUSERPROFILE</term>
+<listitem>
+<para>ID: AUTHENTICATION-243</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based Auth. No user profile found for this user.</para>
+<para>Actions: User does not exist in the datastore plugin configured and hence configure the datastore plugin for this realm/org correctly.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_USERINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-244</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based Auth. This user is not active.</para>
+<para>Actions: Activate the user.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_LOCKEDOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-245</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based Auth. Max number of failure attempts exceeded. User is Locked out.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_ACCOUNTEXPIRED</term>
+<listitem>
+<para>ID: AUTHENTICATION-246</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based Auth. User account has expired.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_LOGINTIMEOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-247</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based Auth. Login timed out.</para>
+<para>Actions: Try to login again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_MODULEDENIED</term>
+<listitem>
+<para>ID: AUTHENTICATION-248</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based Auth. Authentication module is denied.</para>
+<para>Actions: Configure this module or use some other module.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_NOSERVICE</term>
+<listitem>
+<para>ID: AUTHENTICATION-249</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based Auth. Service does not exist.</para>
+<para>Actions: Please use only valid Service.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_MAXSESSIONREACHED</term>
+<listitem>
+<para>ID: AUTHENTICATION-250</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based auth. Limit for maximum number of allowed session has been reached.</para>
+<para>Actions: Logout of a session or increase the limit.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_INVALIDDOMAIN</term>
+<listitem>
+<para>ID: AUTHENTICATION-251</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based auth. Org/Realm does not exists.</para>
+<para>Actions: Use a valid Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_ORGINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-252</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based auth. Org/Realm is not active.</para>
+<para>Actions: Activate the Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_SERVICE_SESSIONCREATEERROR</term>
+<listitem>
+<para>ID: AUTHENTICATION-253</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, service name</para>
+<para>Triggers: Service based auth. Cannot create a session.</para>
+<para>Actions: Ensure that session service is configured and maxsession is not reached.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL</term>
+<listitem>
+<para>ID: AUTHENTICATION-254</para>
+<para>Level: INFO</para>
+<para>Description: Authentication level based authentication failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: There are no authentication module(s) having authentication level value greater than or equal to specified authentication level; Incorrect/invalid credentials presented to one or more authentication modules having authentication level greater than or equal to specified authentication level; User locked out/not active</para>
+<para>Actions: Configure one or more authentication modules having authentication level value greater than or equal to required authentication level; Enter correct/valid credentials to one or more authentication modules having authentication level greater than or equal to specified authentication level</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_INVALIDPASSWORD</term>
+<listitem>
+<para>ID: AUTHENTICATION-255</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based Auth. Invalid credentials entered.</para>
+<para>Actions: Enter the correct password.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_NOCONFIG</term>
+<listitem>
+<para>ID: AUTHENTICATION-256</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based Auth. No Auth Configuration available.</para>
+<para>Actions: Create an auth configuration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_NOUSERPROFILE</term>
+<listitem>
+<para>ID: AUTHENTICATION-257</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based Auth. No user profile found for this user.</para>
+<para>Actions: User does not exist in the datastore plugin configured and hence configure the datastore plugin for this realm/org correctly.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_USERINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-258</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based Auth. This user is not active.</para>
+<para>Actions: Activate the user.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_LOCKEDOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-259</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based Auth. Max number of failure attempts exceeded. User is Locked out.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_ACCOUNTEXPIRED</term>
+<listitem>
+<para>ID: AUTHENTICATION-260</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based Auth. User account has expired.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_LOGINTIMEOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-261</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based Auth. Login timed out.</para>
+<para>Actions: Try to login again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_MODULEDENIED</term>
+<listitem>
+<para>ID: AUTHENTICATION-262</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based Auth. Authentication module is denied.</para>
+<para>Actions: Configure this module or use some other module.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_INCORRECTLEVEL</term>
+<listitem>
+<para>ID: AUTHENTICATION-263</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based Auth. Invalid Authg Level.</para>
+<para>Actions: Please specify valid auth level.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_MAXSESSIONREACHED</term>
+<listitem>
+<para>ID: AUTHENTICATION-264</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based auth. Limit for maximum number of allowed session has been reached.</para>
+<para>Actions: Logout of a session or increase the limit.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_INVALIDDOMAIN</term>
+<listitem>
+<para>ID: AUTHENTICATION-265</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based auth. Org/Realm does not exists.</para>
+<para>Actions: Use a valid Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_ORGINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-266</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based auth. Org/Realm is not active.</para>
+<para>Actions: Activate the Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_LEVEL_SESSIONCREATEERROR</term>
+<listitem>
+<para>ID: AUTHENTICATION-267</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, authentication level value</para>
+<para>Triggers: Level based auth. Cannot create a session.</para>
+<para>Actions: Ensure that session service is configured and maxsession is not reached.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE</term>
+<listitem>
+<para>ID: AUTHENTICATION-268</para>
+<para>Level: INFO</para>
+<para>Description: Module based authentication failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module is not registered/configured under realm; Incorrect/invalid credentials presented; User locked out/not active</para>
+<para>Actions: Register/configure authentication module under realm; Enter correct/valid credentials to authentication module</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_INVALIDPASSWORD</term>
+<listitem>
+<para>ID: AUTHENTICATION-269</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based Auth. Invalid credentials entered.</para>
+<para>Actions: Enter the correct password.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_NOUSERPROFILE</term>
+<listitem>
+<para>ID: AUTHENTICATION-270</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based Auth. No user profile found for this user.</para>
+<para>Actions: User does not exist in the datastore plugin configured and hence configure the datastore plugin for this realm/org correctly.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_USERINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-271</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based Auth. This user is not active.</para>
+<para>Actions: Activate the user.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_LOCKEDOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-272</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based Auth. Max number of failure attempts exceeded. User is Locked out.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_ACCOUNTEXPIRED</term>
+<listitem>
+<para>ID: AUTHENTICATION-273</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based Auth. User account has expired.</para>
+<para>Actions: Contact system administrator.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_LOGINTIMEOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-274</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based Auth. Login timed out.</para>
+<para>Actions: Try to login again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_MODULEDENIED</term>
+<listitem>
+<para>ID: AUTHENTICATION-275</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based Auth. Authentication module is denied.</para>
+<para>Actions: Configure this module or use some other module.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_MAXSESSIONREACHED</term>
+<listitem>
+<para>ID: AUTHENTICATION-276</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based auth. Limit for maximum number of allowed session has been reached.</para>
+<para>Actions: Logout of a session or increase the limit.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_INVALIDDOMAIN</term>
+<listitem>
+<para>ID: AUTHENTICATION-277</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based auth. Org/Realm does not exists.</para>
+<para>Actions: Use a valid Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_ORGINACTIVE</term>
+<listitem>
+<para>ID: AUTHENTICATION-278</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based auth. Org/Realm is not active.</para>
+<para>Actions: Activate the Org/Realm.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGIN_FAILED_MODULE_INSTANCE_SESSIONCREATEERROR</term>
+<listitem>
+<para>ID: AUTHENTICATION-279</para>
+<para>Level: INFO</para>
+<para>Description: Authentication Failed</para>
+<para>Data: error message, authentication type, module name</para>
+<para>Triggers: Module based auth. Cannot create a session.</para>
+<para>Actions: Ensure that session service is configured and maxsession is not reached.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT</term>
+<listitem>
+<para>ID: AUTHENTICATION-300</para>
+<para>Level: INFO</para>
+<para>Description: User logout is Successful</para>
+<para>Data: message</para>
+<para>Triggers: User logged out</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_USER</term>
+<listitem>
+<para>ID: AUTHENTICATION-301</para>
+<para>Level: INFO</para>
+<para>Description: User logout is successful from user based authentication</para>
+<para>Data: message, authentication type, user name</para>
+<para>Triggers: User logged out</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_ROLE</term>
+<listitem>
+<para>ID: AUTHENTICATION-302</para>
+<para>Level: INFO</para>
+<para>Description: User logout is successful from role based authentication</para>
+<para>Data: message, authentication type, role name</para>
+<para>Triggers: User belonging to this role logged out</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_SERVICE</term>
+<listitem>
+<para>ID: AUTHENTICATION-303</para>
+<para>Level: INFO</para>
+<para>Description: User logout is successful from service based authentication</para>
+<para>Data: message, authentication type, service name</para>
+<para>Triggers: User logged out of a configured service under realm</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_LEVEL</term>
+<listitem>
+<para>ID: AUTHENTICATION-304</para>
+<para>Level: INFO</para>
+<para>Description: User logout is successful from authentication level based authentication</para>
+<para>Data: message, authentication type, authentication level value</para>
+<para>Triggers: User logged out of one or more authentication modules having authentication level value greater than or equal to specified authentication level</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>LOGOUT_MODULE_INSTANCE</term>
+<listitem>
+<para>ID: AUTHENTICATION-305</para>
+<para>Level: INFO</para>
+<para>Description: User logout is successful from module based authentication</para>
+<para>Data: message, authentication type, module name</para>
+<para>Triggers: User logged out of authentication module under realm</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CHANGE_USER_PASSWORD_FAILED</term>
+<listitem>
+<para>ID: AUTHENTICATION-306</para>
+<para>Level: INFO</para>
+<para>Description: Change user password failed</para>
+<para>Data: error message, authentication type, user name</para>
+<para>Triggers: Change user password in authentication screen due to directory server password policy.</para>
+<para>Actions: Enter password which meets directory server password policy</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CHANGE_USER_PASSWORD_SUCCEEDED</term>
+<listitem>
+<para>ID: AUTHENTICATION-307</para>
+<para>Level: INFO</para>
+<para>Description: Changing user password succeeded</para>
+<para>Data: message</para>
+<para>Triggers: Change user password in authentication screen due to directory server password policy.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_USER_PROFILE_FAILED</term>
+<listitem>
+<para>ID: AUTHENTICATION-308</para>
+<para>Level: INFO</para>
+<para>Description: Create user password failed</para>
+<para>Data: error message, user name</para>
+<para>Triggers: Create new user in Membership module</para>
+<para>Actions: Make sure password entered meets directory server password policy</para>
+</listitem>
+</varlistentry>
+</variablelist>

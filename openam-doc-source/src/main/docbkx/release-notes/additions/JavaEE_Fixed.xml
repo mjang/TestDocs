@@ -1,0 +1,11 @@
+  <!-- List generated at 15:49:24 20131023 using http://bugster.forgerock.org/jira/rest/api/2/search?jql=project+%3D+OpenAM+AND+component+%3D+%22j2ee+agents%22+AND+fixVersion+in+%28%22Agents-3.1.0-Xpress%22%2C+%22Agents-3.2.0%22%2C+%22Agents-3.3.0%22%29+AND+resolution+%3D+Fixed+AND+labels+%3D+release-notes&startAt=0&maxResults=500&fields=summary-->
+  <itemizedlist>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-1775" xlink:show="new">OPENAM-1775</link>
+       : Java EE agent should not encapsulate exceptions coming out of applications</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-1357" xlink:show="new">OPENAM-1357</link>: WebSphere Policy Agent authentication issue for syncNode script when OpenAM authentication chain updated to not use Datastore as first module.</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-1220" xlink:show="new">OPENAM-1220</link>: Invalid date header -1 with Java agents</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-665" xlink:show="new">OPENAM-665</link>: Uninstallation of agent on Glassfish 3 does cleanly reset security-service element correctly.</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-390" xlink:show="new">OPENAM-390</link>: Hot-deployment fails for J2EE Agents</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-276" xlink:show="new">OPENAM-276</link>: Agent logout throws 403 after logout if cookie encoding is enabled</para></listitem>
+   <listitem><para><link xlink:href="https://bugster.forgerock.org/jira/browse/OPENAM-212" xlink:show="new">OPENAM-212</link>: RemoteUser still setted after logout when accessing not enforced URL</para></listitem>
+  </itemizedlist>

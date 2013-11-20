@@ -1,0 +1,1770 @@
+<variablelist xml:id="log-ref-SAML2">
+<para>OpenAM logs the following SAML2 messages.</para>
+<varlistentry>
+<term>INVALID_SP</term>
+<listitem>
+<para>ID: SAML2-1</para>
+<para>Level: INFO</para>
+<para>Description: Invalid Service Provider Identifier</para>
+<para>Data: Service Provider Entity Identifier</para>
+<para>Triggers: Invalid Service Provider,cannot process request</para>
+<para>Actions: Check the Service Provider Name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_IDP</term>
+<listitem>
+<para>ID: SAML2-2</para>
+<para>Level: INFO</para>
+<para>Description: Invalid Identity Provider Identifier</para>
+<para>Data: Identity Provider Entity Identifier</para>
+<para>Triggers: Invalid Identity Provider,cannot process request</para>
+<para>Actions: Check the Identity Provider Name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SP_METADATA_ERROR</term>
+<listitem>
+<para>ID: SAML2-3</para>
+<para>Level: INFO</para>
+<para>Description: Unable to retreive Service Provider Metadata.</para>
+<para>Data: Service Provider Entity Identifier</para>
+<para>Triggers: Cannot retrieve Service Provider Metadata</para>
+<para>Actions: Check the Data Store is accessible .; Check the Realm name.; Check the Service Provider Entity Identifier.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDP_METADATA_ERROR</term>
+<listitem>
+<para>ID: SAML2-4</para>
+<para>Level: INFO</para>
+<para>Description: Unable to retrieve Identity Provider Metadata.</para>
+<para>Data: Identity Provider Entity Identifier</para>
+<para>Triggers: Cannot retreive Identity Provider Metadata</para>
+<para>Actions: Check the Data Store is accessible .; Check the Realm name.; Check the Identity Provider Entity Identifier.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SSO_NOT_FOUND</term>
+<listitem>
+<para>ID: SAML2-5</para>
+<para>Level: INFO</para>
+<para>Description: Unable to retrieve SingleSignOnService URL.</para>
+<para>Data: Identity Provider Entity Identifier</para>
+<para>Triggers: Error retreiving SingleSignOnService URL.</para>
+<para>Actions: Check the Data Store is accessible .; Check the Realm name.; Check the Identity Provider Entity Identifier.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REDIRECT_TO_SP</term>
+<listitem>
+<para>ID: SAML2-6</para>
+<para>Level: INFO</para>
+<para>Description: Redirecting to SingleSignOnService</para>
+<para>Data: SingleSignOnService URL</para>
+<para>Triggers: Sending Authentication Request by redirecting to Single SignOn Service URL.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>RESPONSE_NOT_FOUND_FROM_CACHE</term>
+<listitem>
+<para>ID: SAML2-7</para>
+<para>Level: INFO</para>
+<para>Description: Unable to retrieve Response using Response ID after local login.</para>
+<para>Data: Response ID</para>
+<para>Triggers: Response doesn't exist in the SP cache.</para>
+<para>Actions: Check the SP cache clean up interval configuration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_ARTIFACT</term>
+<listitem>
+<para>ID: SAML2-8</para>
+<para>Level: INFO</para>
+<para>Description: Unable to retrieve Artifact from HTTP Request.</para>
+<para>Triggers: SAMLart is missing from HTTP Request</para>
+<para>Actions: Check with sender.; Check web container server log.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>RECEIVED_ARTIFACT</term>
+<listitem>
+<para>ID: SAML2-9</para>
+<para>Level: INFO</para>
+<para>Description: Received Artifact from HTTP Request.</para>
+<para>Data: Artifact value</para>
+<para>Triggers: Received Artifact from HTTP Request in the process of Single Sign On using Artifact Profile.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDP_NOT_FOUND</term>
+<listitem>
+<para>ID: SAML2-10</para>
+<para>Level: INFO</para>
+<para>Description: Unable to find Identity Provider Entity ID based on the SourceID in Artifact.</para>
+<para>Data: Artifact value, Realm or organization name</para>
+<para>Triggers: No matching Identity Provider Entity ID found in meta data configuration.</para>
+<para>Actions: Check if Identity Provider's meta data is loaded.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>IDP_META_NOT_FOUND</term>
+<listitem>
+<para>ID: SAML2-11</para>
+<para>Level: INFO</para>
+<para>Description: Unable to load Identity Provider's meta data.</para>
+<para>Data: Realm or organization name, Identity Provider Entity ID</para>
+<para>Triggers: Unable to load Identity Provider's meta data.</para>
+<para>Actions: Check Identity Provider Entity ID.; Check Realm or organization name.; Check if the identity provider's meta is loaded.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ARTIFACT_RESOLUTION_URL_NOT_FOUND</term>
+<listitem>
+<para>ID: SAML2-12</para>
+<para>Level: INFO</para>
+<para>Description: Unable to find Identity Provider's Artifact resolution service URL.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: Artifact resolution service URL is not defined in Identity Provider's metadata.</para>
+<para>Actions: Check Identity Provider's meta data.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_CREATE_ARTIFACT_RESOLVE</term>
+<listitem>
+<para>ID: SAML2-13</para>
+<para>Level: INFO</para>
+<para>Description: Unable to create ArtifactResolve.</para>
+<para>Data: Hosted Service Provider Entity ID, Artifact value</para>
+<para>Triggers: Error when creating ArtifactResolve instance.</para>
+<para>Actions: Check implementation of ArtifactResolve.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_GET_SOAP_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-14</para>
+<para>Level: INFO</para>
+<para>Description: Unable to obtain response from SOAP communication with Identity Provider's artifact resolution service.</para>
+<para>Data: Hosted Service Provider Entity ID, Identity Provider's Artifact Resolution Service URL</para>
+<para>Triggers: Error in SOAP communication.</para>
+<para>Actions: Check Identity Provider's Artifact Resolution Service URL.; Check SOAP message authentication requirements for Identity Provider's Artifact Resolution Service.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_RESPONSE_FROM_ARTIFACT</term>
+<listitem>
+<para>ID: SAML2-15</para>
+<para>Level: INFO</para>
+<para>Description: Obtained response using artifact profile.</para>
+<para>Data: Hosted Service Provider Entity ID, Remote Identity Provider Entity ID, Artifact value, Response xml String if the log level was set to LL_FINE at run time</para>
+<para>Triggers: Single Sign On using Artifact Profile.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SOAP_ERROR</term>
+<listitem>
+<para>ID: SAML2-16</para>
+<para>Level: INFO</para>
+<para>Description: Unable to obtain Artifact Response due to SOAP error.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: Error in SOAP communication.</para>
+<para>Actions: Check configuration for Identity Provider</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SOAP_FAULT</term>
+<listitem>
+<para>ID: SAML2-17</para>
+<para>Level: INFO</para>
+<para>Description: Received SOAP Fault instead of Artifact Response.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: Error in Identity Provider's Artifact Resolution.</para>
+<para>Actions: Check Identity Provider; Check debug file for detailed fault info.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>TOO_MANY_ARTIFACT_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-18</para>
+<para>Level: INFO</para>
+<para>Description: Received too many Artifact Response.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: Identity Provider sent more than one Artifact Response in SOAPMessage.</para>
+<para>Actions: Check Identity Provider</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_INSTANTIATE_ARTIFACT_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-19</para>
+<para>Level: INFO</para>
+<para>Description: Unable to instantiate Artifact Response.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: Error while instantiating Artifact Response.</para>
+<para>Actions: Check Identity Provider; Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_ARTIFACT_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-20</para>
+<para>Level: INFO</para>
+<para>Description: Unable to obtain Artifact Response from SOAP message.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: No ArtifactResponse is included in SOAPMessage.</para>
+<para>Actions: Check Identity Provider</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ARTIFACT_RESPONSE_INVALID_SIGNATURE</term>
+<listitem>
+<para>ID: SAML2-21</para>
+<para>Level: INFO</para>
+<para>Description: Unable to verify signature on Artifact Response.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: Error while trying to verify signature on ArtifactResponse.</para>
+<para>Actions: Check configuration for Identity Provider; Check debug file for detailed info</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ARTIFACT_RESPONSE_INVALID_INRESPONSETO</term>
+<listitem>
+<para>ID: SAML2-22</para>
+<para>Level: INFO</para>
+<para>Description: Invalid InResponseTo attribute in Artifact Response.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: InResponseTo attribute in Artifact Response is missing or doesn't match with Artifact Resolve ID.</para>
+<para>Actions: Check with Identity Provider</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ARTIFACT_RESPONSE_INVALID_ISSUER</term>
+<listitem>
+<para>ID: SAML2-23</para>
+<para>Level: INFO</para>
+<para>Description: Invalid Issuer in Artifact Response.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: Issuer in Artifact Response is missing or doesn't match with Identity Provider Entity ID.</para>
+<para>Actions: Check with Identity Provider</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ARTIFACT_RESPONSE_INVALID_STATUS_CODE</term>
+<listitem>
+<para>ID: SAML2-24</para>
+<para>Level: INFO</para>
+<para>Description: Invalid status code in Artifact Response.</para>
+<para>Data: Identity Provider Entity ID, Status code if the log level was set to LL_FINE at runtime</para>
+<para>Triggers: Status in Artifact Response is missing or status code is not Success.</para>
+<para>Actions: Check with Identity Provider</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_INSTANTIATE_RESPONSE_ARTIFACT</term>
+<listitem>
+<para>ID: SAML2-25</para>
+<para>Level: INFO</para>
+<para>Description: Unable to instantiate Respones from Artifact Response.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: Error occurred while instantiating Response.</para>
+<para>Actions: Check debug file for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_SAML_RESPONSE_FROM_POST</term>
+<listitem>
+<para>ID: SAML2-26</para>
+<para>Level: INFO</para>
+<para>Description: SAML Response is missing from http post.</para>
+<para>Triggers: Parameter SAMLResponse is missing from http POST.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_INSTANTIATE_RESPONSE_POST</term>
+<listitem>
+<para>ID: SAML2-27</para>
+<para>Level: INFO</para>
+<para>Description: Unable to instantiate Response from POST.</para>
+<para>Triggers: Error occurred while instantiating Response.</para>
+<para>Actions: Check debug file for more info</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_DECODE_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-28</para>
+<para>Level: INFO</para>
+<para>Description: Unable to decode Response.</para>
+<para>Triggers: Error occurred while decoding Response.</para>
+<para>Actions: Check debug file for more info</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_RESPONSE_FROM_POST</term>
+<listitem>
+<para>ID: SAML2-29</para>
+<para>Level: INFO</para>
+<para>Description: Obtained response using POST profile.</para>
+<para>Data: Response xml String if the log level was set to LL_FINE at runtime</para>
+<para>Triggers: Single Sign On using POST Profile.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FED_INFO_WRITTEN</term>
+<listitem>
+<para>ID: SAML2-30</para>
+<para>Level: INFO</para>
+<para>Description: Written federation info.</para>
+<para>Data: Username, NameIDInfo value string if the log level was set to LL_FINE at runtime</para>
+<para>Triggers: Federation is done.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REDIRECT_TO_IDP</term>
+<listitem>
+<para>ID: SAML2-31</para>
+<para>Level: INFO</para>
+<para>Description: Redirect request to IDP.</para>
+<para>Data: redirection url</para>
+<para>Triggers: Single logout.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ACS_URL</term>
+<listitem>
+<para>ID: SAML2-32</para>
+<para>Level: INFO</para>
+<para>Description: Unable to find Assertion Consumer Service URL.</para>
+<para>Data: meta alias</para>
+<para>Triggers: Single Sign On.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_RETURN_BINDING</term>
+<listitem>
+<para>ID: SAML2-33</para>
+<para>Level: INFO</para>
+<para>Description: Unable to find return binding.</para>
+<para>Data: meta alias</para>
+<para>Triggers: Single Sign On.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POST_TO_TARGET_FAILED</term>
+<listitem>
+<para>ID: SAML2-34</para>
+<para>Level: INFO</para>
+<para>Description: Unable to post the response to target.</para>
+<para>Data: Assertion Consumer Service URL</para>
+<para>Triggers: Single Sign On with POST binding.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_CREATE_ARTIFACT</term>
+<listitem>
+<para>ID: SAML2-35</para>
+<para>Level: INFO</para>
+<para>Description: Unable to create an artifact.</para>
+<para>Data: IDP entity ID</para>
+<para>Triggers: Single Sign On with Artifact binding.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>RECEIVED_AUTHN_REQUEST</term>
+<listitem>
+<para>ID: SAML2-36</para>
+<para>Level: INFO</para>
+<para>Description: Received AuthnRequest.</para>
+<para>Data: SP entity ID, IDP meta alias, authnRequest xml string</para>
+<para>Triggers: Single Sign On.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POST_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-37</para>
+<para>Level: INFO</para>
+<para>Description: Post response to SP.</para>
+<para>Data: SP entity ID, IDP meta alias, response xml string</para>
+<para>Triggers: Single Sign On with POST binding.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SEND_ARTIFACT</term>
+<listitem>
+<para>ID: SAML2-38</para>
+<para>Level: INFO</para>
+<para>Description: Send an artifact to SP.</para>
+<para>Data: IDP entity ID, IDP realm, redirect URL</para>
+<para>Triggers: Single Sign On with Artifact binding.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_SOAP_MESSAGE</term>
+<listitem>
+<para>ID: SAML2-39</para>
+<para>Level: INFO</para>
+<para>Description: Encounter invalid SOAP message in IDP.</para>
+<para>Data: IDP entity ID</para>
+<para>Triggers: Single Sign On with Artifact binding.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ARTIFACT_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-40</para>
+<para>Level: INFO</para>
+<para>Description: The artifact response being sent to SP.</para>
+<para>Data: IDP entity ID, artifact string, artifact response</para>
+<para>Triggers: Single Sign On with Artifact binding.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-41</para>
+<para>Level: FINE</para>
+<para>Description: Entity descriptor obtained.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_GET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-42</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while getting entity descriptor.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Obtain entity descriptor.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_INVALID_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-43</para>
+<para>Level: INFO</para>
+<para>Description: Obtained invalid entity descriptor.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity descriptor.</para>
+<para>Actions: Delete invalid entity descriptor and import it again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-44</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting entity descriptor.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity descriptor.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_ID_SET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-45</para>
+<para>Level: INFO</para>
+<para>Description: No entity ID while setting entity descriptor.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Set entity descriptor.</para>
+<para>Actions: Set entity ID in entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_SET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-46</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while setting entity descriptor.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Set entity descriptor.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_DESCRIPTOR_SET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-47</para>
+<para>Level: INFO</para>
+<para>Description: Entity descriptor doesn't exist while setting entity descriptor.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity descriptor.</para>
+<para>Actions: Create entity descriptor before set.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-48</para>
+<para>Level: INFO</para>
+<para>Description: Entity descriptor was set.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_SET_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-49</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while setting entity descriptor.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity descriptor.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_INVALID_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-50</para>
+<para>Level: INFO</para>
+<para>Description: Invalid entity descriptor to set.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity descriptor.</para>
+<para>Actions: Check entity descriptor if it follows the schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_ID_CREATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-51</para>
+<para>Level: INFO</para>
+<para>Description: No entity ID while creating entity descriptor.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Create entity descriptor.</para>
+<para>Actions: Set entity ID in entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_CREATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-52</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while creating entity descriptor.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Create entity descriptor.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_DESCRIPTOR_EXISTS</term>
+<listitem>
+<para>ID: SAML2-53</para>
+<para>Level: INFO</para>
+<para>Description: Entity descriptor exists while creating entity descriptor.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity descriptor.</para>
+<para>Actions: Delete existing entity descriptor first.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_DESCRIPTOR_CREATED</term>
+<listitem>
+<para>ID: SAML2-54</para>
+<para>Level: INFO</para>
+<para>Description: Entity descriptor was created.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_CREATE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-55</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while creating entity descriptor.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity descriptor.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_INVALID_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-56</para>
+<para>Level: INFO</para>
+<para>Description: Invalid entity descriptor to create.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity descriptor.</para>
+<para>Actions: Check entity descriptor if it follows the schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_DELETE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-57</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while deleting entity descriptor.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Delete entity descriptor.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_DESCRIPTOR_DELETE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-58</para>
+<para>Level: INFO</para>
+<para>Description: Entity descriptor doesn't exist while deleting entity descriptor.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_DESCRIPTOR_DELETED</term>
+<listitem>
+<para>ID: SAML2-59</para>
+<para>Level: INFO</para>
+<para>Description: Entity descriptor was deleted.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity descriptor.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_DELETE_ENTITY_DESCRIPTOR</term>
+<listitem>
+<para>ID: SAML2-60</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while deleting entity descriptor.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity descriptor.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-61</para>
+<para>Level: FINE</para>
+<para>Description: Entity config obtained.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_GET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-62</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while getting entity config.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Obtain entity config.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_INVALID_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-63</para>
+<para>Level: INFO</para>
+<para>Description: Obtained invalid entity config.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity config.</para>
+<para>Actions: Delete invalid entity config and import it again.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-64</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting entity config.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Obtain entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_ID_SET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-65</para>
+<para>Level: INFO</para>
+<para>Description: No entity ID while setting entity config.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+<para>Actions: Set entity ID in entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_SET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-66</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while setting entity config.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_DESCRIPTOR_SET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-67</para>
+<para>Level: INFO</para>
+<para>Description: Entity config doesn't exist while setting entity config.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+<para>Actions: Create entity descriptor before set entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-68</para>
+<para>Level: INFO</para>
+<para>Description: Entity config was set.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_SET_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-69</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while setting entity config.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SET_INVALID_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-70</para>
+<para>Level: INFO</para>
+<para>Description: Invalid entity config to set.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Set entity config.</para>
+<para>Actions: Check entity config if it follows the schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_ID_CREATE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-71</para>
+<para>Level: INFO</para>
+<para>Description: No entity ID while creating entity config.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Set entity ID in entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_CREATE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-72</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while creating entity config.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_DESCRIPTOR_CREATE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-73</para>
+<para>Level: INFO</para>
+<para>Description: Entity config doesn't exist while creating entity config.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Create entity descriptor before create entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_CONFIG_EXISTS</term>
+<listitem>
+<para>ID: SAML2-74</para>
+<para>Level: INFO</para>
+<para>Description: Entity config exists while creating entity config.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Delete existing entity config first.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_CONFIG_CREATED</term>
+<listitem>
+<para>ID: SAML2-75</para>
+<para>Level: INFO</para>
+<para>Description: Entity config was created.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_CREATE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-76</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while creating entity config.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CREATE_INVALID_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-77</para>
+<para>Level: INFO</para>
+<para>Description: Invalid entity config to create.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Create entity config.</para>
+<para>Actions: Check entity config if it follows the schema.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_DELETE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-78</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while deleting entity config.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Delete entity config.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ENTITY_CONFIG_DELETE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-79</para>
+<para>Level: INFO</para>
+<para>Description: Entity config doesn't exist while deleting entity config.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ENTITY_CONFIG_DELETED</term>
+<listitem>
+<para>ID: SAML2-80</para>
+<para>Level: INFO</para>
+<para>Description: Entity config was deleted.</para>
+<para>Data: Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_DELETE_ENTITY_CONFIG</term>
+<listitem>
+<para>ID: SAML2-81</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while deleting entity config.</para>
+<para>Data: Error message, Entity ID, Realm or organization name</para>
+<para>Triggers: Delete entity config.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_GET_ALL_HOSTED_ENTITIES</term>
+<listitem>
+<para>ID: SAML2-82</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while getting all hosted entities.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Get all hosted entities.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ALL_HOSTED_ENTITIES</term>
+<listitem>
+<para>ID: SAML2-83</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting all hosted entities.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Get all hosted entities.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_ALL_HOSTED_ENTITIES</term>
+<listitem>
+<para>ID: SAML2-84</para>
+<para>Level: FINE</para>
+<para>Description: Obtained all hosted entities.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Get all hosted entities.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_GET_ALL_REMOTE_ENTITIES</term>
+<listitem>
+<para>ID: SAML2-85</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while getting all remote entities.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Get all remote entities.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ALL_REMOTE_ENTITIES</term>
+<listitem>
+<para>ID: SAML2-86</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting all remote entities.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Get all remote entities.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_ALL_REMOTE_ENTITIES</term>
+<listitem>
+<para>ID: SAML2-87</para>
+<para>Level: FINE</para>
+<para>Description: Obtained all remote entities.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Get all remote entities.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_INRESPONSETO_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-88</para>
+<para>Level: INFO</para>
+<para>Description: InResponseTo attribute in Response is invalid.</para>
+<para>Data: Response ID</para>
+<para>Triggers: Service Provider received a Response for Single Sign On.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_ISSUER_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-89</para>
+<para>Level: INFO</para>
+<para>Description: Issuer in Response is invalid.</para>
+<para>Data: Hosted Entity ID, Name of Realm or organization, Response ID</para>
+<para>Triggers: Issuer in Response is not configured or not trusted by the hosted provider</para>
+<para>Actions: Check configuration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>WRONG_STATUS_CODE</term>
+<listitem>
+<para>ID: SAML2-90</para>
+<para>Level: INFO</para>
+<para>Description: Status code in Response was not Success.</para>
+<para>Data: Response ID, Status code (if log level is set to LL_FINE)</para>
+<para>Triggers: Service provider received a Response with wrong Status code. Most likely an error occurred at Identity Provider.</para>
+<para>Actions: Check the status code. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ASSERTION_NOT_ENCRYPTED</term>
+<listitem>
+<para>ID: SAML2-91</para>
+<para>Level: INFO</para>
+<para>Description: Assertion in Response was not encrypted.</para>
+<para>Data: Response ID</para>
+<para>Triggers: Service provider requested the assertion in Response to be encrypted, but it received a Response with unencrypted assertion(s).</para>
+<para>Actions: Check configuration. Notify Identity Provider regarding the requirement.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_ASSERTION</term>
+<listitem>
+<para>ID: SAML2-92</para>
+<para>Level: INFO</para>
+<para>Description: Response had no Assertion.</para>
+<para>Data: Response ID</para>
+<para>Triggers: Service provider received a Response for Single Sign On, but the response contained no Assertion.</para>
+<para>Actions: Check error code of the Response. Notify Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_ISSUER_ASSERTION</term>
+<listitem>
+<para>ID: SAML2-93</para>
+<para>Level: INFO</para>
+<para>Description: Issuer in Assertion is not valid.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: Issuer in Assertion for single sign on was not configured at service provider, or not trusted by the service provider.</para>
+<para>Actions: Check configuration</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISMATCH_ISSUER_ASSERTION</term>
+<listitem>
+<para>ID: SAML2-94</para>
+<para>Level: INFO</para>
+<para>Description: Issuer in Assertion didn't match the Issuer in Response or other Assertions in the Response.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: Service provider received Response which had mismatch Issuer inside the Assertion it contained.</para>
+<para>Actions: Check debug message</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_SIGNATURE_ASSERTION</term>
+<listitem>
+<para>ID: SAML2-95</para>
+<para>Level: INFO</para>
+<para>Description: Assertion is not signed or signature is not valid.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: Service provider requested the Assertion to be signed but the assertion received was not; or the signature on the Assertion received was not valid.</para>
+<para>Actions: Check configuration; check debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_SUBJECT_COMFIRMATION_DATA</term>
+<listitem>
+<para>ID: SAML2-96</para>
+<para>Level: INFO</para>
+<para>Description: SubjectConfirmationData had no Subject.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: Service provider received an Assertion whose SubjectConfirmationData had no Subject.</para>
+<para>Actions: Check debug for the Assertion received. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_RECIPIENT</term>
+<listitem>
+<para>ID: SAML2-97</para>
+<para>Level: INFO</para>
+<para>Description: SubjectConfirmationData had no Recipient.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: Service provider received an Assertion whose SubjectConfirmationData had no Recipient.</para>
+<para>Actions: Check debug for the Assertion received. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>WRONG_RECIPIENT</term>
+<listitem>
+<para>ID: SAML2-98</para>
+<para>Level: INFO</para>
+<para>Description: Service Provider is not the intended recipient.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: Service provider received an Assertion. But the provider is not the intended recipient of the Assertion.</para>
+<para>Actions: Check debug for the Assertion received. Check meta data. Contact Identity Provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_TIME_SUBJECT_CONFIRMATION_DATA</term>
+<listitem>
+<para>ID: SAML2-99</para>
+<para>Level: INFO</para>
+<para>Description: Time in SubjectConfirmationData of the Assertion is invalid.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: The assertion service provider received had expired timewise.</para>
+<para>Actions: Synchronize the time between service provider and identity provider. Increase the time skew attribute for the service provider in its entity config.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONTAINED_NOT_BEFORE</term>
+<listitem>
+<para>ID: SAML2-100</para>
+<para>Level: INFO</para>
+<para>Description: SubjectConfirmationData of the Assertion had NotBefore.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: The assertion service provider received had NotBefore.</para>
+<para>Actions: Check debug for the Assertion received. Contact identity provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>WRONG_INRESPONSETO_ASSERTION</term>
+<listitem>
+<para>ID: SAML2-101</para>
+<para>Level: INFO</para>
+<para>Description: Assertion contained wrong InResponseTo attribute.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: InResponseTo in Assertion is different from the one in Response. Or Assertion didn't contain InResponseTo, but Response did.</para>
+<para>Actions: Check debug for the Assertion received. Contact identity provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_CONDITIONS</term>
+<listitem>
+<para>ID: SAML2-102</para>
+<para>Level: INFO</para>
+<para>Description: Assertion contained no Conditions.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: Conditions is missing from the Single Sign On Assertion.</para>
+<para>Actions: Check debug for the Assertion received. Contact identity provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_AUDIENCE_RESTRICTION</term>
+<listitem>
+<para>ID: SAML2-103</para>
+<para>Level: INFO</para>
+<para>Description: Assertion contained no AudienceRestriction.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: AudienceRestriction is missing from the Single Sign On Assertion.</para>
+<para>Actions: Check debug for the Assertion received. Contact identity provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>WRONG_AUDIENCE</term>
+<listitem>
+<para>ID: SAML2-104</para>
+<para>Level: INFO</para>
+<para>Description: Assertion contained wrong Audience.</para>
+<para>Data: Assertion ID</para>
+<para>Triggers: This service provider was not the intended audience of the single sign on assertion.</para>
+<para>Actions: Check debug for the Assertion received. Check meta data. Contact identity provider if needed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FOUND_AUTHN_ASSERTION</term>
+<listitem>
+<para>ID: SAML2-105</para>
+<para>Level: INFO</para>
+<para>Description: Found authentication assertion in the Response.</para>
+<para>Data: Assertion ID, Subject if the log level was set to LL_FINE, SesionIndex if any</para>
+<para>Triggers: Both the Response and Assertion(s) inside the Response are valid.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_SSOTOKEN</term>
+<listitem>
+<para>ID: SAML2-106</para>
+<para>Level: INFO</para>
+<para>Description: Invalid SSOToken found in Request.</para>
+<para>Data: SSOToken value</para>
+<para>Triggers: Initiate Single Logout without SSOToken.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_ENTITY</term>
+<listitem>
+<para>ID: SAML2-107</para>
+<para>Level: INFO</para>
+<para>Description: No entity ID is specified in Request.</para>
+<para>Data: EntityID value</para>
+<para>Triggers: Initiate Request without EntityID.</para>
+<para>Actions: Specify EntityID parameter in request URL.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_META_ALIAS</term>
+<listitem>
+<para>ID: SAML2-108</para>
+<para>Level: INFO</para>
+<para>Description: No metaAlias is specified in Request.</para>
+<para>Data: MetaAlias value</para>
+<para>Triggers: Initiate Request without metaAlias.</para>
+<para>Actions: Specify metaAlias parameter in request URL.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REDIRECT_TO_AUTH</term>
+<listitem>
+<para>ID: SAML2-109</para>
+<para>Level: INFO</para>
+<para>Description: Redirect request to authentication page.</para>
+<para>Data: URL to Authentication page</para>
+<para>Triggers: Initiate Request without SSOToken.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_DECODE_REQUEST</term>
+<listitem>
+<para>ID: SAML2-110</para>
+<para>Level: INFO</para>
+<para>Description: Can not decode URL encoded Query parameter.</para>
+<para>Data: URL encoded Query parameter</para>
+<para>Triggers: Initiate to decode incorrectly URL encoded Query parameter.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_INSTANTIATE_MNI_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-111</para>
+<para>Level: INFO</para>
+<para>Description: Can not instantiate MNI Response with input xml.</para>
+<para>Data: Input XML string for MNI Response</para>
+<para>Triggers: Initiate parse MNI Response with incorrect XML string.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_INSTANTIATE_MNI_REQUEST</term>
+<listitem>
+<para>ID: SAML2-112</para>
+<para>Level: INFO</para>
+<para>Description: Can not instantiate MNI Request with input XML.</para>
+<para>Data: Input XML string for MNI Request</para>
+<para>Triggers: Initiate parse MNI Request with incorrect XML string.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_INSTANTIATE_SLO_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-113</para>
+<para>Level: INFO</para>
+<para>Description: Can not instantiate SLO Response with input XML.</para>
+<para>Data: Input XML string for SLO Response</para>
+<para>Triggers: Initiate parse SLO Response with incorrect XML string.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_INSTANTIATE_SLO_REQUEST</term>
+<listitem>
+<para>ID: SAML2-114</para>
+<para>Level: INFO</para>
+<para>Description: Can not instantiate SLO Request with input XML.</para>
+<para>Data: Input XML string for SLO Request</para>
+<para>Triggers: Initiate parse SLO Request with incorrect XML string.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MNI_REQUEST_INVALID_SIGNATURE</term>
+<listitem>
+<para>ID: SAML2-115</para>
+<para>Level: INFO</para>
+<para>Description: Can not varify signature in MNI Request.</para>
+<para>Data: MNI Request with signature</para>
+<para>Triggers: Sinature in MNI Request is incorrect.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MNI_RESPONSE_INVALID_SIGNATURE</term>
+<listitem>
+<para>ID: SAML2-116</para>
+<para>Level: INFO</para>
+<para>Description: Can not valify signature in MNI Response.</para>
+<para>Data: MNI Response with signature</para>
+<para>Triggers: Sinature in MNI Response is incorrect.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SLO_REQUEST_INVALID_SIGNATURE</term>
+<listitem>
+<para>ID: SAML2-117</para>
+<para>Level: INFO</para>
+<para>Description: Can not valify signature in SLO Request.</para>
+<para>Data: SLO Request with signature</para>
+<para>Triggers: Sinature in SLO Request is incorrect.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SLO_RESPONSE_INVALID_SIGNATURE</term>
+<listitem>
+<para>ID: SAML2-118</para>
+<para>Level: INFO</para>
+<para>Description: Can not valify signature in SLO Response.</para>
+<para>Data: SLO Response with signature</para>
+<para>Triggers: Sinature in SLO Response is incorrect.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NAMEID_INVALID_ENCRYPTION</term>
+<listitem>
+<para>ID: SAML2-119</para>
+<para>Level: INFO</para>
+<para>Description: Can not decrypt EncryptedID.</para>
+<para>Data: Exception message</para>
+<para>Triggers: Decrypt the incorrectly encrypted EncryptedID.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_MNI_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-120</para>
+<para>Level: INFO</para>
+<para>Description: MNI Response has error status.</para>
+<para>Data: Status message</para>
+<para>Triggers: Requested MNI Request caused problem.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_SLO_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-121</para>
+<para>Level: INFO</para>
+<para>Description: SLO Response has error status.</para>
+<para>Data: Status message</para>
+<para>Triggers: Requested SLO Request caused problem.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_ENTITY_ROLE</term>
+<listitem>
+<para>ID: SAML2-122</para>
+<para>Level: INFO</para>
+<para>Description: Entity Role is not specified in the request.</para>
+<para>Data: Entity Role value</para>
+<para>Triggers: Initiate request without Role value.</para>
+<para>Actions: Specify Entity Role parameter in the request.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_ISSUER_REQUEST</term>
+<listitem>
+<para>ID: SAML2-123</para>
+<para>Level: INFO</para>
+<para>Description: Issuer in Request is invalid.</para>
+<para>Data: Hosted Entity ID, Name of Realm or organization, Request ID</para>
+<para>Triggers: Issuer in Request is not configured or not trusted by the hosted provider</para>
+<para>Actions: Check configuration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_GET_ALL_ENTITIES</term>
+<listitem>
+<para>ID: SAML2-124</para>
+<para>Level: INFO</para>
+<para>Description: Invaid realm while getting all entities.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Get all entities.</para>
+<para>Actions: Check the Realm name.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CONFIG_ERROR_GET_ALL_ENTITIES</term>
+<listitem>
+<para>ID: SAML2-125</para>
+<para>Level: INFO</para>
+<para>Description: Configuration error while getting all entities.</para>
+<para>Data: Error message, Realm or organization name</para>
+<para>Triggers: Get all entities.</para>
+<para>Actions: Check debug message for detailed error.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>GOT_ALL_ENTITIES</term>
+<listitem>
+<para>ID: SAML2-126</para>
+<para>Level: FINE</para>
+<para>Description: Obtained all entities.</para>
+<para>Data: Realm or organization name</para>
+<para>Triggers: Get all entities.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_PEP_ID</term>
+<listitem>
+<para>ID: SAML2-127</para>
+<para>Level: INFO</para>
+<para>Description: Invalid Policy Enforcement Point (PEP) Identifier.</para>
+<para>Data: PEP Identifier</para>
+<para>Triggers: Cannot retrieve PEP Metadata</para>
+<para>Actions: Provide valid PEP Identifier and retry.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_PDP_ID</term>
+<listitem>
+<para>ID: SAML2-128</para>
+<para>Level: INFO</para>
+<para>Description: Invalid Policy Decision Point (PDP) Identifier.</para>
+<para>Data: PDP Identifier</para>
+<para>Triggers: Cannot retrieve PDP Metadata</para>
+<para>Actions: Provide valid PDP Identifier and retry.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_PDP_SIGN_CERT_ALIAS</term>
+<listitem>
+<para>ID: SAML2-129</para>
+<para>Level: INFO</para>
+<para>Description: Certificate Alias is null, cannot sign the message.</para>
+<para>Data: The realm from which the metadata was retreived., Entity Identifier for the Policy Decision Point.</para>
+<para>Triggers: Cannot sign the message.</para>
+<para>Actions: Check the entity's metadata to verify the certificate alias is correct.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_PEP_SIGN_CERT_ALIAS</term>
+<listitem>
+<para>ID: SAML2-130</para>
+<para>Level: INFO</para>
+<para>Description: Certificate Alias is null,cannot retreive the certificate.</para>
+<para>Data: The realm from which the metadata was retreived., Entity Identifier for the Policy Enforcement Point.</para>
+<para>Triggers: Cannot validate the signature in the request message.</para>
+<para>Actions: Check the entity's metadata to verify the certificate alias is correct.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_SIGNATURE_QUERY</term>
+<listitem>
+<para>ID: SAML2-131</para>
+<para>Level: INFO</para>
+<para>Description: Invalid Signature in Query Request.</para>
+<para>Data: The realm from which the metadata was retreived., Entity Identifier for the Policy Decision Point., Cert Alias used to retrieve certificate from keystore.</para>
+<para>Triggers: Cannot process the request, server will send back error to the Requester.</para>
+<para>Actions: Check the entity's metadata to verify the certificate alias is correct.; Check the certificate in the keystore for its existance and validity.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_ISSUER_IN_PEP_REQUEST</term>
+<listitem>
+<para>ID: SAML2-132</para>
+<para>Level: INFO</para>
+<para>Description: Issuer in Request is invalid.</para>
+<para>Data: Name of Realm or organization, Identity of the Issuer, Hosted Entity Identifier</para>
+<para>Triggers: Issuer in Request is not configured or not trusted by the hosted provider therefore Query will fail.</para>
+<para>Actions: Check the hosted entity configuration attribute cotlist to make sure the issuer identifier is in the list.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PEP_METADATA_ERROR</term>
+<listitem>
+<para>ID: SAML2-133</para>
+<para>Level: INFO</para>
+<para>Description: Unable to retreive Policy Enforcement Point (PEP) Metadata.</para>
+<para>Data: PEP Provider Entity Identifier</para>
+<para>Triggers: Cannot retrieve PEP Provider Metadata</para>
+<para>Actions: Check the Data Store is accessible .; Check the PEP Provider Entity Identifier.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>PDP_METADATA_ERROR</term>
+<listitem>
+<para>ID: SAML2-134</para>
+<para>Level: INFO</para>
+<para>Description: Unable to retrieve Policy Decision Point (PDP) Metadata.</para>
+<para>Data: PDP Provider Entity Identifier</para>
+<para>Triggers: Cannot retreive PDP Provider Metadata</para>
+<para>Actions: Check the Data Store is accessible .; Check the PDP Provider Entity Identifier.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ASSERTION_FROM_PDP_NOT_ENCRYPTED</term>
+<listitem>
+<para>ID: SAML2-135</para>
+<para>Level: INFO</para>
+<para>Description: Assertion in Response not encrypted.</para>
+<para>Data: Identity of the Issuer, Response ID</para>
+<para>Triggers: Policy Enforcement Point (PEP) Provider requested the assertion in Response to be encrypted, but it received a Response with unencrypted assertion(s).</para>
+<para>Actions: Check PEP metadata published to the PDP. Notify Policy Decision Point (PDP) Provider regarding the requirement.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_ASSERTION_IN_PDP_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-136</para>
+<para>Level: INFO</para>
+<para>Description: Response has no Assertion.</para>
+<para>Data: Identity of Issuer, Response ID</para>
+<para>Triggers: Policy Enforcement Point (PEP) Provider received a Response with no Assertion.</para>
+<para>Actions: Check error code of the Response. Notify Policy Decision Point (PDP) Provider to check for errors or possible misconfiguration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_ISSUER_IN_ASSERTION_FROM_PDP</term>
+<listitem>
+<para>ID: SAML2-137</para>
+<para>Level: INFO</para>
+<para>Description: Issuer in Assertion is not valid.</para>
+<para>Data: Assertion Issuer, Assertion ID</para>
+<para>Triggers: Issuer in Assertion was not configured at Policy Enforcement Point (PEP) provider, or not trusted by the PEP provider.</para>
+<para>Actions: Check the configuration.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISMATCH_ISSUER_IN_ASSERTION_FROM_PDP</term>
+<listitem>
+<para>ID: SAML2-138</para>
+<para>Level: INFO</para>
+<para>Description: Issuer in Assertion doesn't match the Issuer in Response.</para>
+<para>Data: Issuer Identifier in the Resposnse, Issuer Identity in the Assertion</para>
+<para>Triggers: Error condition, Response will not be accepted.</para>
+<para>Actions: Check the Policy Decision Point instance to debug the cause of the problem.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_SIGNATURE_ASSERTION_FROM_PDP</term>
+<listitem>
+<para>ID: SAML2-139</para>
+<para>Level: INFO</para>
+<para>Description: Assertion is not signed or signature is not valid.</para>
+<para>Data: Issuer Identity in the Assertion, Assertion ID</para>
+<para>Triggers: Policy Enforcement Point (PEP) provider requested the Assertion to be signed but the assertion received was not; or the signature on the Assertion received was not valid.</para>
+<para>Actions: Check PEP metadata configuration.; Check debug for more detailed error message.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REQUEST_MESSAGE</term>
+<listitem>
+<para>ID: SAML2-140</para>
+<para>Level: FINE</para>
+<para>Description: Request message from Query Requester</para>
+<para>Data: policy decision point entity descriptor, SAMLv2 Query Request Message</para>
+<para>Triggers: SAMLv2 SOAP Query</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>VALID_SIGNATURE_QUERY</term>
+<listitem>
+<para>ID: SAML2-141</para>
+<para>Level: INFO</para>
+<para>Description: Valid Signature in Query Request.</para>
+<para>Data: The realm from which the metadata was retreived., Entity Identifier for the Policy Decision Point., Cert Alias used to retrieve certificate from keystore.</para>
+<para>Triggers: The Request will be processed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCESS_FED_SSO</term>
+<listitem>
+<para>ID: SAML2-142</para>
+<para>Level: INFO</para>
+<para>Description: Successful federation/Single Sign On.</para>
+<para>Data: user id, NameID value</para>
+<para>Triggers: Successful federation/Single Sign On.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SAE_IDP_SUCCESS</term>
+<listitem>
+<para>ID: SAML2-143</para>
+<para>Level: INFO</para>
+<para>Description: SAE_IDP succeeded.</para>
+<para>Data: SAE attributes</para>
+<para>Triggers: SAE_IDP succeeded.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SAE_IDP_ERROR</term>
+<listitem>
+<para>ID: SAML2-144</para>
+<para>Level: INFO</para>
+<para>Description: SAE_IDP failed.</para>
+<para>Data: Error message, SAE attributes</para>
+<para>Triggers: SAE_IDP failed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SAE_IDP_ERROR_NODATA</term>
+<listitem>
+<para>ID: SAML2-145</para>
+<para>Level: INFO</para>
+<para>Description: SAE_IDP invoked without attributes.</para>
+<para>Data: Error message</para>
+<para>Triggers: SAE_IDP invoked without attributes.</para>
+<para>Actions: Add SAE attributes to request.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SAE_IDP_AUTH</term>
+<listitem>
+<para>ID: SAML2-146</para>
+<para>Level: INFO</para>
+<para>Description: SAE_IDP delegated to Auth.</para>
+<para>Data: SAE attributes</para>
+<para>Triggers: SAE_IDP invoked but no user session.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SAE_SP_SUCCESS</term>
+<listitem>
+<para>ID: SAML2-147</para>
+<para>Level: INFO</para>
+<para>Description: SAE_SP succeeded.</para>
+<para>Data: SAE attributes</para>
+<para>Triggers: SAE_SP succeeded.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SAE_SP_ERROR</term>
+<listitem>
+<para>ID: SAML2-148</para>
+<para>Level: INFO</para>
+<para>Description: SAE_SP failed.</para>
+<para>Data: Error message</para>
+<para>Triggers: SAE_SP failed.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SEND_ECP_RESPONSE</term>
+<listitem>
+<para>ID: SAML2-149</para>
+<para>Level: INFO</para>
+<para>Description: Send a response to ECP.</para>
+<para>Data: Identity Provider Entity Identifier, Realm or organization name, Assertion Consumer Service URL, SOAP message string if the log level was set to LL_FINE at run time</para>
+<para>Triggers: Received AuthnRequest.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SEND_ECP_RESPONSE_FAILED</term>
+<listitem>
+<para>ID: SAML2-150</para>
+<para>Level: INFO</para>
+<para>Description: Unable to send a response to ECP.</para>
+<para>Data: Identity Provider Entity Identifier, Realm or organization name, Assertion Consumer Service URL</para>
+<para>Triggers: Send a response to ECP.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_INSTANTIATE_SOAP_MESSAGE_ECP</term>
+<listitem>
+<para>ID: SAML2-151</para>
+<para>Level: INFO</para>
+<para>Description: Unable to instantiate a SOAP message sent from ECP.</para>
+<para>Data: Service Provider Entity Identifier</para>
+<para>Triggers: Received a response from ECP.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>RECEIVE_SOAP_FAULT_ECP</term>
+<listitem>
+<para>ID: SAML2-152</para>
+<para>Level: INFO</para>
+<para>Description: Received a SOAP fault from ECP.</para>
+<para>Data: Service Provider Entity Identifier</para>
+<para>Triggers: Received a response from ECP.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>CANNOT_INSTANTIATE_SOAP_MESSAGE_ECP</term>
+<listitem>
+<para>ID: SAML2-153</para>
+<para>Level: INFO</para>
+<para>Description: Unable to instantiate a SAML Response sent from ECP.</para>
+<para>Data: Service Provider Entity Identifier</para>
+<para>Triggers: Received a response from ECP.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ECP_ASSERTION_NOT_SIGNED</term>
+<listitem>
+<para>ID: SAML2-154</para>
+<para>Level: INFO</para>
+<para>Description: Assertion received from ECP is not signed.</para>
+<para>Data: Identity Provider Entity Identifier</para>
+<para>Triggers: Received a response from ECP.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ECP_ASSERTION_INVALID_SIGNATURE</term>
+<listitem>
+<para>ID: SAML2-155</para>
+<para>Level: INFO</para>
+<para>Description: Assertion received from ECP has invalid signature.</para>
+<para>Data: Identity Provider Entity Identifier</para>
+<para>Triggers: Assertion signature verification.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>RECEIVED_AUTHN_REQUEST_ECP</term>
+<listitem>
+<para>ID: SAML2-156</para>
+<para>Level: INFO</para>
+<para>Description: Received AuthnRequest from ECP.</para>
+<para>Data: Service Provider Entity Identifier, IDP meta alias, authnRequest xml string</para>
+<para>Triggers: Single Sign On.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>RECEIVED_HTTP_REQUEST_ECP</term>
+<listitem>
+<para>ID: SAML2-157</para>
+<para>Level: INFO</para>
+<para>Description: Received HTTP request from ECP.</para>
+<para>Data: Service Provider Entity Identifier, Realm or organization name</para>
+<para>Triggers: ECP accessed SP Resource.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SEND_ECP_PAOS_REQUEST</term>
+<listitem>
+<para>ID: SAML2-158</para>
+<para>Level: INFO</para>
+<para>Description: Send a PAOS request to ECP.</para>
+<para>Data: Service Provider Entity Identifier, Realm or organization name, SOAP message string if the log level was set to LL_FINE at run time</para>
+<para>Triggers: Received HTTP request from ECP.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SEND_ECP_PAOS_REQUEST_FAILED</term>
+<listitem>
+<para>ID: SAML2-159</para>
+<para>Level: INFO</para>
+<para>Description: Unable to send a PAOS request to ECP.</para>
+<para>Data: Service Provider Entity Identifier, Realm or organization name</para>
+<para>Triggers: Send a PAOS request to ECP.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCESS_FED_TERMINATION</term>
+<listitem>
+<para>ID: SAML2-160</para>
+<para>Level: INFO</para>
+<para>Description: Federation termination succeeded.</para>
+<para>Data: user id</para>
+<para>Triggers: Federation termination succeeded.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SUCCESS_NEW_NAMEID</term>
+<listitem>
+<para>ID: SAML2-161</para>
+<para>Level: INFO</para>
+<para>Description: New name identifier succeeded.</para>
+<para>Data: user id</para>
+<para>Triggers: New name identifier succeeded.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNKNOWN_PRINCIPAL</term>
+<listitem>
+<para>ID: SAML2-162</para>
+<para>Level: INFO</para>
+<para>Description: Unknown princial in manage name ID request.</para>
+<para>Data: Manage Name ID request XML</para>
+<para>Triggers: Unable to find old name id in the management name id request.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNABLE_TO_TERMINATE</term>
+<listitem>
+<para>ID: SAML2-163</para>
+<para>Level: INFO</para>
+<para>Description: Unable to terminate federation.</para>
+<para>Data: user id</para>
+<para>Triggers: Unable to terminate federation.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>POST_RESPONSE_INVALID_SIGNATURE</term>
+<listitem>
+<para>ID: SAML2-164</para>
+<para>Level: INFO</para>
+<para>Description: Unable to verify signature in Single Sign-On Response using POST binding.</para>
+<para>Data: Identity Provider Entity ID</para>
+<para>Triggers: Error while trying to verify signature in Response.</para>
+<para>Actions: Check Identity Provider metadata; Check debug file for detailed info</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>BINDING_NOT_SUPPORTED</term>
+<listitem>
+<para>ID: SAML2-165</para>
+<para>Level: INFO</para>
+<para>Description: Binding is not supported.</para>
+<para>Data: Provider Entity ID, Name of binding that is not supported</para>
+<para>Triggers: Hosted provider received data from unsupported binding endpoint.</para>
+<para>Actions: Check Provider metadata; Check debug file for detailed info</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SP_SSO_FAILED</term>
+<listitem>
+<para>ID: SAML2-166</para>
+<para>Level: INFO</para>
+<para>Description: Single Sign-On Failed at Service Provider.</para>
+<para>Data: Hosted Service Provider Entity ID, Error message, Response received from IDP if the log level was set to LL_FINE at run time</para>
+<para>Triggers: Single Sign On failed</para>
+<para>Actions: Check debug file for detailed info</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REALM_FOR_SESSION</term>
+<listitem>
+<para>ID: SAML2-167</para>
+<para>Level: INFO</para>
+<para>Description: Invalid realm for the user trying to get an assertion from the IdP.</para>
+<para>Data: Realm of the authenticated user, Realm where the IdP is defined, Entity Id of the SP, IP Address of the requester, SAML2 Authentication Request</para>
+<para>Triggers: Single Sign On failed</para>
+<para>Actions: Check debug file for detailed info</para>
+</listitem>
+</varlistentry>
+</variablelist>

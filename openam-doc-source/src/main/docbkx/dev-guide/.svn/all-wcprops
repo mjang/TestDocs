@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/openam/!svn/ver/7344/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide
+END
+chap-ws-federation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-ws-federation.xml
+END
+chap-best-practices.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-best-practices.xml
+END
+chap-jdk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/openam/!svn/ver/6724/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-jdk.xml
+END
+chap-sae.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/openam/!svn/ver/4960/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-sae.xml
+END
+chap-policy-decisions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/openam/!svn/ver/4742/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-policy-decisions.xml
+END
+chap-rest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/openam/!svn/ver/7194/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-rest.xml
+END
+chap-api-overview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/openam/!svn/ver/6724/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-api-overview.xml
+END
+chap-openid.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-openid.xml
+END
+chap-authentication.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/openam/!svn/ver/6724/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-authentication.xml
+END
+chap-custom-web-agent.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-custom-web-agent.xml
+END
+chap-custom-attr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/openam/!svn/ver/7083/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-custom-attr.xml
+END
+chap-fedlet-java.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/openam/!svn/ver/7083/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-fedlet-java.xml
+END
+chap-session.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/openam/!svn/ver/6724/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-session.xml
+END
+chap-csdk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/openam/!svn/ver/5999/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-csdk.xml
+END
+chap-post-auth.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/openam/!svn/ver/6724/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-post-auth.xml
+END
+chap-identity-repo-spi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/openam/!svn/ver/4959/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-identity-repo-spi.xml
+END
+chap-extending.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-extending.xml
+END
+chap-policy-spi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/openam/!svn/ver/6002/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-policy-spi.xml
+END
+chap-auth-spi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/openam/!svn/ver/6793/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-auth-spi.xml
+END
+chap-client-dev.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-client-dev.xml
+END
+chap-sms-spi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-sms-spi.xml
+END
+preface.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/preface.xml
+END
+chap-oauth2-scopes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/openam/!svn/ver/4594/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-oauth2-scopes.xml
+END
+chap-fedlet-dotnet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/openam/!svn/ver/6724/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-fedlet-dotnet.xml
+END
+index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/openam/!svn/ver/6579/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/index.xml
+END
+chap-custom-quota-exhaustion-action.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/openam/!svn/ver/6537/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-custom-quota-exhaustion-action.xml
+END
+chap-samlv2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/openam/!svn/ver/3333/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-samlv2.xml
+END
+chap-xacml.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/openam/!svn/ver/7344/trunk/openam/openam-documentation/openam-doc-source/src/main/docbkx/dev-guide/chap-xacml.xml
+END

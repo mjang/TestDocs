@@ -1,0 +1,364 @@
+<variablelist xml:id="log-ref-SAML">
+<para>OpenAM logs the following SAML messages.</para>
+<varlistentry>
+<term>ASSERTION_CREATED</term>
+<listitem>
+<para>ID: SAML-1</para>
+<para>Level: INFO</para>
+<para>Description: New assertion created</para>
+<para>Data: message id, Assertion ID or Assertion if log level is LL_FINER</para>
+<para>Triggers: Browser Artifact Profile; Browser POST Profile; Create Assertion Artifact; Authentication Query; Attribute Query; Authorization Decision Query</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ASSERTION_ARTIFACT_CREATED</term>
+<listitem>
+<para>ID: SAML-2</para>
+<para>Level: INFO</para>
+<para>Description: New assertion artifact created</para>
+<para>Data: message id, Assertion Artifact, ID of the Assertion corresponding to the Artifact</para>
+<para>Triggers: Browser Artifact Profile; Creating Assertion Artifact</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ASSERTION_ARTIFACT_REMOVED</term>
+<listitem>
+<para>ID: SAML-3</para>
+<para>Level: FINE</para>
+<para>Description: Assertion artifact removed from map</para>
+<para>Data: message id, Assertion Artifact</para>
+<para>Triggers: SAML Artifact Query; Assertion artifact expires</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ASSERTION_REMOVED</term>
+<listitem>
+<para>ID: SAML-4</para>
+<para>Level: FINE</para>
+<para>Description: Assertion removed from map</para>
+<para>Data: message id, Assertion ID</para>
+<para>Triggers: SAML Artifact Query; Assertion expires</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ASSERTION_ARTIFACT_VERIFIED</term>
+<listitem>
+<para>ID: SAML-5</para>
+<para>Level: INFO</para>
+<para>Description: Access right by assertion artifact verified</para>
+<para>Data: message id, Assertion Artifact</para>
+<para>Triggers: SAML Artifact Query</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>AUTH_PROTOCOL_MISMATCH</term>
+<listitem>
+<para>ID: SAML-6</para>
+<para>Level: INFO</para>
+<para>Description: Authentication type configured and the actual SOAP protocol do not match.</para>
+<para>Data: message id</para>
+<para>Triggers: SAML SOAP Query</para>
+<para>Actions: Login to console, go to Federation, then SAML, edit the Trusted Partners Configuration, check the selected Authentication Type field, make sure it matches the protocol specified in SOAP URL field.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_AUTH_TYPE</term>
+<listitem>
+<para>ID: SAML-7</para>
+<para>Level: INFO</para>
+<para>Description: Invalid authentication type</para>
+<para>Data: message id</para>
+<para>Triggers: SAML SOAP Query</para>
+<para>Actions: Login to console, go to Federation, then SAML, edit the Trusted Partners Configuration, select one of the values for Authentication Type field, then save.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SOAP_RECEIVER_URL</term>
+<listitem>
+<para>ID: SAML-8</para>
+<para>Level: FINE</para>
+<para>Description: Remote SOAP receiver URL</para>
+<para>Data: message id, SOAP Receiver URL</para>
+<para>Triggers: SAML SOAP Query</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_ASSERTION_IN_RESPONSE</term>
+<listitem>
+<para>ID: SAML-9</para>
+<para>Level: INFO</para>
+<para>Description: No assertion present in saml response</para>
+<para>Data: message id, SAML Response</para>
+<para>Triggers: SAML Artifact Query</para>
+<para>Actions: Contact remote partner on what's wrong</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISMATCHED_ASSERTION_AND_ARTIFACT</term>
+<listitem>
+<para>ID: SAML-10</para>
+<para>Level: INFO</para>
+<para>Description: Number of assertions in SAML response does not equal to number of artifacts in SAML request.</para>
+<para>Data: message id, SAML Response</para>
+<para>Triggers: SAML Artifact Query</para>
+<para>Actions: Contact remote partner on what's wrong</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ARTIFACT_TO_SEND</term>
+<listitem>
+<para>ID: SAML-11</para>
+<para>Level: INFO</para>
+<para>Description: Artifact to be sent to remote partner</para>
+<para>Data: message id, SAML Artifact</para>
+<para>Triggers: SAML Artifact Query</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>WRONG_SOAP_URL</term>
+<listitem>
+<para>ID: SAML-12</para>
+<para>Level: INFO</para>
+<para>Description: Wrong SOAP URL in trusted partner configuration</para>
+<para>Data: message id</para>
+<para>Triggers: SAML Artifact Query</para>
+<para>Actions: Login to console, go to Federation, then SAML, edit the Trusted Partners Configuration, enter value for SOAP URL field, then save.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SAML_ARTIFACT_QUERY</term>
+<listitem>
+<para>ID: SAML-13</para>
+<para>Level: FINE</para>
+<para>Description: SAML Artifact Query SOAP request</para>
+<para>Data: message id, SAML Artifact Query message</para>
+<para>Triggers: SAML Artifact Query</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NO_REPLY_FROM_SOAP_RECEIVER</term>
+<listitem>
+<para>ID: SAML-14</para>
+<para>Level: INFO</para>
+<para>Description: No reply from remote SAML SOAP Receiver</para>
+<para>Data: message id</para>
+<para>Triggers: SAML Artifact Query</para>
+<para>Actions: Check remote partner on what's wrong</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REPLIED_SOAP_MESSAGE</term>
+<listitem>
+<para>ID: SAML-15</para>
+<para>Level: FINE</para>
+<para>Description: SAML Artifact Query response</para>
+<para>Data: message id, SAML Artifact Query response message</para>
+<para>Triggers: SAML Artifact Query</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_SAML_RESPONSE</term>
+<listitem>
+<para>ID: SAML-16</para>
+<para>Level: INFO</para>
+<para>Description: No SAML response inside SOAP response</para>
+<para>Data: message id</para>
+<para>Triggers: SAML Artifact Query</para>
+<para>Actions: Check remote partner on what's wrong</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_RESPONSE_SIGNATURE</term>
+<listitem>
+<para>ID: SAML-17</para>
+<para>Level: INFO</para>
+<para>Description: XML signature for SAML response is not valid</para>
+<para>Data: message id</para>
+<para>Triggers: SAML Artifact Query</para>
+<para>Actions: Check remote partner on what's wrong on XML digital signature</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ERROR_RESPONSE_STATUS</term>
+<listitem>
+<para>ID: SAML-18</para>
+<para>Level: INFO</para>
+<para>Description: Error in getting SAML response status code</para>
+<para>Data: message id</para>
+<para>Triggers: SAML Artifact Query</para>
+<para>Actions: Check remote partner on what's wrong on response status code</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_TARGET</term>
+<listitem>
+<para>ID: SAML-19</para>
+<para>Level: INFO</para>
+<para>Description: TARGET parameter is missing from the request</para>
+<para>Data: message id</para>
+<para>Triggers: SAML Artifact Profile; SAML POST Profile</para>
+<para>Actions: Add "TARGET=target_url" as query parameter in the request</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>REDIRECT_TO_URL</term>
+<listitem>
+<para>ID: SAML-20</para>
+<para>Level: INFO</para>
+<para>Description: Redirection URL in SAML artifact source site</para>
+<para>Data: message id, target, redirection URL, SAML response message in case of POST profile and log level is LL_FINER</para>
+<para>Triggers: SAML Artifact Profile source; SAML POST Profile source</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>TARGET_FORBIDDEN</term>
+<listitem>
+<para>ID: SAML-21</para>
+<para>Level: INFO</para>
+<para>Description: The specified target site is forbidden</para>
+<para>Data: message id, target URL</para>
+<para>Triggers: SAML Artifact Profile source; SAML POST Profile source</para>
+<para>Actions: TARGET URL specified in the request is not handled by any trusted partner, check your TARGET url, make sure it matches one of the Target URL configured in trusted partner sites</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>FAILED_TO_CREATE_SSO_TOKEN</term>
+<listitem>
+<para>ID: SAML-22</para>
+<para>Level: INFO</para>
+<para>Description: Failed to create single-sign-on token</para>
+<para>Data: message id</para>
+<para>Triggers: SAML Artifact Profile destination; SAML POST Profile destination</para>
+<para>Actions: Authentication component failed to create SSO token, please check authentication log and debug for more details</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>ACCESS_GRANTED</term>
+<listitem>
+<para>ID: SAML-23</para>
+<para>Level: INFO</para>
+<para>Description: Single sign on successful, access to target is granted</para>
+<para>Data: message id, Response message in case of POST profile and log levele is LL_FINER or higher</para>
+<para>Triggers: SAML Artifact Profile destination; SAML POST Profile destination</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>NULL_PARAMETER</term>
+<listitem>
+<para>ID: SAML-24</para>
+<para>Level: INFO</para>
+<para>Description: Null servlet request or response</para>
+<para>Data: message id</para>
+<para>Triggers: SAML Artifact Profile; SAML POST Profile</para>
+<para>Actions: Check web container error log for details</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>MISSING_RESPONSE</term>
+<listitem>
+<para>ID: SAML-25</para>
+<para>Level: INFO</para>
+<para>Description: Missing SAML response in POST body</para>
+<para>Data: message id</para>
+<para>Triggers: SAML POST Profile destination</para>
+<para>Actions: Check with remote SAML partner to see why SAML response object is missing from HTTP POST body</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>RESPONSE_MESSAGE_ERROR</term>
+<listitem>
+<para>ID: SAML-26</para>
+<para>Level: INFO</para>
+<para>Description: Error in response message</para>
+<para>Data: message id</para>
+<para>Triggers: SAML POST Profile destination</para>
+<para>Actions: Unable to convert encoded POST body attribute to SAML Response object, check with remote SAML partner to see if there is any error in the SAML response create, for example, encoding error, invalid response sub-element etc.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_RESPONSE</term>
+<listitem>
+<para>ID: SAML-27</para>
+<para>Level: INFO</para>
+<para>Description: Response is not valid</para>
+<para>Data: message id</para>
+<para>Triggers: SAML POST Profile destination</para>
+<para>Actions: recipient attribute in SAML response does not match this site's POST profile URL; Response status code is not success</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SOAP_MESSAGE_FACTORY_ERROR</term>
+<listitem>
+<para>ID: SAML-28</para>
+<para>Level: INFO</para>
+<para>Description: Failed to get an instance of the message factory</para>
+<para>Data: message id</para>
+<para>Triggers: SAML SOAP Receiver init</para>
+<para>Actions: Check your SOAP factory property (javax.xml.soap.MessageFactory) to make sure it is using a valid SOAP factory implementation</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>UNTRUSTED_SITE</term>
+<listitem>
+<para>ID: SAML-29</para>
+<para>Level: INFO</para>
+<para>Description: Received Request from an untrusted site</para>
+<para>Data: message id, Remote site Hostname or IP Address</para>
+<para>Triggers: SAML SOAP Queries</para>
+<para>Actions: Login to console, go to Federation, then SAML service, edit the Trusted Partners Configuration, check the Host List field, make sure remote host/IP is one the values. In case of SSL with client auth, make sure Host List contains the client certificate alias of the remote site.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>INVALID_REQUEST</term>
+<listitem>
+<para>ID: SAML-30</para>
+<para>Level: INFO</para>
+<para>Description: Invalid request from remote partner site</para>
+<para>Data: message id and request hostname/IP address, return response</para>
+<para>Triggers: SAML SOAP Queries</para>
+<para>Actions: Check with administrator of remote partner site</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SOAP_REQUEST_MESSAGE</term>
+<listitem>
+<para>ID: SAML-31</para>
+<para>Level: FINE</para>
+<para>Description: Request message from partner site</para>
+<para>Data: message id and request hostname/IP address, request xml</para>
+<para>Triggers: SAML SOAP Queries</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>BUILD_RESPONSE_ERROR</term>
+<listitem>
+<para>ID: SAML-32</para>
+<para>Level: INFO</para>
+<para>Description: Failed to build response due to internal server error</para>
+<para>Data: message id</para>
+<para>Triggers: SAML SOAP Queries</para>
+<para>Actions: Check debug message to see why it is failing, for example, cannot create response status, major/minor version error, etc.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SENDING_RESPONSE</term>
+<listitem>
+<para>ID: SAML-33</para>
+<para>Level: INFO</para>
+<para>Description: Sending SAML response to partner site</para>
+<para>Data: message id, SAML response or response id</para>
+<para>Triggers: SAML SOAP Queries</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>SOAP_FAULT_ERROR</term>
+<listitem>
+<para>ID: SAML-34</para>
+<para>Level: INFO</para>
+<para>Description: Failed to build SOAP fault response body</para>
+<para>Data: message id</para>
+<para>Triggers: SAML SOAP Queries</para>
+<para>Actions: Check debug message to see why it is failing, for example, unable to create SOAP fault, etc.</para>
+</listitem>
+</varlistentry>
+</variablelist>
