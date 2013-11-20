@@ -1,5 +1,8 @@
 {
-  "files": [],
+  "files": [
+    "openam-doc-source/src/main/docbkx/admin-guide/appendix-interface-stability.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-admin-tools.xml"
+  ],
   "formats": {
     "pdf": {
       "version": "print",
