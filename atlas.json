@@ -1,0 +1,25 @@
+{
+  "files": [],
+  "formats": {
+    "pdf": {
+      "version": "print",
+      "index": false,
+      "toc": false
+    },
+    "epub": {
+      "index": true,
+      "toc": true,
+      "epubcheck": true
+    },
+    "mobi": {
+      "index": true,
+      "toc": false
+    },
+    "html": {
+      "index": true,
+      "toc": true
+    }
+  },
+  "theme": "oreillymedia/atlas_tech1c_theme",
+  "title": "TestDocs"
+}
