@@ -1,13 +1,36 @@
 {
   "files": [
     "openam-doc-source/src/main/docbkx/admin-guide/appendix-interface-stability.xml",
-    "openam-doc-source/src/main/docbkx/admin-guide/chap-admin-tools.xml"
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-agents.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-auth-services.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-authz-policy.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-backup-restore.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-cdsso.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-certs-keystores.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-change-hosts.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-dashboard.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-entitlements.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-admin-tools.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/preface.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/index.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/glossary.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-tuning.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-troubleshooting.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-sso.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-realms.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-securing.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-pwd-reset.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-oauth2.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-openid-connect.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-federation.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-mobile.xml",
+    "openam-doc-source/src/main/docbkx/admin-guide/chap-monitoring.xml"
   ],
   "formats": {
     "pdf": {
       "version": "print",
-      "index": false,
-      "toc": false
+      "index": true,
+      "toc": true
     },
     "epub": {
       "index": true,
