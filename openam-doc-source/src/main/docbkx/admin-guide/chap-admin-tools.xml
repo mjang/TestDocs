@@ -34,6 +34,16 @@
  console. It also lists and describes each command line interface (CLI)
  administration tool.</para>
  
+ <para>This is a test addition.<literal>checking</literal><command>different docbook</command> options.</para>
+ 
+ <procedure xml:id="some-procedure">
+   <title>This is some procedure</title>
+   <para>This is the intro text of some procedure.</para>
+   <step>
+     <para>This is step 1.</para>
+   </step>
+ </procedure>
+ 
  <section xml:id="openam-console-overview">
   <title>OpenAM Web-Based Console</title>
   <indexterm><primary>Console overview</primary></indexterm>
