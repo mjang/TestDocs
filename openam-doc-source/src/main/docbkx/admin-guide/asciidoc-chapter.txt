@@ -1,0 +1,32 @@
+This Is A Test Article
+======================
+Mike Jang <michael.jang@forgerock.com>
+v0.1, 12-24-2013
+
+I'm just testing out asciidoc, in the context of a DocBook tree. I would like to see how they work together.
+
+NOTE: This is only a test.
+
+:numbered!:
+[abstract]
+Test Article Abstract
+_____________________
+At some point, I'm actually going to have to draft an article for O'Reilly Strata.
+
+The article will address federation in the context of health care, focusing on technologies that ForgeRock is good at. 
+
+:numbered:
+
+Section One
+___________
+This is the top level of an article that can be nested into four different sections. 
+footnote:[A test footnote showing some source reference.]
+indexterm:[Index entries are important to help readers find what they need.]
+
+I'm assuming that regular text is just that, something that does not have to be enclosed in XML-style brackets. 
+
+I do see how images can be incorporated, such as image:images/adaptive-auth-module.png[]
+
+However, I am not sure about the use of generated images, such as those from PlantUML text files.
+
+Now it is time to try a table:
