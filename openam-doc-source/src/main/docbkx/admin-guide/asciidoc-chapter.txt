@@ -30,3 +30,13 @@ I do see how images can be incorporated, such as image:images/adaptive-auth-modu
 However, I am not sure about the use of generated images, such as those from PlantUML text files.
 
 Now it is time to try a table:
+
+.This is my first Asciidoc table -- will the width be optimzed for different formats?
+[width="50%", options="header"]
+|===================================
+|Option       |   Description
+|-a "opt1"    |   Some explanation
+|-b "opt2"    |   Some explanation 2
+|===================================
+
+Enough for now.
