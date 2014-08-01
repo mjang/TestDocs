@@ -66,6 +66,10 @@
    for CDSSO.</para>
   </textobject>
  </mediaobject>
+ 
+ <para>
+   test para
+ </para>
 
  <para>Whereas the Java EE policy agent has an endpoint specifically to handle
  the cookie domain translation, the web policy agent handles the request
